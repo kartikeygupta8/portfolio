@@ -1,0 +1,177 @@
+{
+  "basics": {
+    "name": "Kartikey Gupta",
+    "title": "Full-Stack Developer",
+    "tagline": "Performance Architect. 6+ Years Shipping at Scale.",
+    "summary": "Full-Stack Developer with 6+ years of experience in designing, developing, and maintaining scalable web and mobile applications. Proficient in Node.js, Python, React, SQL, AWS, and RESTful APIs, with a strong focus on performance optimization, security, and user experience. Proven track record of leading teams, delivering robust backend systems, and creating intuitive front-end interfaces.",
+    "location": "India",
+    "email": "kartikeygupta8@gmail.com",
+    "phone": "+91-9695173723",
+    "github": "https://github.com/kartikeygupta8",
+    "linkedin": "https://www.linkedin.com/in/kartikeyguptadev/"
+  },
+  "impact": [
+    {
+      "id": "portal-usage",
+      "value": 40,
+      "suffix": "%",
+      "label": "Portal Usage Increase",
+      "description": "Multi-tiered access controls at Evren",
+      "color": "emerald"
+    },
+    {
+      "id": "debug-time",
+      "value": 50,
+      "suffix": "%",
+      "label": "Debugging Time Reduced",
+      "description": "Python automation for log analysis",
+      "color": "cyan"
+    },
+    {
+      "id": "api-response",
+      "value": 30,
+      "suffix": "%",
+      "label": "Faster API Responses",
+      "description": "Backend query optimization at Evren",
+      "color": "violet"
+    },
+    {
+      "id": "test-coverage",
+      "value": 100,
+      "suffix": "%",
+      "label": "API Test Coverage",
+      "description": "Automation framework at FIS Global",
+      "color": "amber"
+    },
+    {
+      "id": "test-time",
+      "value": 80,
+      "suffix": "%",
+      "label": "Testing Time Reduced",
+      "description": "Automated REST API testing at FIS Global",
+      "color": "rose"
+    },
+    {
+      "id": "etl-accuracy",
+      "value": 95,
+      "suffix": "%",
+      "label": "ETL Data Accuracy",
+      "description": "SQL–Salesforce sync tool at FIS Global",
+      "color": "sky"
+    }
+  ],
+  "experience": [
+    {
+      "id": "evren",
+      "company": "Evren",
+      "role": "Full-Stack Developer",
+      "period": "Jan 2023 – Present",
+      "duration": "3+ years",
+      "type": "current",
+      "logo": "E",
+      "color": "#10b981",
+      "tagline": "Scaling OS management infrastructure",
+      "highlights": [
+        "Developed and optimized a scalable Admin & Support Portal for OS management, migrating the backend from Python to Node.js for better performance and scalability",
+        "Implemented multi-tiered access controls and built intuitive React interfaces, resulting in a 40% increase in portal usage",
+        "Built a Python-based automation tool for log analysis & monitoring, reducing manual debugging time by 50%",
+        "Optimized backend APIs to cut response times by 30% through query optimization",
+        "Used custom hooks, Context API, memoization, and lazy loading for smoother workflows"
+      ],
+      "metrics": [
+        { "label": "Portal Usage", "value": "+40%" },
+        { "label": "Debug Time", "value": "-50%" },
+        { "label": "API Speed", "value": "+30%" }
+      ],
+      "tech": ["Node.js", "React", "Python", "PostgreSQL", "AWS"]
+    },
+    {
+      "id": "bestpeers",
+      "company": "Bestpeers Infosystem",
+      "role": "Full-Stack Developer",
+      "period": "Jul 2021 – Dec 2022",
+      "duration": "1.5 years",
+      "type": "past",
+      "logo": "B",
+      "color": "#6366f1",
+      "tagline": "Building for web, mobile, and wearables",
+      "highlights": [
+        "Developed web, mobile, and smartwatch applications using ReactJS, React Native, and Node.js, improving performance by 25%",
+        "Applied advanced React patterns — Redux, Context API, custom hooks, memoization — for scalable, high-quality code",
+        "Led a team of 3 developers, conducting code reviews, mentoring juniors, and establishing architecture standards",
+        "Resolved critical bugs, memory leaks, and security vulnerabilities, reducing bug reports by 35% and enhancing system reliability"
+      ],
+      "metrics": [
+        { "label": "Performance", "value": "+25%" },
+        { "label": "Bug Reports", "value": "-35%" },
+        { "label": "Team Size", "value": "3 devs" }
+      ],
+      "tech": ["ReactJS", "React Native", "Node.js", "Redux", "MongoDB"]
+    },
+    {
+      "id": "fis",
+      "company": "FIS Global (Worldpay)",
+      "role": "Software Developer",
+      "period": "Jan 2020 – Jun 2021",
+      "duration": "1.5 years",
+      "type": "past",
+      "logo": "F",
+      "color": "#f59e0b",
+      "tagline": "Enterprise automation and data engineering",
+      "highlights": [
+        "Built an automation testing framework covering 100% of REST APIs, reducing manual API testing time by 80%",
+        "Developed an ETL tool to sync data between multiple SQL databases and Salesforce, improving accuracy by 95%",
+        "Streamlined data synchronization pipelines while maintaining and enhancing existing business applications",
+        "Ensured higher test coverage, reliability, and scalability across enterprise systems"
+      ],
+      "metrics": [
+        { "label": "API Coverage", "value": "100%" },
+        { "label": "Test Time", "value": "-80%" },
+        { "label": "ETL Accuracy", "value": "95%" }
+      ],
+      "tech": ["Python", "SQL", "Salesforce", "REST APIs", "Java"]
+    }
+  ],
+  "skills": [
+    { "name": "Node.js", "level": 95, "category": "backend", "icon": "node" },
+    { "name": "React", "level": 95, "category": "frontend", "icon": "react" },
+    { "name": "Python", "level": 90, "category": "backend", "icon": "python" },
+    { "name": "TypeScript", "level": 88, "category": "frontend", "icon": "typescript" },
+    { "name": "AWS", "level": 80, "category": "cloud", "icon": "aws" },
+    { "name": "SQL", "level": 85, "category": "database", "icon": "sql" },
+    { "name": "React Native", "level": 85, "category": "mobile", "icon": "react-native" },
+    { "name": "MongoDB", "level": 80, "category": "database", "icon": "mongodb" },
+    { "name": "Redux", "level": 88, "category": "frontend", "icon": "redux" },
+    { "name": "REST APIs", "level": 95, "category": "backend", "icon": "api" }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Engineering (Computer Science)",
+      "institution": "RGPV University, LNCT College",
+      "period": "2015 – 2019",
+      "location": "Bhopal, India"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Machine Learning with R - Level 1",
+      "issuer": "IBM",
+      "icon": "ibm"
+    },
+    {
+      "title": "MongoDB",
+      "issuer": "MongoDB, Inc.",
+      "icon": "mongodb"
+    },
+    {
+      "title": "Big Data Foundations - Level 2",
+      "issuer": "IBM",
+      "icon": "ibm"
+    },
+    {
+      "title": "Big Data and ML Training",
+      "issuer": "Appin Technologies",
+      "icon": "appin"
+    }
+  ]
+}
