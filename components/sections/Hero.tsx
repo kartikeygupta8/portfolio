@@ -161,15 +161,24 @@ export function Hero() {
     canvas.addEventListener('pointermove', onMove)
 
     const resize = () => {
-      const dpr = Math.max(1, 0.5 * devicePixelRatio)
-      canvas.width  = window.innerWidth  * dpr
-      canvas.height = window.innerHeight * dpr
+      const dpr = window.innerWidth <= 768 ? 1 : Math.min(devicePixelRatio, 1.5)
+      canvas.width  = Math.floor(window.innerWidth  * dpr)
+      canvas.height = Math.floor(window.innerHeight * dpr)
       gl.viewport(0, 0, canvas.width, canvas.height)
     }
     resize()
     window.addEventListener('resize', resize)
 
+    let lastFrame = 0
+    let heroPast  = false
+    const TARGET_MS = 1000 / 30
+    const onScroll = () => { heroPast = window.scrollY > window.innerHeight }
+    window.addEventListener('scroll', onScroll, { passive: true })
+
     const loop = (now: number) => {
+      rafRef.current = requestAnimationFrame(loop)
+      if (document.hidden || heroPast || now - lastFrame < TARGET_MS) return
+      lastFrame = now
       gl.useProgram(prog)
       gl.uniform2f(uRes,   canvas.width, canvas.height)
       gl.uniform1f(uTime,  now * 1e-3)
@@ -177,7 +186,6 @@ export function Hero() {
       gl.uniform2f(uMove,  dmx, dmy)
       dmx *= 0.9; dmy *= 0.9
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
-      rafRef.current = requestAnimationFrame(loop)
     }
     rafRef.current = requestAnimationFrame(loop)
 
@@ -185,6 +193,7 @@ export function Hero() {
       cancelAnimationFrame(rafRef.current)
       canvas.removeEventListener('pointermove', onMove)
       window.removeEventListener('resize', resize)
+      window.removeEventListener('scroll', onScroll)
     }
   }, [])
 

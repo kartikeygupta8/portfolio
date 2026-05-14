@@ -73,13 +73,19 @@ function ContactBackground({ mouseRef }: { mouseRef: React.RefObject<MouseState>
     const ctx    = canvas.getContext('2d')!
     let raf: number
     let frame = 0
+    let lastDraw = 0
+    let visible  = true
+    const TARGET_MS = 1000 / 30
 
     const resize = () => {
       canvas.width  = canvas.offsetWidth
       canvas.height = canvas.offsetHeight
     }
 
-    const draw = () => {
+    const draw = (now: number) => {
+      raf = requestAnimationFrame(draw)
+      if (!visible || document.hidden || now - lastDraw < TARGET_MS) return
+      lastDraw = now
       frame++
       const t  = frame * 0.016
       const W  = canvas.width
@@ -166,15 +172,20 @@ function ContactBackground({ mouseRef }: { mouseRef: React.RefObject<MouseState>
         ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke()
       }
 
-      raf = requestAnimationFrame(draw)
     }
+
+    const io = new IntersectionObserver(
+      entries => { visible = entries[0]?.isIntersecting ?? true },
+      { threshold: 0 }
+    )
+    io.observe(canvas)
 
     const ro = new ResizeObserver(resize)
     ro.observe(canvas)
     resize()
-    draw()
+    raf = requestAnimationFrame(draw)
 
-    return () => { cancelAnimationFrame(raf); ro.disconnect() }
+    return () => { cancelAnimationFrame(raf); ro.disconnect(); io.disconnect() }
   }, [])
 
   return (
