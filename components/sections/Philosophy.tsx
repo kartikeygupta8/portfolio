@@ -41,7 +41,7 @@ export function Philosophy() {
           Six principles that shape every system I build — accumulated over six years of production engineering.
         </motion.p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 1, border: '1px solid var(--rule)', borderRadius: 12, overflow: 'hidden' }}>
+        <div className="phil-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 1, border: '1px solid var(--rule)', borderRadius: 12, overflow: 'hidden' }}>
           {PHILOSOPHY.map((p, i) => (
             <motion.div
               key={p.label}

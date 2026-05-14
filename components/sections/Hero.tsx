@@ -210,7 +210,7 @@ export function Hero() {
         style={{
           position: 'absolute', inset: 0,
           width: '100%', height: '100%',
-          touchAction: 'none',
+          touchAction: 'pan-y',
           background: 'var(--bg)',
         }}
       />
@@ -228,6 +228,7 @@ export function Hero() {
 
       {/* Content */}
       <div
+        className="hero-content"
         style={{
           position: 'relative', zIndex: 2,
           display: 'flex', flexDirection: 'column', alignItems: 'center',
@@ -386,9 +387,10 @@ export function Hero() {
       {/* Proof bar */}
       <motion.div
         {...rise(0.74)}
+        className="proof-bar"
         style={{
           position: 'absolute', bottom: 0, left: 0, right: 0,
-          display: 'flex',
+          display: 'flex', flexWrap: 'wrap',
           borderTop: '1px solid var(--rule)',
           zIndex: 3,
           background: 'rgba(7,7,9,0.72)',
@@ -470,10 +472,11 @@ export function Hero() {
           #hero h1 { letter-spacing: -1px !important; }
         }
         @media (max-width: 640px) {
+          #hero .hero-content { padding: 80px 20px 200px !important; }
           #hero .proof-bar > div { flex: 0 0 50% !important; border-bottom: 1px solid var(--rule); }
         }
         @media (max-width: 420px) {
-          #hero .proof-bar > div { flex: 0 0 100% !important; }
+          #hero .hero-content { padding: 60px 16px 200px !important; }
         }
       `}</style>
     </motion.section>

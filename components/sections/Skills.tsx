@@ -106,7 +106,7 @@ export function Skills() {
           Five layers I own end-to-end. Every tool here is battle-tested in production.
         </motion.p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 16 }}>
+        <div className="layer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 16 }}>
           {STACK_LAYERS.map((layer, i) => (
             <LayerCard key={layer.name} layer={layer} i={i} />
           ))}
