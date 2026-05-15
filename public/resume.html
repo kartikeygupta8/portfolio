@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartikey Gupta — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4;
+      margin: 0.42in 0.48in;
+    }
+
+    html { font-size: 11px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.45;
+      color: #111827;
+      background: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media screen {
+      body { background: #f3f4f6; display: flex; justify-content: center; padding: 32px 16px; }
+      .page {
+        box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+        padding: 0.42in 0.48in;
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff;
+      }
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 10px;
+      margin-bottom: 9px;
+      border-bottom: 1.5px solid #10b981;
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #111827;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .title-line {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #10b981;
+      font-weight: 500;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 9px;
+      color: #6b7280;
+      line-height: 1.75;
+    }
+
+    .contact a { color: #6b7280; text-decoration: none; }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 9px; }
+
+    .section-label {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #10b981;
+      margin-bottom: 5px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* ── SUMMARY ── */
+    .summary {
+      font-size: 10px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      row-gap: 3px;
+      column-gap: 10px;
+      align-items: baseline;
+    }
+
+    .skill-cat {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8px;
+      color: #9ca3af;
+      white-space: nowrap;
+      padding-top: 1px;
+    }
+
+    .skill-vals {
+      font-size: 10px;
+      color: #1f2937;
+      line-height: 1.45;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-item { margin-bottom: 8px; }
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .exp-company {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: -0.2px;
+    }
+
+    .exp-period {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8px;
+      color: #9ca3af;
+    }
+
+    .exp-role {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #10b981;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding-left: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .exp-bullets li {
+      font-size: 10px;
+      color: #374151;
+      line-height: 1.52;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: -11px;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    strong { font-weight: 600; color: #111827; }
+
+    /* ── BOTTOM GRID ── */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 24px;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8.5px;
+    }
+
+    .edu-degree { font-weight: 600; color: #1f2937; }
+    .edu-school { color: #6b7280; }
+
+    .edu-period {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8px;
+      color: #9ca3af;
+      white-space: nowrap;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .cert-item {
+      font-size: 9px;
+      color: #374151;
+      line-height: 1.4;
+    }
+
+    .cert-issuer { color: #9ca3af; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div>
+      <div class="name">Kartikey Gupta</div>
+      <div class="title-line">Full-Stack Engineer &nbsp;&middot;&nbsp; AI Integration Engineer</div>
+    </div>
+    <div class="contact">
+      kartikeygupta8@gmail.com &nbsp;&middot;&nbsp; +91-9695173723<br>
+      <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/kartikeygupta8">github.com/kartikeygupta8</a><br>
+      <a href="https://kartikeyguptadev.netlify.app">kartikeyguptadev.netlify.app</a>
+      &nbsp;&middot;&nbsp; India (UTC+5:30) &nbsp;&middot;&nbsp; Open to Remote
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <section class="section">
+    <div class="section-label">Summary</div>
+    <p class="summary">
+      Full-Stack Engineer with <strong>6+ years</strong> building production web, mobile, and AI-integrated systems across SaaS, fintech, and enterprise.
+      Shipped LLM-based support automation achieving <strong>78% auto-resolution</strong> at 4,800 concurrent sessions, designed <strong>MCP agent workflows</strong> automating internal operations,
+      and built fault-tolerant ETL pipelines at financial scale. Core stack:
+      <strong>Node.js, React, Python, TypeScript, PostgreSQL, AWS</strong>, and AI/LLM integration (<strong>Claude API, OpenAI, MCP Protocol</strong>).
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="section-label">Technical Skills</div>
+    <div class="skills-grid">
+      <span class="skill-cat">AI &amp; LLMs</span>
+      <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, AI Agents, LLM Integration, Prompt Engineering</span>
+
+      <span class="skill-cat">Backend</span>
+      <span class="skill-vals">Node.js, Python, Java, Express.js, REST APIs, GraphQL, Microservices, JWT Auth, WebSockets</span>
+
+      <span class="skill-cat">Frontend</span>
+      <span class="skill-vals">React.js, Next.js, TypeScript, React Native, Redux, Context API, Tailwind CSS, Framer Motion</span>
+
+      <span class="skill-cat">Data</span>
+      <span class="skill-vals">PostgreSQL, MySQL, MongoDB, Redis, ETL Pipelines, SQL Optimization, Salesforce API, Pandas</span>
+
+      <span class="skill-cat">DevOps &amp; Cloud</span>
+      <span class="skill-vals">AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx, Selenium WebDriver, Maven</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <div class="section-label">Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-company">Evren</span>
+        <span class="exp-period">Jan 2023 – Present &nbsp;&middot;&nbsp; 3+ yrs</span>
+      </div>
+      <div class="exp-role">Full-Stack Developer</div>
+      <ul class="exp-bullets">
+        <li>Led <strong>Python → Node.js</strong> backend migration; integrated <strong>Claude API, OpenAI, and Ollama</strong> behind a unified LLM gateway — support automation, chatbots, and generation pipelines at <strong>4,800 peak concurrent sessions</strong>, 99.7% uptime</li>
+        <li>Engineered <strong>MCP server-based AI agents</strong> autonomously executing workflows (DB queries, notifications, reports) — <strong>78% ticket auto-resolution</strong>, 6h+/week of manual ops eliminated</li>
+        <li>Implemented <strong>RBAC</strong>, redesigned React UI (custom hooks, memoization, lazy loading), and optimized queries — <strong>30% faster API responses</strong>, <strong>40% portal adoption increase</strong>, <strong>50% less debugging time</strong> via Python log analysis tooling</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-company">Bestpeers Infosystem</span>
+        <span class="exp-period">Jul 2021 – Dec 2022 &nbsp;&middot;&nbsp; 1.5 yrs</span>
+      </div>
+      <div class="exp-role">Full-Stack Developer &nbsp;&middot;&nbsp; Team Lead</div>
+      <ul class="exp-bullets">
+        <li>Architected unified product across <strong>React.js web, React Native iOS, and watchOS</strong> on a single Node.js + MySQL backend with shared JWT auth; shipped with <strong>+25% performance</strong></li>
+        <li>Led a <strong>3-engineer team</strong> — enforced code review gates and architecture standards, directly contributing to a <strong>35% reduction in post-ship bug reports</strong></li>
+        <li>Resolved memory leaks, N+1 queries, and security vulnerabilities; applied Redux, Context API, custom hooks, and memoization across the frontend</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-company">FIS Global (Worldpay)</span>
+        <span class="exp-period">Jan 2020 – Jun 2021 &nbsp;&middot;&nbsp; 1.5 yrs</span>
+      </div>
+      <div class="exp-role">Software Developer</div>
+      <ul class="exp-bullets">
+        <li>Designed and shipped a <strong>Selenium WebDriver REST API test automation framework</strong> — <strong>90%+ test coverage</strong>, <strong>80% manual QA eliminated</strong>; integrated CI/CD for automated regression on every deployment</li>
+        <li>Developed fault-tolerant <strong>ETL pipeline</strong> syncing SQL databases with Salesforce CRM — <strong>95% data accuracy</strong>, zero manual reconciliation, full audit trail with retry logic and dead-letter queuing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <div class="bottom-grid">
+    <section class="section">
+      <div class="section-label">Education</div>
+      <div class="edu-row">
+        <div>
+          <span class="edu-degree">B.E. Computer Science</span>
+          <span class="edu-school"> &nbsp;&middot;&nbsp; RGPV University, LNCT College, Bhopal</span>
+        </div>
+        <span class="edu-period">2015 – 2019</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Certifications</div>
+      <div class="cert-list">
+        <span class="cert-item">Machine Learning with R — Level 1 &nbsp;<span class="cert-issuer">· IBM, 2021</span></span>
+        <span class="cert-item">MongoDB Developer Certification &nbsp;<span class="cert-issuer">· MongoDB, Inc., 2021</span></span>
+        <span class="cert-item">Big Data Foundations — Level 2 &nbsp;<span class="cert-issuer">· IBM, 2020</span></span>
+        <span class="cert-item">Big Data &amp; ML Training &nbsp;<span class="cert-issuer">· Appin Technologies, 2019</span></span>
+      </div>
+    </section>
+  </div>
+
+</div>
+</body>
+</html>
