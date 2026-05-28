@@ -42,8 +42,8 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-bottom: 10px;
-      margin-bottom: 9px;
+      padding-bottom: 9px;
+      margin-bottom: 8px;
       border-bottom: 1.5px solid #10b981;
     }
 
@@ -58,7 +58,7 @@
 
     .title-line {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8px;
+      font-size: 7.5px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #10b981;
@@ -74,12 +74,35 @@
 
     .contact a { color: #6b7280; text-decoration: none; }
 
+    /* ── IMPACT BAR ── */
+    .impact-bar {
+      display: flex;
+      gap: 7px;
+      flex-wrap: nowrap;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .impact-chip {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 7.5px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #047857;
+      background: #f0fdf4;
+      border: 1px solid #6ee7b7;
+      border-radius: 3px;
+      padding: 2px 7px;
+      white-space: nowrap;
+    }
+
     /* ── SECTION ── */
-    .section { margin-bottom: 9px; }
+    .section { margin-bottom: 8px; }
 
     .section-label {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8px;
+      font-size: 7.5px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -99,7 +122,7 @@
     /* ── SKILLS ── */
     .skills-grid {
       display: grid;
-      grid-template-columns: 84px 1fr;
+      grid-template-columns: 90px 1fr;
       row-gap: 3px;
       column-gap: 10px;
       align-items: baseline;
@@ -107,7 +130,7 @@
 
     .skill-cat {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8px;
+      font-size: 7.5px;
       color: #9ca3af;
       white-space: nowrap;
       padding-top: 1px;
@@ -120,7 +143,7 @@
     }
 
     /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 8px; }
+    .exp-item { margin-bottom: 7px; }
     .exp-item:last-child { margin-bottom: 0; }
 
     .exp-header {
@@ -145,7 +168,7 @@
 
     .exp-role {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8.5px;
+      font-size: 8px;
       font-weight: 500;
       color: #10b981;
       letter-spacing: 0.04em;
@@ -163,7 +186,7 @@
     .exp-bullets li {
       font-size: 10px;
       color: #374151;
-      line-height: 1.52;
+      line-height: 1.5;
       position: relative;
     }
 
@@ -225,26 +248,36 @@
   <header class="header">
     <div>
       <div class="name">Kartikey Gupta</div>
-      <div class="title-line">Full-Stack Engineer &nbsp;&middot;&nbsp; AI Integration Engineer</div>
+      <div class="title-line">Full-Stack &nbsp;&middot;&nbsp; Backend &nbsp;&middot;&nbsp; AI Integration &nbsp;&middot;&nbsp; GenAI Engineer</div>
     </div>
     <div class="contact">
       kartikeygupta8@gmail.com &nbsp;&middot;&nbsp; +91-9695173723<br>
       <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a>
       &nbsp;&middot;&nbsp;
       <a href="https://github.com/kartikeygupta8">github.com/kartikeygupta8</a><br>
-      <a href="https://kartikeyguptadev.netlify.app">kartikeyguptadev.netlify.app</a>
+      <a href="https://www.kartikeygupta.co">www.kartikeygupta.co</a>
       &nbsp;&middot;&nbsp; India (UTC+5:30) &nbsp;&middot;&nbsp; Open to Remote
     </div>
   </header>
+
+  <!-- IMPACT BAR -->
+  <div class="impact-bar">
+    <span class="impact-chip">78% AI Ticket Auto-Resolution</span>
+    <span class="impact-chip">4,800 Peak Concurrent Sessions</span>
+    <span class="impact-chip">99.7% System Uptime</span>
+    <span class="impact-chip">−80% Manual QA</span>
+    <span class="impact-chip">6h+/week Ops Reclaimed</span>
+    <span class="impact-chip">6+ Years Production</span>
+  </div>
 
   <!-- SUMMARY -->
   <section class="section">
     <div class="section-label">Summary</div>
     <p class="summary">
-      Full-Stack Engineer with <strong>6+ years</strong> building production web, mobile, and AI-integrated systems across SaaS, fintech, and enterprise.
-      Shipped LLM-based support automation achieving <strong>78% auto-resolution</strong> at 4,800 concurrent sessions, designed <strong>MCP agent workflows</strong> automating internal operations,
-      and built fault-tolerant ETL pipelines at financial scale. Core stack:
-      <strong>Node.js, React, Python, TypeScript, PostgreSQL, AWS</strong>, and AI/LLM integration (<strong>Claude API, OpenAI, MCP Protocol</strong>).
+      Shipped an AI support system that <strong>auto-resolves 78% of tier-1 tickets</strong> — running at 4,800 concurrent users, 99.7% uptime — without proportional headcount growth as the platform scaled.
+      Designed <strong>MCP-based agent workflows</strong> that execute internal operations autonomously, reclaiming <strong>6h+/week</strong> of manual work with a full audit trail.
+      Six years across Fortune-500 fintech (FIS Global/Worldpay), product startups, and SaaS — I own the full stack from database to UI,
+      integrate AI where it genuinely moves business outcomes, and ship.
     </p>
   </section>
 
@@ -252,11 +285,11 @@
   <section class="section">
     <div class="section-label">Technical Skills</div>
     <div class="skills-grid">
-      <span class="skill-cat">AI &amp; LLMs</span>
-      <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, AI Agents, LLM Integration, Prompt Engineering</span>
+      <span class="skill-cat">AI &amp; GenAI</span>
+      <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Function Calling, Prompt Engineering</span>
 
       <span class="skill-cat">Backend</span>
-      <span class="skill-vals">Node.js, Python, Java, Express.js, REST APIs, GraphQL, Microservices, JWT Auth, WebSockets</span>
+      <span class="skill-vals">Node.js, Python, Express.js, REST APIs, GraphQL, Microservices, JWT Auth, WebSockets</span>
 
       <span class="skill-cat">Frontend</span>
       <span class="skill-vals">React.js, Next.js, TypeScript, React Native, Redux, Context API, Tailwind CSS, Framer Motion</span>
@@ -265,7 +298,7 @@
       <span class="skill-vals">PostgreSQL, MySQL, MongoDB, Redis, ETL Pipelines, SQL Optimization, Salesforce API, Pandas</span>
 
       <span class="skill-cat">DevOps &amp; Cloud</span>
-      <span class="skill-vals">AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx, Selenium WebDriver, Maven</span>
+      <span class="skill-vals">AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx</span>
     </div>
   </section>
 
@@ -280,9 +313,9 @@
       </div>
       <div class="exp-role">Full-Stack Developer</div>
       <ul class="exp-bullets">
-        <li>Led <strong>Python → Node.js</strong> backend migration; integrated <strong>Claude API, OpenAI, and Ollama</strong> behind a unified LLM gateway — support automation, chatbots, and generation pipelines at <strong>4,800 peak concurrent sessions</strong>, 99.7% uptime</li>
-        <li>Engineered <strong>MCP server-based AI agents</strong> autonomously executing workflows (DB queries, notifications, reports) — <strong>78% ticket auto-resolution</strong>, 6h+/week of manual ops eliminated</li>
-        <li>Implemented <strong>RBAC</strong>, redesigned React UI (custom hooks, memoization, lazy loading), and optimized queries — <strong>30% faster API responses</strong>, <strong>40% portal adoption increase</strong>, <strong>50% less debugging time</strong> via Python log analysis tooling</li>
+        <li><strong>78% of tier-1 support tickets are resolved without a human</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway that handles <strong>4,800 peak concurrent sessions at 99.7% uptime</strong>, letting the platform scale without proportional support headcount growth</li>
+        <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server-based AI agents that autonomously execute workflows (DB queries, Slack notifications, report generation) on trigger, with a full audit trail on every action</li>
+        <li>Led <strong>Node.js backend architecture</strong>, RBAC security redesign, and React UI overhaul — delivered <strong>−30% API latency</strong>, <strong>+40% portal adoption</strong>, and cut debugging time by 50% through structured Python log-analysis tooling</li>
       </ul>
     </div>
 
@@ -293,9 +326,9 @@
       </div>
       <div class="exp-role">Full-Stack Developer &nbsp;&middot;&nbsp; Team Lead</div>
       <ul class="exp-bullets">
-        <li>Architected unified product across <strong>React.js web, React Native iOS, and watchOS</strong> on a single Node.js + MySQL backend with shared JWT auth; shipped with <strong>+25% performance</strong></li>
-        <li>Led a <strong>3-engineer team</strong> — enforced code review gates and architecture standards, directly contributing to a <strong>35% reduction in post-ship bug reports</strong></li>
-        <li>Resolved memory leaks, N+1 queries, and security vulnerabilities; applied Redux, Context API, custom hooks, and memoization across the frontend</li>
+        <li>Led a <strong>3-engineer team</strong> shipping one product across web (React.js), iOS (React Native), and Apple Watch — single Node.js + MySQL backend, shared JWT auth — delivered with <strong>+25% performance</strong> over the previous system</li>
+        <li>Enforced structured code review gates and architecture standards that drove a <strong>35% drop in post-ship bug reports</strong> — quality built in during development, not patched after launch</li>
+        <li>Eliminated memory leaks, N+1 queries, and security vulnerabilities at development time; applied Redux, Context API, and memoization for a performant, maintainable frontend</li>
       </ul>
     </div>
 
@@ -306,8 +339,8 @@
       </div>
       <div class="exp-role">Software Developer</div>
       <ul class="exp-bullets">
-        <li>Designed and shipped a <strong>Selenium WebDriver REST API test automation framework</strong> — <strong>90%+ test coverage</strong>, <strong>80% manual QA eliminated</strong>; integrated CI/CD for automated regression on every deployment</li>
-        <li>Developed fault-tolerant <strong>ETL pipeline</strong> syncing SQL databases with Salesforce CRM — <strong>95% data accuracy</strong>, zero manual reconciliation, full audit trail with retry logic and dead-letter queuing</li>
+        <li>Built the REST API test automation framework that let FIS's payment platform deploy continuously — <strong>90%+ test coverage</strong>, <strong>80% of manual QA eliminated</strong>, zero-regression CI/CD pipeline integrated from day one</li>
+        <li>Engineered a fault-tolerant <strong>ETL pipeline</strong> syncing SQL transaction databases with Salesforce CRM — <strong>95% data accuracy at financial scale</strong>, zero manual reconciliation, retry logic with dead-letter queuing and full audit trail</li>
       </ul>
     </div>
   </section>
