@@ -6,6 +6,7 @@ import { Experience } from '@/components/sections/Experience'
 import { Philosophy } from '@/components/sections/Philosophy'
 import { Skills }     from '@/components/sections/Skills'
 import { About }      from '@/components/sections/About'
+import { Writing }    from '@/components/sections/Writing'
 import { Contact }    from '@/components/sections/Contact'
 
 export default function Home() {
@@ -23,8 +24,16 @@ export default function Home() {
         <Philosophy />
         <Skills />
         <About />
+        <Writing />
         <Contact />
       </main>
+
+      {/* Netlify Forms build-time detection — hidden, required for form submissions */}
+      <form name="contact" data-netlify="true" hidden>
+        <input name="name"    type="text"  />
+        <input name="email"   type="email" />
+        <textarea name="message" />
+      </form>
     </>
   )
 }

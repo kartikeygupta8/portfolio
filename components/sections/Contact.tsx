@@ -1,8 +1,10 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react'
+import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { SITE } from '@/lib/constants'
+
+type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -228,12 +230,53 @@ function KGLogo() {
   )
 }
 
+// ── Shared styles ─────────────────────────────────────────────────────────────
+
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  background: 'rgba(255,255,255,0.04)',
+  border: '1px solid var(--rule)',
+  borderRadius: 6,
+  padding: '11px 14px',
+  fontSize: 14,
+  color: 'var(--t0)',
+  fontFamily: 'var(--font-sans), system-ui, sans-serif',
+  outline: 'none',
+  transition: 'border-color 0.2s',
+}
+
+const secondaryLinkStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-mono), monospace',
+  fontSize: 11,
+  letterSpacing: '0.06em',
+  color: 'var(--t1)',
+  textDecoration: 'none',
+  transition: 'color 0.2s',
+}
+
 // ── Section ───────────────────────────────────────────────────────────────────
 
 export function Contact() {
-  const ref      = useRef<HTMLElement>(null)
-  const inView   = useInView(ref, { once: true, margin: '-60px' })
-  const mouseRef = useRef<MouseState>({ x: -1, y: -1, active: false })
+  const ref       = useRef<HTMLElement>(null)
+  const inView    = useInView(ref, { once: true, margin: '-60px' })
+  const mouseRef  = useRef<MouseState>({ x: -1, y: -1, active: false })
+  const [formState, setFormState] = useState<FormState>('idle')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setFormState('submitting')
+    try {
+      const data = new FormData(e.currentTarget)
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+      })
+      setFormState('success')
+    } catch {
+      setFormState('error')
+    }
+  }
 
   return (
     <section
@@ -292,64 +335,154 @@ export function Contact() {
           systems end-to-end — let's talk.
         </motion.p>
 
-        {/* CTA buttons */}
+        {/* Contact form */}
         <motion.div
-          style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12, marginBottom: 48 }}
-          initial={{ opacity: 0, y: 12 }}
+          style={{ width: '100%', marginBottom: 32 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.28 }}
         >
+          <AnimatePresence mode="wait">
+            {formState === 'success' ? (
+              <motion.div
+                key="success"
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                style={{
+                  padding: '32px 28px',
+                  border: '1px solid rgba(45,214,138,0.35)',
+                  borderRadius: 10,
+                  background: 'rgba(45,214,138,0.06)',
+                  textAlign: 'center',
+                }}
+              >
+                <div style={{ fontSize: 22, marginBottom: 8 }}>✓</div>
+                <div style={{ fontSize: 15, color: 'var(--green)', fontWeight: 500, marginBottom: 6 }}>Message sent.</div>
+                <div style={{ fontSize: 13, color: 'var(--t2)' }}>I'll get back to you within 24 hours.</div>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onSubmit={handleSubmit}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                  padding: '24px',
+                  border: '1px solid var(--rule2)',
+                  borderRadius: 10,
+                  background: 'rgba(7,7,9,0.72)',
+                  backdropFilter: 'blur(16px)',
+                  textAlign: 'left',
+                }}
+              >
+                <input type="hidden" name="form-name" value="contact" />
+
+                <div style={{ display: 'flex', gap: 10 }} className="form-row">
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                    required
+                    style={inputStyle}
+                    onFocus={e => (e.currentTarget.style.borderColor = 'var(--rule2)')}
+                    onBlur={e => (e.currentTarget.style.borderColor = 'var(--rule)')}
+                  />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
+                    style={inputStyle}
+                    onFocus={e => (e.currentTarget.style.borderColor = 'var(--rule2)')}
+                    onBlur={e => (e.currentTarget.style.borderColor = 'var(--rule)')}
+                  />
+                </div>
+
+                <textarea
+                  name="message"
+                  placeholder="What are you working on?"
+                  required
+                  rows={4}
+                  style={{ ...inputStyle, resize: 'vertical', minHeight: 100 }}
+                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--rule2)')}
+                  onBlur={e => (e.currentTarget.style.borderColor = 'var(--rule)')}
+                />
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: 11, color: 'var(--t2)', fontFamily: 'var(--font-mono), monospace' }}>
+                    {formState === 'error' ? (
+                      <span style={{ color: 'var(--red)' }}>Something went wrong — try emailing directly.</span>
+                    ) : (
+                      'Replies within 24h.'
+                    )}
+                  </span>
+                  <button
+                    type="submit"
+                    disabled={formState === 'submitting'}
+                    style={{
+                      fontFamily: 'var(--font-mono), monospace',
+                      fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase',
+                      color: 'var(--bg)', background: formState === 'submitting' ? 'var(--t2)' : 'var(--t0)',
+                      border: 'none', padding: '11px 24px',
+                      borderRadius: 'var(--r)', cursor: formState === 'submitting' ? 'not-allowed' : 'pointer',
+                      transition: 'opacity 0.2s, background 0.2s',
+                      display: 'inline-flex', alignItems: 'center', gap: 8,
+                    }}
+                    onMouseEnter={e => { if (formState !== 'submitting') (e.currentTarget as HTMLElement).style.opacity = '0.84' }}
+                    onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = '1')}
+                  >
+                    {formState === 'submitting' ? 'Sending…' : 'Send Message'}
+                    {formState !== 'submitting' && (
+                      <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </motion.form>
+            )}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Secondary links */}
+        <motion.div
+          style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 10, marginBottom: 48 }}
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.4, delay: 0.4 }}
+        >
           <a
             href={`mailto:${SITE.email}`}
-            style={{
-              fontFamily: 'var(--font-mono), monospace',
-              fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: 'var(--bg)', background: 'var(--t0)',
-              textDecoration: 'none', padding: '13px 28px',
-              borderRadius: 'var(--r)', transition: 'opacity 0.2s',
-              display: 'inline-flex', alignItems: 'center', gap: 9,
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = '0.84')}
-            onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = '1')}
+            style={secondaryLinkStyle}
+            onMouseEnter={e => (e.currentTarget.style.color = 'var(--t0)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'var(--t1)')}
           >
-            Send a Message
-            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+            {SITE.email}
           </a>
+          <span style={{ color: 'var(--t3)', fontSize: 12 }}>·</span>
           <a
             href={SITE.linkedin}
             target="_blank" rel="noopener noreferrer"
-            style={{
-              fontFamily: 'var(--font-mono), monospace',
-              fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: 'var(--t1)', textDecoration: 'none', padding: '13px 28px',
-              border: '1px solid var(--rule2)', borderRadius: 'var(--r)',
-              transition: 'all 0.2s',
-            }}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t0)'; el.style.borderColor = 'var(--rule2)' }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t1)'; el.style.borderColor = 'var(--rule2)' }}
+            style={secondaryLinkStyle}
+            onMouseEnter={e => (e.currentTarget.style.color = 'var(--t0)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'var(--t1)')}
           >
             LinkedIn ↗
           </a>
+          <span style={{ color: 'var(--t3)', fontSize: 12 }}>·</span>
           <a
             href="/resume.pdf"
             download="Kartikey-Gupta-Resume.pdf"
-            style={{
-              fontFamily: 'var(--font-mono), monospace',
-              fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: 'var(--t1)', textDecoration: 'none', padding: '13px 28px',
-              border: '1px solid var(--rule2)', borderRadius: 'var(--r)',
-              transition: 'all 0.2s',
-              display: 'inline-flex', alignItems: 'center', gap: 7,
-            }}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t0)'; el.style.borderColor = 'var(--t2)' }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t1)'; el.style.borderColor = 'var(--rule2)' }}
+            style={{ ...secondaryLinkStyle, display: 'inline-flex', alignItems: 'center', gap: 5 }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'var(--t0)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'var(--t1)')}
           >
             Resume
-            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-              <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </a>
         </motion.div>
 

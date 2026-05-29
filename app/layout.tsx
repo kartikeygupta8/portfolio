@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif, Inter, JetBrains_Mono, Syne } from 'next/font/google'
+import { VersionBadge } from '@/components/ui/VersionBadge'
 import './globals.css'
 
 const serif = Instrument_Serif({
@@ -61,7 +62,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable} ${display.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <VersionBadge />
+      </body>
     </html>
   )
 }

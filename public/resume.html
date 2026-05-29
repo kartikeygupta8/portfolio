@@ -12,10 +12,10 @@
 
     @page {
       size: A4;
-      margin: 0.42in 0.48in;
+      margin: 0.44in 0.52in;
     }
 
-    html { font-size: 11px; }
+    html { font-size: 12px; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -27,13 +27,14 @@
     }
 
     @media screen {
-      body { background: #f3f4f6; display: flex; justify-content: center; padding: 32px 16px; }
+      body { background: #f3f4f6; display: flex; justify-content: center; padding: 40px 16px; }
       .page {
-        box-shadow: 0 4px 32px rgba(0,0,0,0.12);
-        padding: 0.42in 0.48in;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.14);
+        padding: 0.44in 0.52in;
         width: 210mm;
         min-height: 297mm;
         background: #fff;
+        position: relative;
       }
     }
 
@@ -42,23 +43,23 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-bottom: 9px;
-      margin-bottom: 8px;
-      border-bottom: 1.5px solid #10b981;
+      padding-bottom: 10px;
+      margin-bottom: 9px;
+      border-bottom: 2px solid #10b981;
     }
 
     .name {
-      font-size: 21px;
+      font-size: 24px;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.6px;
       color: #111827;
       line-height: 1.1;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .title-line {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 7.5px;
+      font-size: 8.5px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #10b981;
@@ -67,133 +68,133 @@
 
     .contact {
       text-align: right;
-      font-size: 9px;
-      color: #6b7280;
+      font-size: 10px;
+      color: #4b5563;
       line-height: 1.75;
     }
 
-    .contact a { color: #6b7280; text-decoration: none; }
+    .contact a { color: #4b5563; text-decoration: none; }
 
     /* ── IMPACT BAR ── */
     .impact-bar {
       display: flex;
       gap: 7px;
       flex-wrap: nowrap;
-      margin-bottom: 8px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 9px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #d1d5db;
     }
 
     .impact-chip {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 7.5px;
+      font-size: 8px;
       font-weight: 500;
       letter-spacing: 0.04em;
-      color: #047857;
-      background: #f0fdf4;
-      border: 1px solid #6ee7b7;
+      color: #065f46;
+      background: transparent;
+      border: 1px solid #10b981;
       border-radius: 3px;
       padding: 2px 7px;
       white-space: nowrap;
     }
 
     /* ── SECTION ── */
-    .section { margin-bottom: 8px; }
+    .section { margin-bottom: 9px; }
 
     .section-label {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 7.5px;
+      font-size: 8.5px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #10b981;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       padding-bottom: 3px;
       border-bottom: 1px solid #e5e7eb;
     }
 
     /* ── SUMMARY ── */
     .summary {
-      font-size: 10px;
-      color: #374151;
-      line-height: 1.6;
+      font-size: 11px;
+      color: #1f2937;
+      line-height: 1.65;
     }
 
     /* ── SKILLS ── */
     .skills-grid {
       display: grid;
-      grid-template-columns: 90px 1fr;
-      row-gap: 3px;
-      column-gap: 10px;
+      grid-template-columns: 96px 1fr;
+      row-gap: 4px;
+      column-gap: 12px;
       align-items: baseline;
     }
 
     .skill-cat {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 7.5px;
-      color: #9ca3af;
+      font-size: 8.5px;
+      color: #6b7280;
       white-space: nowrap;
       padding-top: 1px;
     }
 
     .skill-vals {
-      font-size: 10px;
+      font-size: 11px;
       color: #1f2937;
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
     /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 7px; }
+    .exp-item { margin-bottom: 9px; }
     .exp-item:last-child { margin-bottom: 0; }
 
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 1px;
+      margin-bottom: 2px;
     }
 
     .exp-company {
-      font-size: 11.5px;
+      font-size: 13px;
       font-weight: 700;
       color: #111827;
-      letter-spacing: -0.2px;
+      letter-spacing: -0.3px;
     }
 
     .exp-period {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8px;
-      color: #9ca3af;
+      font-size: 8.5px;
+      color: #6b7280;
     }
 
     .exp-role {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8px;
+      font-size: 9px;
       font-weight: 500;
       color: #10b981;
       letter-spacing: 0.04em;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .exp-bullets {
       list-style: none;
-      padding-left: 11px;
+      padding-left: 12px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
     }
 
     .exp-bullets li {
-      font-size: 10px;
-      color: #374151;
-      line-height: 1.5;
+      font-size: 11px;
+      color: #1f2937;
+      line-height: 1.52;
       position: relative;
     }
 
     .exp-bullets li::before {
       content: '–';
       position: absolute;
-      left: -11px;
+      left: -12px;
       color: #10b981;
       font-weight: 600;
     }
@@ -204,7 +205,7 @@
     .bottom-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0 24px;
+      gap: 0 28px;
     }
 
     /* ── EDUCATION ── */
@@ -212,16 +213,17 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 8.5px;
+      font-size: 10px;
+      gap: 8px;
     }
 
-    .edu-degree { font-weight: 600; color: #1f2937; }
-    .edu-school { color: #6b7280; }
+    .edu-degree { font-weight: 600; color: #111827; }
+    .edu-school { color: #4b5563; }
 
     .edu-period {
       font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 8px;
-      color: #9ca3af;
+      font-size: 9px;
+      color: #6b7280;
       white-space: nowrap;
     }
 
@@ -229,16 +231,26 @@
     .cert-list {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
     }
 
     .cert-item {
-      font-size: 9px;
-      color: #374151;
-      line-height: 1.4;
+      font-size: 10px;
+      color: #1f2937;
+      line-height: 1.45;
     }
 
-    .cert-issuer { color: #9ca3af; }
+    .cert-issuer { color: #6b7280; }
+
+    /* ── TIMESTAMP ── */
+    .timestamp {
+      text-align: right;
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 8px;
+      color: #9ca3af;
+      margin-top: 10px;
+      letter-spacing: 0.04em;
+    }
   </style>
 </head>
 <body>
@@ -368,6 +380,9 @@
       </div>
     </section>
   </div>
+
+  <!-- TIMESTAMP -->
+  <div class="timestamp">Updated May 2026</div>
 
 </div>
 </body>
