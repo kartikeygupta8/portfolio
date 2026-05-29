@@ -6,8 +6,9 @@ import { Experience } from '@/components/sections/Experience'
 import { Philosophy } from '@/components/sections/Philosophy'
 import { Skills }     from '@/components/sections/Skills'
 import { About }      from '@/components/sections/About'
-import { Writing }    from '@/components/sections/Writing'
-import { Contact }    from '@/components/sections/Contact'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { Writing }      from '@/components/sections/Writing'
+import { Contact }      from '@/components/sections/Contact'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <div style={{ height: '100svh' }} />
         <Projects />
         <Experience />
+        <Testimonials />
         <Philosophy />
         <Skills />
         <About />
