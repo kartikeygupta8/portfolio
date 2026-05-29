@@ -32,19 +32,29 @@ const display = Syne({
 })
 
 export const metadata: Metadata = {
-  title: 'Kartikey Gupta — Full-Stack & AI Systems Engineer',
+  metadataBase: new URL('https://www.kartikeygupta.co'),
+  title: 'Kartikey Gupta — Full-Stack & GenAI Engineer',
   description:
-    '6+ years building production AI systems, LLM pipelines, and full-stack products end-to-end. Open to remote roles at high-growth startups.',
+    '6+ years shipping production AI systems, LLM pipelines, and full-stack products end-to-end. 78% AI auto-resolution at 4,800 concurrent sessions. Open to remote roles.',
   keywords: [
-    'Full-Stack Engineer', 'AI Engineer', 'LLM integration', 'MCP servers',
-    'Node.js', 'React', 'TypeScript', 'OpenAI', 'Claude API',
+    'Full-Stack Engineer', 'Backend Engineer', 'GenAI Engineer', 'AI Integration Engineer',
+    'LLM integration', 'MCP servers', 'Node.js', 'React', 'Python', 'TypeScript',
+    'OpenAI', 'Claude API', 'LangChain', 'RAG', 'AI Agents',
     'remote engineer India', 'AI product engineer',
   ],
-  authors: [{ name: 'Kartikey Gupta', url: 'https://github.com/kartikeygupta8' }],
+  authors: [{ name: 'Kartikey Gupta', url: 'https://www.kartikeygupta.co' }],
   openGraph: {
-    title: 'Kartikey Gupta — Full-Stack & AI Systems Engineer',
-    description: 'Ships production AI systems end-to-end. 6+ years, open to remote roles.',
+    title: 'Kartikey Gupta — Full-Stack & GenAI Engineer',
+    description: 'Ships production AI systems end-to-end. 78% AI auto-resolution, 4,800 peak sessions. 6+ years, open to remote.',
+    url: 'https://www.kartikeygupta.co',
+    siteName: 'Kartikey Gupta',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kartikey Gupta — Full-Stack & GenAI Engineer',
+    description: 'Ships production AI systems end-to-end. 78% AI auto-resolution, 4,800 peak sessions. Open to remote.',
+    creator: '@kartikeyguptadev',
   },
 }
 

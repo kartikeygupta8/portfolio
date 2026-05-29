@@ -332,6 +332,25 @@ export function Contact() {
           >
             LinkedIn ↗
           </a>
+          <a
+            href="/resume.pdf"
+            download="Kartikey-Gupta-Resume.pdf"
+            style={{
+              fontFamily: 'var(--font-mono), monospace',
+              fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
+              color: 'var(--t1)', textDecoration: 'none', padding: '13px 28px',
+              border: '1px solid var(--rule2)', borderRadius: 'var(--r)',
+              transition: 'all 0.2s',
+              display: 'inline-flex', alignItems: 'center', gap: 7,
+            }}
+            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t0)'; el.style.borderColor = 'var(--t2)' }}
+            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t1)'; el.style.borderColor = 'var(--rule2)' }}
+          >
+            Resume
+            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </a>
         </motion.div>
 
         {/* Channel cards — 4 across */}
