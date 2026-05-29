@@ -265,11 +265,12 @@ export const PHILOSOPHY = [
 ]
 
 export const CERTIFICATIONS = [
-  { title: 'Machine Learning with R — Level 1',  issuer: 'IBM', year: '2018' },
-  { title: 'Big Data Foundations — Level 2',      issuer: 'IBM', year: '2018' },
-  { title: 'Spark — Level 1',                     issuer: 'IBM', year: '2018' },
-  { title: 'Hadoop Foundations — Level 1',        issuer: 'IBM', year: '2018' },
-  { title: 'Build Your Own Chatbot — Level 1',    issuer: 'IBM', year: '2018' },
+  { title: 'Machine Learning with R — Level 1',  issuer: 'IBM',           year: '2018' },
+  { title: 'Big Data Foundations — Level 2',      issuer: 'IBM',           year: '2018' },
+  { title: 'Spark — Level 1',                     issuer: 'IBM',           year: '2018' },
+  { title: 'Hadoop Foundations — Level 1',        issuer: 'IBM',           year: '2018' },
+  { title: 'Build Your Own Chatbot — Level 1',    issuer: 'IBM',           year: '2018' },
+  { title: 'MongoDB Developer Certification',     issuer: 'MongoDB, Inc.', year: '2021' },
 ]
 
 export const PINNED_REPOS = [
