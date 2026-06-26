@@ -57,7 +57,7 @@ export function About() {
                   I started writing production code at <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>FIS Global</strong> in 2019 — building automation frameworks and ETL pipelines that handled financial-scale data at an enterprise with zero tolerance for error. That early constraint shaped how I think: instrument everything, fail gracefully, ship with confidence.
                 </>,
                 <>
-                  At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Bestpeers</strong>, I led a 3-engineer team shipping simultaneously across React web, React Native iOS, and watchOS — all from a single Node.js backend. I learned that clean architecture isn't aesthetic, it's operational: it's what lets you ship three surfaces without tripling the maintenance burden.
+                  At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Bestpeers</strong>, I led a 3-engineer team shipping simultaneously across React web, React Native iOS, and a custom smartwatch — all from a single Node.js backend. I learned that clean architecture isn't aesthetic, it's operational: it's what lets you ship three surfaces without tripling the maintenance burden.
                 </>,
                 <>
                   At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Evren</strong>, I've been building AI-first infrastructure since before it became a trend. LLM gateways, MCP agents, support automation — systems where the AI is invisible infrastructure, not a UI feature. If you want someone who can take an AI product idea from prompt to production, that's the work I do every day.

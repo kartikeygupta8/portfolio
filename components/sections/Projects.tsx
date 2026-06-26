@@ -23,7 +23,7 @@ const CHIP_COLOR_MAP: Record<string, string> = {
 const BROWSER_URL: Record<string, string> = {
   'ai-support-platform':      'support.evren.app / dashboard',
   'mcp-workflow-engine':       'agents.evren.internal / workflow-engine',
-  'cross-platform-ecosystem':  'bestpeers.io / web · mobile · watch',
+  'cross-platform-ecosystem':  'bestpeers.io / web · mobile · smartwatch',
   'etl-sync-pipeline':         'internal.worldpay.com / etl-monitor',
   'automation-framework':      'fis.internal / test-runner',
 }
