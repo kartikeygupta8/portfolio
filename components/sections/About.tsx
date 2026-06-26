@@ -14,7 +14,7 @@ const FACTS = [
   { label: 'Status',     value: 'Open to remote roles' },
 ]
 
-const CERT_COLOR = ['var(--blue)', 'var(--green)', 'var(--blue)', 'var(--amber)']
+const CERT_COLOR = ['var(--blue)', 'var(--green)', 'var(--cyan)', 'var(--amber)', 'var(--violet)', 'var(--green)']
 
 const LANG_ICON: Record<string, string> = {
   TypeScript: '●',
@@ -54,7 +54,7 @@ export function About() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20, margin: '40px 0 52px' }}>
               {[
                 <>
-                  I started writing production code at <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>FIS Global</strong> in 2020 — building automation frameworks and ETL pipelines that handled financial-scale data at an enterprise with zero tolerance for error. That early constraint shaped how I think: instrument everything, fail gracefully, ship with confidence.
+                  I started writing production code at <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>FIS Global</strong> in 2019 — building automation frameworks and ETL pipelines that handled financial-scale data at an enterprise with zero tolerance for error. That early constraint shaped how I think: instrument everything, fail gracefully, ship with confidence.
                 </>,
                 <>
                   At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Bestpeers</strong>, I led a 3-engineer team shipping simultaneously across React web, React Native iOS, and watchOS — all from a single Node.js backend. I learned that clean architecture isn't aesthetic, it's operational: it's what lets you ship three surfaces without tripling the maintenance burden.

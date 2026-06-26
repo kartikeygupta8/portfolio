@@ -146,7 +146,7 @@ export const EXPERIENCE = [
     id: 'fis',
     company: 'FIS Global (Worldpay)',
     role: 'Software Developer',
-    period: 'Jan 2020 – Jun 2021',
+    period: 'Aug 2019 – Jun 2021',
     type: 'past' as const,
     hl: 'Built automation and data infrastructure handling financial-scale transaction data',
     kpis: [

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartikey Gupta — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4;
+      margin: 0.30in 0.46in;
+    }
+
+    html { font-size: 10px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.5;
+      color: #111;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media screen {
+      body { background: #d1d5db; display: flex; justify-content: center; padding: 40px 16px; }
+      .page {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        padding: 0.30in 0.46in;
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff;
+      }
+    }
+
+    /* ── NAME BLOCK ── */
+    .name {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #000;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .subtitle {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #444;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #000;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-top: 9px;
+      margin-bottom: 5px;
+    }
+
+    /* ── SUMMARY ── */
+    .summary {
+      font-size: 10px;
+      color: #111;
+      line-height: 1.58;
+    }
+
+    /* ── CONTACT GRID ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 0;
+      column-gap: 24px;
+      font-size: 10px;
+      color: #111;
+      line-height: 1.6;
+    }
+    .contact-grid a { color: #111; text-decoration: none; }
+
+    /* ── SKILLS ── */
+    .skills-table {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      row-gap: 2px;
+      column-gap: 10px;
+      font-size: 10px;
+    }
+    .skill-cat {
+      font-weight: 600;
+      color: #000;
+    }
+    .skill-vals { color: #111; }
+
+    /* ── EXPERIENCE ── */
+    .exp-item { margin-bottom: 8px; }
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #000;
+      border-bottom: 1px solid #999;
+      padding-bottom: 1px;
+      margin-bottom: 2px;
+    }
+
+    .exp-company {
+      font-size: 10px;
+      color: #555;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding-left: 12px;
+    }
+
+    .exp-bullets li {
+      font-size: 10px;
+      color: #111;
+      line-height: 1.52;
+      position: relative;
+      margin-bottom: 2px;
+    }
+
+    .exp-bullets li:last-child { margin-bottom: 0; }
+
+    .exp-bullets li::before {
+      content: '◦';
+      position: absolute;
+      left: -11px;
+      color: #000;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-school {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .edu-sub {
+      font-size: 10px;
+      color: #444;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+
+    .cert-name {
+      font-size: 10px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .cert-issuer {
+      font-size: 9.5px;
+      color: #666;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 10px;
+      font-size: 8px;
+      color: #aaa;
+    }
+    .footer a { color: #aaa; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- NAME + SUBTITLE -->
+  <div class="name">KARTIKEY GUPTA</div>
+  <div class="subtitle">Full-Stack Developer &nbsp;&middot;&nbsp; Backend &nbsp;&middot;&nbsp; AI Integration &nbsp;&middot;&nbsp; GenAI Engineer</div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">
+    Full-Stack Developer with 6+ years of experience building scalable web, mobile, and AI-first applications. Shipped an AI support system that auto-resolves <strong>78% of tier-1 tickets</strong> at 4,800 concurrent users and 99.7% uptime — without proportional headcount growth. Designed MCP-based agent workflows that execute internal operations autonomously, eliminating <strong>6h+/week</strong> of manual ops with a full audit trail. Track record across Fortune-500 fintech (FIS Global/Worldpay), product startups, and SaaS — I own the full stack from database to UI and integrate AI where it genuinely moves business outcomes.
+  </p>
+
+  <!-- CONTACT -->
+  <div class="section-title">Contact</div>
+  <div class="contact-grid">
+    <div>Phone: +91-9695173723</div>
+    <div>Github: <a href="https://github.com/kartikeygupta8">github.com/kartikeygupta8</a></div>
+    <div>Email: kartikeygupta8@gmail.com</div>
+    <div>LinkedIn: <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a></div>
+    <div>Portfolio: <a href="https://www.kartikeygupta.co">www.kartikeygupta.co</a></div>
+    <div>Blog: <a href="https://www.kartikeygupta.co/blog">kartikeygupta.co/blog</a></div>
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-table">
+    <span class="skill-cat">AI &amp; GenAI</span>
+    <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Function Calling, Prompt Engineering</span>
+
+    <span class="skill-cat">Backend</span>
+    <span class="skill-vals">Node.js, Python, Express.js, REST APIs, GraphQL, Microservices, JWT Auth, WebSockets</span>
+
+    <span class="skill-cat">Frontend</span>
+    <span class="skill-vals">React.js, Next.js, TypeScript, React Native, Redux, Context API, Tailwind CSS, Framer Motion</span>
+
+    <span class="skill-cat">Data</span>
+    <span class="skill-vals">PostgreSQL, MySQL, MongoDB, Redis, ETL Pipelines, SQL Optimization, Salesforce API, Pandas</span>
+
+    <span class="skill-cat">DevOps</span>
+    <span class="skill-vals">AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx</span>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section-title">Work Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-header">Full-Stack Developer &nbsp;|&nbsp; Jan 2023 &ndash; Present</div>
+    <div class="exp-company">Evren</div>
+    <ul class="exp-bullets">
+      <li><strong>78% of tier-1 support tickets resolved without a human</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway handling <strong>4,800 peak concurrent sessions at 99.7% uptime</strong>, scaling the platform without proportional support headcount growth</li>
+      <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server-based AI agents that autonomously execute workflows (DB queries, Slack notifications, report generation) on trigger, with a full audit trail on every action</li>
+      <li>Led <strong>Node.js backend architecture</strong>, RBAC security redesign, and React UI overhaul — delivered <strong>&minus;30% API latency</strong>, <strong>+40% portal adoption</strong>, and cut debugging time by 50% through structured Python log-analysis tooling</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">Full-Stack Developer &amp; Team Lead &nbsp;|&nbsp; Jul 2021 &ndash; Dec 2022</div>
+    <div class="exp-company">Bestpeers Infosystem</div>
+    <ul class="exp-bullets">
+      <li>Led a <strong>3-engineer team</strong> shipping one product across web (React.js), iOS (React Native), and Apple Watch — single Node.js + MySQL backend, shared JWT auth — delivered with <strong>+25% performance</strong> over the previous system</li>
+      <li>Enforced structured code review gates and architecture standards driving a <strong>35% drop in post-ship bug reports</strong> — quality built in during development, not patched after launch</li>
+      <li>Eliminated memory leaks, N+1 queries, and security vulnerabilities at development time; applied Redux, Context API, and memoization for a performant, maintainable frontend</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">Software Developer &nbsp;|&nbsp; Aug 2019 &ndash; Jun 2021</div>
+    <div class="exp-company">FIS Global (Worldpay)</div>
+    <ul class="exp-bullets">
+      <li>Built the REST API test automation framework that let FIS&rsquo;s payment platform deploy continuously &mdash; <strong>90%+ test coverage</strong>, <strong>80% of manual QA eliminated</strong>, zero-regression CI/CD pipeline integrated from day one</li>
+      <li>Engineered a fault-tolerant <strong>ETL pipeline</strong> syncing SQL transaction databases with Salesforce CRM &mdash; <strong>95% data accuracy at financial scale</strong>, zero manual reconciliation, retry logic with dead-letter queuing and full audit trail</li>
+    </ul>
+  </div>
+
+  <!-- ACADEMIC HISTORY -->
+  <div class="section-title">Academic History</div>
+  <div class="edu-school">RGPV University, LNCT College &nbsp;|&nbsp; 2015&ndash;2019</div>
+  <div class="edu-sub">Bachelor of Engineering (Computer Science)</div>
+
+  <!-- CERTIFICATION -->
+  <div class="section-title">Certification</div>
+  <div class="cert-grid">
+    <div>
+      <div class="cert-name">Machine Learning with R &mdash; Level 1</div>
+      <div class="cert-issuer">IBM, 2018</div>
+    </div>
+    <div>
+      <div class="cert-name">MongoDB Developer Certification</div>
+      <div class="cert-issuer">MongoDB, Inc., 2021</div>
+    </div>
+    <div>
+      <div class="cert-name">Big Data Foundations &mdash; Level 2</div>
+      <div class="cert-issuer">IBM, 2018</div>
+    </div>
+    <div>
+      <div class="cert-name">Spark &mdash; Level 1</div>
+      <div class="cert-issuer">IBM, 2018</div>
+    </div>
+    <div>
+      <div class="cert-name">Hadoop Foundations &mdash; Level 1</div>
+      <div class="cert-issuer">IBM, 2018</div>
+    </div>
+    <div>
+      <div class="cert-name">Build Your Own Chatbot &mdash; Level 1</div>
+      <div class="cert-issuer">IBM, 2018</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>LinkedIn recommendations from direct manager &amp; teammate at Evren &mdash; <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a></div>
+    <div>Updated June 2026</div>
+  </div>
+
+</div>
+</body>
+</html>
