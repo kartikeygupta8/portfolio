@@ -26,6 +26,7 @@ const BROWSER_URL: Record<string, string> = {
   'cross-platform-ecosystem':  'bestpeers.io / web · mobile · smartwatch',
   'etl-sync-pipeline':         'internal.worldpay.com / etl-monitor',
   'automation-framework':      'fis.internal / test-runner',
+  'admin-support-portal':      'portal.evren.app / admin',
 }
 
 /* ── Per-project main browser SVG ── */

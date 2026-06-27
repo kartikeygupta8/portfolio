@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/projects/cross-platform-ecosystem`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/projects/etl-sync-pipeline`,          lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/projects/automation-framework`,                   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/projects/admin-support-portal`,                   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/blog`,                                            lastModified: new Date(), changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${BASE}/blog/ai-auto-resolution-production`,              lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/blog/llm-gateway-architecture`,                   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },

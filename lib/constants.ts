@@ -99,6 +99,20 @@ export const PROJECTS = [
     metrics: ['90%+ test coverage', '−80% manual QA', '100% REST API coverage'],
     accent: 'amber' as const,
   },
+  {
+    slug: 'admin-support-portal',
+    index: '06',
+    badge: 'Live',
+    badgeColor: 'green' as const,
+    company: 'Evren',
+    title: 'Admin & Support Portal',
+    titleEm: 'Support Portal',
+    summary: 'Scalable admin and support portal for OS management — migrated backend from Python to Node.js, implemented multi-tiered RBAC, rebuilt the React UI, and shipped a Python log-analysis tool that cut debugging time by 50% and API response times by 30%.',
+    stack: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Redis', 'RBAC', 'Docker'],
+    chipColors: ['g', 'b', 'g', '', '', '', ''],
+    metrics: ['−30% API latency', '+40% portal adoption', '−50% debug time'],
+    accent: 'green' as const,
+  },
 ]
 
 export const EXPERIENCE = [
