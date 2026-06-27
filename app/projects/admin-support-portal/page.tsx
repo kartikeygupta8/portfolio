@@ -22,7 +22,7 @@ export default function AdminSupportPortal() {
             <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
               <span className="chip chip-g">Live</span>
               <span className="chip">Evren</span>
-              <span className="chip">06 / 06</span>
+              <span className="chip">03 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               Admin &amp; <br />
@@ -79,49 +79,89 @@ export default function AdminSupportPortal() {
                 <span className="browser-url">portal.evren.app / admin</span>
               </div>
               <div style={{ padding: '40px 32px', background: 'var(--bg)' }}>
-                <svg viewBox="0 0 760 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
+                <svg viewBox="0 0 760 320" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
                   {/* React UI */}
-                  <rect x="10" y="120" width="110" height="52" rx="6" fill="rgba(75,139,245,0.08)" stroke="rgba(75,139,245,0.35)" strokeWidth="1"/>
-                  <text x="65" y="140" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="10">React UI</text>
-                  <text x="65" y="157" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.6">Role-aware views</text>
-                  <text x="65" y="170" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.5">+40% adoption</text>
+                  <rect x="8" y="100" width="112" height="90" rx="6" fill="rgba(75,139,245,0.08)" stroke="rgba(75,139,245,0.35)" strokeWidth="1"/>
+                  <text x="64" y="122" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="10" fontWeight="600">React UI</text>
+                  <text x="64" y="138" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.7">Admin Portal</text>
+                  <text x="64" y="152" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.7">Support Portal</text>
+                  <text x="64" y="166" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="7" opacity="0.5">role-aware views</text>
+                  <text x="64" y="180" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="7" opacity="0.45">+40% adoption</text>
 
-                  <path d="M120 146 L160 146" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arrowG)"/>
+                  <path d="M120 145 L143 145" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arrA)"/>
 
-                  {/* RBAC Middleware */}
-                  <rect x="160" y="108" width="120" height="76" rx="6" fill="rgba(45,214,138,0.08)" stroke="rgba(45,214,138,0.4)" strokeWidth="1.5"/>
-                  <text x="220" y="128" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="10">RBAC Layer</text>
-                  <text x="220" y="145" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">Admin / Support /</text>
-                  <text x="220" y="158" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">Viewer tiers</text>
-                  <text x="220" y="174" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.5">JWT + policy engine</text>
+                  {/* RBAC Layer */}
+                  <rect x="143" y="76" width="128" height="138" rx="6" fill="rgba(45,214,138,0.08)" stroke="rgba(45,214,138,0.4)" strokeWidth="1.5"/>
+                  <text x="207" y="98" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="10" fontWeight="600">RBAC</text>
+                  <text x="207" y="114" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.7">Super Admin</text>
+                  <text x="207" y="128" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">Team Admin</text>
+                  <text x="207" y="142" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">Support Agent</text>
+                  <text x="207" y="156" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.6">Viewer</text>
+                  <text x="207" y="172" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="7" opacity="0.45">JWT + policy engine</text>
+                  <text x="207" y="185" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="7" opacity="0.4">per-route enforcement</text>
 
-                  <path d="M280 146 L320 146" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arrowG)"/>
+                  <path d="M271 145 L294 145" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arrA)"/>
 
                   {/* Node.js API */}
-                  <rect x="320" y="108" width="120" height="76" rx="6" fill="rgba(45,214,138,0.06)" stroke="rgba(45,214,138,0.3)" strokeWidth="1"/>
-                  <text x="380" y="128" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="10">Node.js API</text>
-                  <text x="380" y="145" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">Migrated from Python</text>
-                  <text x="380" y="158" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">−30% API latency</text>
-                  <text x="380" y="174" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.5">Express + TypeScript</text>
+                  <rect x="294" y="100" width="112" height="90" rx="6" fill="rgba(45,214,138,0.06)" stroke="rgba(45,214,138,0.3)" strokeWidth="1"/>
+                  <text x="350" y="122" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="10" fontWeight="600">Node.js API</text>
+                  <text x="350" y="138" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">Express + TS</text>
+                  <text x="350" y="152" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.65">−30% latency</text>
+                  <text x="350" y="166" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="7" opacity="0.5">migrated from Python</text>
+                  <text x="350" y="179" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="7" opacity="0.4">zero downtime</text>
 
-                  <path d="M440 130 L480 110" stroke="rgba(255,255,255,0.12)" strokeWidth="1" markerEnd="url(#arrowG)"/>
-                  <path d="M440 162 L480 182" stroke="rgba(255,255,255,0.12)" strokeWidth="1" markerEnd="url(#arrowG)"/>
+                  {/* Node.js → OS Management */}
+                  <path d="M406 128 L428 90" stroke="rgba(255,255,255,0.12)" strokeWidth="1" markerEnd="url(#arrA)"/>
+                  {/* Node.js → Support Ticketing */}
+                  <path d="M406 162 L428 208" stroke="rgba(255,255,255,0.12)" strokeWidth="1" markerEnd="url(#arrA)"/>
 
-                  {/* PostgreSQL */}
-                  <rect x="480" y="82" width="110" height="52" rx="6" fill="rgba(31,208,208,0.07)" stroke="rgba(31,208,208,0.3)" strokeWidth="1"/>
-                  <text x="535" y="102" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="10">PostgreSQL</text>
-                  <text x="535" y="118" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.6">Optimised queries</text>
-                  <text x="535" y="130" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.5">Redis cache layer</text>
+                  {/* OS Management Module */}
+                  <rect x="428" y="48" width="140" height="72" rx="6" fill="rgba(31,208,208,0.08)" stroke="rgba(31,208,208,0.35)" strokeWidth="1"/>
+                  <text x="498" y="68" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="10" fontWeight="600">OS Management</text>
+                  <text x="498" y="84" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.65">personal + enterprise</text>
+                  <text x="498" y="98" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.65">device &amp; system mgmt</text>
+                  <text x="498" y="110" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="7" opacity="0.5">all teams in scope</text>
 
-                  {/* Python Log Tool */}
-                  <rect x="480" y="160" width="110" height="64" rx="6" fill="rgba(149,124,244,0.08)" stroke="rgba(149,124,244,0.35)" strokeWidth="1"/>
-                  <text x="535" y="180" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">Log Analyser</text>
-                  <text x="535" y="197" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.65">Python · structured</text>
-                  <text x="535" y="210" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.65">parsing pipeline</text>
-                  <text x="535" y="222" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.5">−50% debug time</text>
+                  {/* OS Mgmt → Personal Systems */}
+                  <path d="M568 68 L598 52" stroke="rgba(255,255,255,0.1)" strokeWidth="1" markerEnd="url(#arrA)"/>
+                  {/* OS Mgmt → Enterprise Systems */}
+                  <path d="M568 84 L598 98" stroke="rgba(255,255,255,0.1)" strokeWidth="1" markerEnd="url(#arrA)"/>
+
+                  {/* Personal Systems */}
+                  <rect x="598" y="30" width="120" height="36" rx="5" fill="rgba(31,208,208,0.06)" stroke="rgba(31,208,208,0.25)" strokeWidth="1"/>
+                  <text x="658" y="46" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="9">Personal Systems</text>
+                  <text x="658" y="59" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="7" opacity="0.55">user devices · local OS</text>
+
+                  {/* Enterprise Systems */}
+                  <rect x="598" y="78" width="120" height="50" rx="5" fill="rgba(31,208,208,0.06)" stroke="rgba(31,208,208,0.25)" strokeWidth="1"/>
+                  <text x="658" y="96" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="9">Enterprise Systems</text>
+                  <text x="658" y="110" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="7" opacity="0.55">team infra · per-org scope</text>
+                  <text x="658" y="122" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="7" opacity="0.45">all teams managed</text>
+
+                  {/* Support Ticketing Module */}
+                  <rect x="428" y="186" width="140" height="64" rx="6" fill="rgba(149,124,244,0.08)" stroke="rgba(149,124,244,0.35)" strokeWidth="1"/>
+                  <text x="498" y="206" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10" fontWeight="600">Support Portal</text>
+                  <text x="498" y="222" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.65">internal ticket workflow</text>
+                  <text x="498" y="236" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="7" opacity="0.5">log analysis · −50% debug</text>
+                  <text x="498" y="244" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="7" opacity="0.4">Python structured parser</text>
+
+                  {/* Support → Internal Tickets */}
+                  <path d="M568 218 L598 218" stroke="rgba(255,255,255,0.1)" strokeWidth="1" markerEnd="url(#arrA)"/>
+
+                  {/* Internal Support */}
+                  <rect x="598" y="196" width="120" height="44" rx="5" fill="rgba(149,124,244,0.06)" stroke="rgba(149,124,244,0.25)" strokeWidth="1"/>
+                  <text x="658" y="214" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9">Internal Support</text>
+                  <text x="658" y="228" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="7" opacity="0.55">Python log analyser</text>
+                  <text x="658" y="236" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="7" opacity="0.45">structured parsing</text>
+
+                  {/* PostgreSQL + Redis data layer */}
+                  <path d="M350 190 L350 268" stroke="rgba(255,255,255,0.08)" strokeWidth="1" markerEnd="url(#arrA)"/>
+                  <rect x="294" y="268" width="112" height="42" rx="5" fill="rgba(78,78,104,0.12)" stroke="rgba(78,78,104,0.3)" strokeWidth="1"/>
+                  <text x="350" y="285" textAnchor="middle" fill="#9090B0" fontFamily="monospace" fontSize="9">PostgreSQL</text>
+                  <text x="350" y="300" textAnchor="middle" fill="#9090B0" fontFamily="monospace" fontSize="7" opacity="0.65">+ Redis cache layer</text>
 
                   <defs>
-                    <marker id="arrowG" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                    <marker id="arrA" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
                       <path d="M0,0 L6,3 L0,6" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
                     </marker>
                   </defs>
@@ -194,12 +234,12 @@ export default function AdminSupportPortal() {
         {/* ── Navigation ── */}
         <section style={{ padding: '60px 48px' }}>
           <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
-            <Link href="/projects/automation-framework" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--t2)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
+            <Link href="/projects/mcp-workflow-engine" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--t2)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
               <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Prev: Automation Framework
+              Prev: MCP Workflow Engine
             </Link>
-            <Link href="/projects" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--green)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
-              All Projects
+            <Link href="/projects/cross-platform-ecosystem" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--green)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
+              Next: Cross-Platform Ecosystem
               <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>

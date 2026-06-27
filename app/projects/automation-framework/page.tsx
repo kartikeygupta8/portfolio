@@ -22,7 +22,7 @@ export default function AutomationFramework() {
             <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
               <span className="chip chip-g">Production</span>
               <span className="chip">FIS Global</span>
-              <span className="chip">05 / 05</span>
+              <span className="chip">06 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               Selenium WebDriver<br />
@@ -211,8 +211,8 @@ export default function AutomationFramework() {
               <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
               Prev: ETL Sync Pipeline
             </Link>
-            <Link href="/projects/admin-support-portal" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--amber)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
-              Next: Admin &amp; Support Portal
+            <Link href="/projects" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--amber)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
+              All Projects
               <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>

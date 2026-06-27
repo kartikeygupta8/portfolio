@@ -23,7 +23,7 @@ export default function CrossPlatformEcosystem() {
             <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
               <span className="chip chip-b">Shipped</span>
               <span className="chip">Bestpeers Infosystem</span>
-              <span className="chip">03 / 05</span>
+              <span className="chip">04 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               Cross-Platform<br />
@@ -206,9 +206,9 @@ export default function CrossPlatformEcosystem() {
         {/* ── Navigation ── */}
         <section style={{ padding: '60px 48px' }}>
           <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
-            <Link href="/projects/mcp-workflow-engine" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--t2)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
+            <Link href="/projects/admin-support-portal" style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 11, color: 'var(--t2)', textDecoration: 'none', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', gap: 7 }}>
               <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Prev: MCP Workflow Engine
+              Prev: Admin &amp; Support Portal
             </Link>
             <NextProjectLink
               href="/projects/etl-sync-pipeline"

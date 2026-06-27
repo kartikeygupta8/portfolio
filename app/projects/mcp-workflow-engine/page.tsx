@@ -23,7 +23,7 @@ export default function McpWorkflowEngine() {
             <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
               <span className="chip chip-g">Live · Production</span>
               <span className="chip">Evren</span>
-              <span className="chip">02 / 05</span>
+              <span className="chip">02 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               MCP-Based AI Agent<br />
@@ -215,8 +215,8 @@ export default function McpWorkflowEngine() {
               Prev: AI Support Platform
             </Link>
             <NextProjectLink
-              href="/projects/cross-platform-ecosystem"
-              label="Next: Cross-Platform Ecosystem"
+              href="/projects/admin-support-portal"
+              label="Next: Admin &amp; Support Portal"
               accent="var(--cyan)"
               accentDim="var(--cyan-d)"
               accentBright="var(--cyan-b)"

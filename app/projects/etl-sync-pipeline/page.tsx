@@ -23,7 +23,7 @@ export default function EtlSyncPipeline() {
             <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
               <span className="chip chip-g">Production</span>
               <span className="chip">FIS Global</span>
-              <span className="chip">04 / 05</span>
+              <span className="chip">05 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               Fault-Tolerant<br />
