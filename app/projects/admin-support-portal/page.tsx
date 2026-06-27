@@ -1,4 +1,4 @@
-import { Navigation } from '@/components/layout/Navigation'
+import { ProjectNav } from '@/components/layout/ProjectNav'
 import { Footer }     from '@/components/layout/Footer'
 import Link from 'next/link'
 
@@ -9,7 +9,7 @@ export const metadata = {
 export default function AdminSupportPortal() {
   return (
     <>
-      <Navigation />
+      <ProjectNav />
       <main>
 
         {/* ── Hero ── */}

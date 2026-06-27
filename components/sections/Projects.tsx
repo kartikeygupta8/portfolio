@@ -247,6 +247,67 @@ function ProjectVisual({ slug }: { slug: string }) {
     </svg>
   )
 
+  if (slug === 'admin-support-portal') return (
+    <svg width="100%" viewBox="0 0 520 244" xmlns="http://www.w3.org/2000/svg">
+      <text x="14" y="18" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">ADMIN &amp; SUPPORT PORTAL</text>
+
+      <rect x="0" y="26" width="120" height="56" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+      <text x="14" y="44" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">SYSTEMS ONLINE</text>
+      <text x="14" y="68" fontFamily="monospace" fontSize="22" fontWeight="700" fill="#2DD68A">47</text>
+      <rect x="0" y="30" width="2" height="48" rx="1" fill="#2DD68A"/>
+
+      <rect x="132" y="26" width="120" height="56" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+      <text x="146" y="44" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">OPEN TICKETS</text>
+      <text x="146" y="68" fontFamily="monospace" fontSize="22" fontWeight="700" fill="#F0A429">12</text>
+      <rect x="132" y="30" width="2" height="48" rx="1" fill="#F0A429"/>
+
+      <rect x="264" y="26" width="120" height="56" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+      <text x="278" y="44" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">API LATENCY</text>
+      <text x="278" y="68" fontFamily="monospace" fontSize="22" fontWeight="700" fill="#4B8BF5">−30%</text>
+      <rect x="264" y="30" width="2" height="48" rx="1" fill="#4B8BF5"/>
+
+      <rect x="396" y="26" width="124" height="56" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+      <text x="410" y="44" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">YOUR ROLE</text>
+      <text x="410" y="62" fontFamily="monospace" fontSize="11" fontWeight="700" fill="#2DD68A">Super Admin</text>
+      <text x="410" y="76" fontFamily="monospace" fontSize="8" fill="#4E4E68">full access</text>
+      <rect x="396" y="30" width="2" height="48" rx="1" fill="#957CF4"/>
+
+      <rect x="0" y="94" width="250" height="144" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+      <text x="14" y="112" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">OS MANAGEMENT</text>
+      <rect x="14" y="120" width="222" height="22" rx="3" fill="rgba(45,214,138,0.07)" stroke="rgba(45,214,138,0.15)" strokeWidth="1"/>
+      <circle cx="26" cy="131" r="3.5" fill="#2DD68A"/>
+      <text x="38" y="135" fontFamily="monospace" fontSize="9" fill="#8A8AA8">Personal — MacBook Pro</text>
+      <text x="208" y="135" fontFamily="monospace" fontSize="8" fill="#2DD68A">Online</text>
+      <rect x="14" y="148" width="222" height="22" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
+      <circle cx="26" cy="159" r="3.5" fill="#2DD68A"/>
+      <text x="38" y="163" fontFamily="monospace" fontSize="9" fill="#8A8AA8">Team Alpha — 8 systems</text>
+      <text x="208" y="163" fontFamily="monospace" fontSize="8" fill="#2DD68A">All up</text>
+      <rect x="14" y="176" width="222" height="22" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
+      <circle cx="26" cy="187" r="3.5" fill="#2DD68A"/>
+      <text x="38" y="191" fontFamily="monospace" fontSize="9" fill="#8A8AA8">Team Beta — 12 systems</text>
+      <text x="208" y="191" fontFamily="monospace" fontSize="8" fill="#2DD68A">All up</text>
+      <rect x="14" y="204" width="222" height="22" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
+      <circle cx="26" cy="215" r="3.5" fill="#F0A429"/>
+      <text x="38" y="219" fontFamily="monospace" fontSize="9" fill="#8A8AA8">Team Gamma — 14 systems</text>
+      <text x="208" y="219" fontFamily="monospace" fontSize="8" fill="#F0A429">1 alert</text>
+
+      <rect x="262" y="94" width="258" height="144" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+      <text x="276" y="112" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">SUPPORT PORTAL — INTERNAL</text>
+      <rect x="276" y="120" width="230" height="22" rx="3" fill="rgba(240,164,41,0.07)" stroke="rgba(240,164,41,0.15)" strokeWidth="1"/>
+      <text x="288" y="135" fontFamily="monospace" fontSize="9" fill="#8A8AA8">VPN config issue — Team Alpha</text>
+      <text x="462" y="135" fontFamily="monospace" fontSize="8" fill="#F0A429">Open</text>
+      <rect x="276" y="148" width="230" height="22" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
+      <text x="288" y="163" fontFamily="monospace" fontSize="9" fill="#8A8AA8">Log analysis — latency spike</text>
+      <text x="462" y="163" fontFamily="monospace" fontSize="8" fill="#2DD68A">Done</text>
+      <rect x="276" y="176" width="230" height="22" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
+      <text x="288" y="191" fontFamily="monospace" fontSize="9" fill="#8A8AA8">Access request — Viewer role</text>
+      <text x="462" y="191" fontFamily="monospace" fontSize="8" fill="#4B8BF5">Review</text>
+      <rect x="276" y="204" width="230" height="22" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
+      <text x="288" y="219" fontFamily="monospace" fontSize="9" fill="#8A8AA8">System patch — Team Gamma</text>
+      <text x="462" y="219" fontFamily="monospace" fontSize="8" fill="#F0A429">Open</text>
+    </svg>
+  )
+
   /* automation-framework fallback */
   return (
     <svg width="100%" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
@@ -348,7 +409,7 @@ export function Projects() {
         <div className="s-tag">Selected Work</div>
         <h2 className="s-h2">Systems <em>Built</em></h2>
         <p className="s-sub" style={{ marginTop: 12 }}>
-          Five production systems — each with a distinct constraint, a deliberate architecture, and a measurable outcome.
+          Six production systems — each with a distinct constraint, a deliberate architecture, and a measurable outcome.
         </p>
       </motion.div>
 
