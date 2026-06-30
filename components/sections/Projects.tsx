@@ -40,7 +40,7 @@ function ProjectVisual({ slug }: { slug: string }) {
 
       <rect x="128" y="0" width="116" height="64" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
       <text x="142" y="19" fontFamily="monospace" fontSize="8" fill="#4E4E68" letterSpacing="1">AI HANDLED</text>
-      <text x="142" y="46" fontFamily="monospace" fontSize="24" fontWeight="700" fill="#2DD68A">78%</text>
+      <text x="142" y="46" fontFamily="monospace" fontSize="24" fontWeight="700" fill="#2DD68A">38%</text>
       <rect x="128" y="4" width="2" height="56" rx="1" fill="#2DD68A"/>
 
       <rect x="256" y="0" width="116" height="64" rx="5" fill="#14141F" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>

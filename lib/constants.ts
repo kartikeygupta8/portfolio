@@ -12,13 +12,13 @@ export const SITE = {
 
 export const PROOF = [
   { num: '7', sup: '+', label: 'Years Production' },
-  { num: '78', sup: '%', label: 'AI Auto-Resolution' },
+  { num: '38', sup: '%', label: 'AI Auto-Resolution' },
   { num: '−30', sup: '%', label: 'API Latency' },
   { num: '95', sup: '%', label: 'ETL Accuracy' },
 ]
 
 export const TICKER_ITEMS = [
-  { dot: 'green', val: '78%',   label: 'AI Ticket Auto-Resolution' },
+  { dot: 'green', val: '38%',   label: 'AI Ticket Auto-Resolution' },
   { dot: 'blue',  val: '1.2s',  label: 'Median Support Response Time' },
   { dot: 'green', val: '−30%',  label: 'API Latency Reduction' },
   { dot: 'amber', val: '95%',   label: 'ETL Data Accuracy' },
@@ -40,7 +40,7 @@ export const PROJECTS = [
     summary: 'Built a full-stack support automation system combining LLM-based intent classification with autonomous agent workflows. Handles the majority of tier-1 support without human intervention at 4,800 concurrent sessions.',
     stack: ['Claude API', 'OpenAI', 'Ollama', 'Node.js', 'React', 'PostgreSQL', 'Redis', 'Docker'],
     chipColors: ['b', 'b', 'b', '', '', '', '', ''],
-    metrics: ['78% auto-resolution', '4,800 peak sessions', '99.7% uptime'],
+    metrics: ['38% auto-resolution without human intervention', '4,800 peak sessions', '99.7% uptime'],
     accent: 'blue' as const,
   },
   {
@@ -119,14 +119,14 @@ export const EXPERIENCE = [
   {
     id: 'evren',
     company: 'Evren',
-    role: 'Senior Full-Stack Developer & Tech Lead',
+    role: 'Senior Full-Stack Developer',
     period: 'Jan 2023 – Present',
     type: 'current' as const,
     hl: 'Built and scaled an AI-first admin and support platform from scratch',
     kpis: [
       { label: '+40% Portal Adoption', color: 'green' },
       { label: '−30% API Latency', color: 'blue' },
-      { label: '78% AI Resolution', color: 'green' },
+      { label: '38% AI Auto-Resolution', color: 'green' },
     ],
     points: [
       'Led Python → Node.js backend migration, improving throughput and maintainability across the platform',
@@ -139,7 +139,7 @@ export const EXPERIENCE = [
   {
     id: 'bestpeers',
     company: 'Bestpeers Infosystem',
-    role: 'Full-Stack Developer',
+    role: 'Full-Stack Developer & Team Lead',
     period: 'Jul 2021 – Dec 2022',
     type: 'past' as const,
     hl: 'Led a 3-engineer team shipping web, mobile, and smartwatch app on a shared backend',

@@ -35,7 +35,7 @@ export default function AISupportPlatform() {
             {/* Impact metrics bar */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
-                { val: '78%',   label: 'Auto-Resolution Rate' },
+                { val: '38%',   label: 'Auto-Resolution Rate' },
                 { val: '1.2s',  label: 'Median Response Time' },
                 { val: '4,800', label: 'Peak Concurrent Sessions' },
                 { val: '99.7%', label: 'System Uptime (90d)' },
@@ -125,8 +125,8 @@ export default function AISupportPlatform() {
                   <text x="686" y="163" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="9" opacity="0.7">PostgreSQL</text>
 
                   {/* Labels */}
-                  <text x="360" y="94" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.7">Tier-1 (78%)</text>
-                  <text x="360" y="216" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.7">Complex (22%)</text>
+                  <text x="360" y="94" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.7">Tier-1 (38%)</text>
+                  <text x="360" y="216" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.7">Complex (62%)</text>
 
                   {/* Redis session note */}
                   <rect x="140" y="220" width="100" height="36" rx="5" fill="rgba(31,208,208,0.07)" stroke="rgba(31,208,208,0.25)" strokeWidth="1"/>
@@ -199,7 +199,7 @@ export default function AISupportPlatform() {
             <div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 20 }}>
                 {[
-                  { val: '78%',     unit: '',    label: 'of tickets resolved without a human agent', color: 'up' },
+                  { val: '38%',     unit: '',    label: 'of tickets auto-resolved without human intervention', color: 'up' },
                   { val: '1.2',     unit: 's',   label: 'median response time vs. 4-6 minute baseline', color: 'up' },
                   { val: '4,800',   unit: '',    label: 'peak concurrent sessions without degradation', color: 'neu' },
                   { val: '99.7',    unit: '%',   label: 'uptime over a 90-day production window', color: 'up' },

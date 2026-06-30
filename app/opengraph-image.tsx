@@ -107,7 +107,7 @@ export default function Image() {
         {/* Metric chips */}
         <div style={{ display: 'flex', gap: 10, flexWrap: 'nowrap' }}>
           {[
-            { label: '78% AI Auto-Resolution', bg: '#f0fdf4', color: '#047857', border: '#6ee7b7' },
+            { label: '38% AI Auto-Resolution', bg: '#f0fdf4', color: '#047857', border: '#6ee7b7' },
             { label: '4,800 Peak Sessions',    bg: '#eff6ff', color: '#1d4ed8', border: '#93c5fd' },
             { label: '99.7% Uptime',           bg: '#f0fdf4', color: '#047857', border: '#6ee7b7' },
             { label: '−80% Manual QA',         bg: '#fefce8', color: '#92400e', border: '#fcd34d' },

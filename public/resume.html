@@ -90,7 +90,7 @@
     .skill-cat { font-weight: 600; color: #000; }
     .skill-vals { color: #111; }
 
-    .exp-item { margin-bottom: 7px; }
+    .exp-item { margin-bottom: 14px; }
     .exp-item:last-child { margin-bottom: 0; }
 
     .exp-header {
@@ -99,14 +99,14 @@
       color: #000;
       border-bottom: 1px solid #999;
       padding-bottom: 1px;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .exp-company {
-      font-size: 10px;
-      color: #555;
-      font-weight: 500;
-      margin-bottom: 3px;
+      font-size: 10.5px;
+      color: #111;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .exp-bullets {
@@ -137,7 +137,14 @@
       gap: 4px 24px;
     }
 
-    .proj-item { }
+    .proj-item { margin-bottom: 2px; }
+
+    .proj-metric {
+      font-size: 9px;
+      color: #777;
+      line-height: 1.4;
+      margin-top: 2px;
+    }
 
     .proj-name {
       font-size: 10.5px;
@@ -208,7 +215,7 @@
   <!-- PROFESSIONAL SUMMARY -->
   <div class="section-title">Professional Summary</div>
   <p class="summary">
-    Senior Full-Stack Developer and GenAI Engineer with <strong>7 years</strong> building scalable AI-first systems across Fortune-500 fintech, product startups, and SaaS. Shipped an AI support platform auto-resolving <strong>78% of tier-1 tickets</strong> at 4,800 concurrent sessions and 99.7% uptime; designed MCP agent workflows eliminating <strong>6h+/week of manual ops</strong> with full audit coverage. Led cross-functional engineering teams, owned technical architecture and roadmap end-to-end, and integrate AI as reliable production infrastructure — not a feature bolted on.
+    Senior Full-Stack Developer and GenAI Engineer with <strong>7 years</strong> building scalable AI-first systems across Fortune-500 fintech, product startups, and SaaS. Shipped an AI support platform auto-resolving <strong>38% of tier-1 tickets without human intervention</strong> at 4,800 concurrent sessions and 99.7% uptime; designed MCP agent workflows eliminating <strong>6h+/week of manual ops</strong> with full audit coverage. Led a 3-engineer team at Bestpeers, own the full technical stack from database schema to production deployment, and integrate AI as reliable production infrastructure — not a feature bolted on.
   </p>
 
   <!-- TECHNICAL SKILLS -->
@@ -237,11 +244,11 @@
   <div class="section-title">Work Experience</div>
 
   <div class="exp-item">
-    <div class="exp-header">Senior Full-Stack Developer &amp; Tech Lead &nbsp;|&nbsp; Jan 2023 &ndash; Present</div>
+    <div class="exp-header">Senior Full-Stack Developer &nbsp;|&nbsp; Jan 2023 &ndash; Present</div>
     <div class="exp-company">Evren</div>
     <ul class="exp-bullets">
       <li>Owned end-to-end technical architecture and roadmap — led cross-functional engineering decisions across backend, AI, and frontend layers; mentored developers through structured code reviews and architecture design sessions</li>
-      <li><strong>78% of tier-1 support tickets resolved autonomously</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway handling <strong>4,800 peak concurrent sessions at 99.7% uptime</strong></li>
+      <li><strong>38% of tier-1 support tickets auto-resolved without human intervention</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway handling <strong>4,800 peak concurrent sessions at 99.7% uptime</strong></li>
       <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server-based AI agents autonomously executing workflows (DB queries, Slack notifications, report generation) with a full audit trail on every action</li>
       <li>Led <strong>Python &rarr; Node.js migration</strong>, RBAC redesign, and React UI overhaul — delivered <strong>&minus;30% API latency</strong>, <strong>+40% portal adoption</strong>, and &minus;50% debug time via structured log-analysis tooling</li>
     </ul>
@@ -273,21 +280,25 @@
       <div class="proj-name"><a href="https://lexandledger.in">Lex &amp; Ledger</a></div>
       <div class="proj-stack">React &middot; Node.js &middot; MongoDB &middot; Groq AI &middot; JWT &middot; AWS S3</div>
       <div class="proj-desc">Legal &amp; financial services marketplace — user-to-expert matching (lawyers, CAs), booking system, WhatsApp notifications, multi-role auth, AI document processing</div>
+      <div class="proj-metric">Reduced client-to-expert matching time to under 2 minutes; supports multi-role workflows across lawyers and CAs</div>
     </div>
     <div class="proj-item">
       <div class="proj-name"><a href="https://livoh.in">Livoh.in</a></div>
       <div class="proj-stack">React &middot; TypeScript &middot; Express &middot; Prisma &middot; PostgreSQL &middot; AWS S3</div>
       <div class="proj-desc">Full-stack home decor e-commerce — OTP auth, product catalog, cart &amp; checkout, shipping integration, automated GST invoice generation</div>
+      <div class="proj-metric">End-to-end e-commerce with 50+ SKUs, automated GST invoice generation on every order, OTP-secured checkout</div>
     </div>
     <div class="proj-item">
       <div class="proj-name">Sunpress Organic</div>
       <div class="proj-stack">React &middot; Node.js &middot; PostgreSQL</div>
       <div class="proj-desc">Manufacturing P&amp;L costing tool for edible oil production — tracks seed input, oil/khari yield, overhead allocation, per-unit profitability across pack sizes</div>
+      <div class="proj-metric">Reduced batch costing from ~4 hours of manual spreadsheet work to under 20 minutes per production run</div>
     </div>
     <div class="proj-item">
       <div class="proj-name">PlotSync</div>
       <div class="proj-stack">React Native &middot; Node.js &middot; MongoDB</div>
       <div class="proj-desc">Real estate plot management for tier-3 Indian cities — eliminates double-booking conflicts, real-time plot availability for developers and sales teams</div>
+      <div class="proj-metric">Eliminates double-booking conflicts across 200+ plots; real-time availability visibility for field sales teams</div>
     </div>
   </div>
 
