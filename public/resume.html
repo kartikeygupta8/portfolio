@@ -37,7 +37,6 @@
       }
     }
 
-    /* ── NAME BLOCK ── */
     .name {
       font-size: 34px;
       font-weight: 800;
@@ -53,9 +52,16 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #444;
+      margin-bottom: 4px;
     }
 
-    /* ── SECTION HEADER ── */
+    .contact-line {
+      font-size: 9.5px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .contact-line a { color: #555; text-decoration: none; }
+
     .section-title {
       font-size: 11px;
       font-weight: 700;
@@ -68,41 +74,23 @@
       margin-bottom: 5px;
     }
 
-    /* ── SUMMARY ── */
     .summary {
       font-size: 10px;
       color: #111;
       line-height: 1.58;
     }
 
-    /* ── CONTACT GRID ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      row-gap: 0;
-      column-gap: 24px;
-      font-size: 10px;
-      color: #111;
-      line-height: 1.6;
-    }
-    .contact-grid a { color: #111; text-decoration: none; }
-
-    /* ── SKILLS ── */
     .skills-table {
       display: grid;
-      grid-template-columns: 62px 1fr;
+      grid-template-columns: 72px 1fr;
       row-gap: 2px;
       column-gap: 10px;
       font-size: 10px;
     }
-    .skill-cat {
-      font-weight: 600;
-      color: #000;
-    }
+    .skill-cat { font-weight: 600; color: #000; }
     .skill-vals { color: #111; }
 
-    /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 8px; }
+    .exp-item { margin-bottom: 7px; }
     .exp-item:last-child { margin-bottom: 0; }
 
     .exp-header {
@@ -129,7 +117,7 @@
     .exp-bullets li {
       font-size: 10px;
       color: #111;
-      line-height: 1.52;
+      line-height: 1.50;
       position: relative;
       margin-bottom: 2px;
     }
@@ -143,7 +131,33 @@
       color: #000;
     }
 
-    /* ── EDUCATION ── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+
+    .proj-item { }
+
+    .proj-name {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #000;
+    }
+    .proj-name a { color: #000; text-decoration: none; }
+
+    .proj-stack {
+      font-size: 9px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .proj-desc {
+      font-size: 9.5px;
+      color: #333;
+      line-height: 1.45;
+    }
+
     .edu-school {
       font-size: 10.5px;
       font-weight: 700;
@@ -153,13 +167,6 @@
     .edu-sub {
       font-size: 10px;
       color: #444;
-    }
-
-    /* ── CERTIFICATIONS ── */
-    .cert-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px 24px;
     }
 
     .cert-name {
@@ -173,7 +180,6 @@
       color: #666;
     }
 
-    /* ── FOOTER ── */
     .footer {
       display: flex;
       justify-content: space-between;
@@ -188,34 +194,31 @@
 <body>
 <div class="page">
 
-  <!-- NAME + SUBTITLE -->
+  <!-- HEADER -->
   <div class="name">KARTIKEY GUPTA</div>
-  <div class="subtitle">Full-Stack Developer &nbsp;&middot;&nbsp; Backend &nbsp;&middot;&nbsp; AI Integration &nbsp;&middot;&nbsp; GenAI Engineer</div>
+  <div class="subtitle">Senior Full-Stack Developer &nbsp;&middot;&nbsp; Backend &nbsp;&middot;&nbsp; AI Integration &nbsp;&middot;&nbsp; GenAI Engineer</div>
+  <div class="contact-line">
+    +91-9695173723 &nbsp;&middot;&nbsp;
+    <a href="mailto:kartikeygupta8@gmail.com">kartikeygupta8@gmail.com</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/kartikeygupta8">github.com/kartikeygupta8</a> &nbsp;&middot;&nbsp;
+    <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.kartikeygupta.co">kartikeygupta.co</a>
+  </div>
 
   <!-- PROFESSIONAL SUMMARY -->
   <div class="section-title">Professional Summary</div>
   <p class="summary">
-    Full-Stack Developer with 6+ years of experience building scalable web, mobile, and AI-first applications. Shipped an AI support system that auto-resolves <strong>78% of tier-1 tickets</strong> at 4,800 concurrent users and 99.7% uptime — without proportional headcount growth. Designed MCP-based agent workflows that execute internal operations autonomously, eliminating <strong>6h+/week</strong> of manual ops with a full audit trail. Track record across Fortune-500 fintech (FIS Global/Worldpay), product startups, and SaaS — I own the full stack from database to UI and integrate AI where it genuinely moves business outcomes.
+    Senior Full-Stack Developer and GenAI Engineer with <strong>7 years</strong> building scalable AI-first systems across Fortune-500 fintech, product startups, and SaaS. Shipped an AI support platform auto-resolving <strong>78% of tier-1 tickets</strong> at 4,800 concurrent sessions and 99.7% uptime; designed MCP agent workflows eliminating <strong>6h+/week of manual ops</strong> with full audit coverage. Led cross-functional engineering teams, owned technical architecture and roadmap end-to-end, and integrate AI as reliable production infrastructure — not a feature bolted on.
   </p>
-
-  <!-- CONTACT -->
-  <div class="section-title">Contact</div>
-  <div class="contact-grid">
-    <div>Phone: +91-9695173723</div>
-    <div><a href="https://github.com/kartikeygupta8">Github: github.com/kartikeygupta8</a></div>
-    <div>Email: kartikeygupta8@gmail.com</div>
-    <div><a href="https://linkedin.com/in/kartikeyguptadev">LinkedIn: linkedin.com/in/kartikeyguptadev</a></div>
-    <div><a href="https://www.kartikeygupta.co">Portfolio: www.kartikeygupta.co</a></div>
-  </div>
 
   <!-- TECHNICAL SKILLS -->
   <div class="section-title">Technical Skills</div>
   <div class="skills-table">
     <span class="skill-cat">AI &amp; GenAI</span>
-    <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Function Calling, Prompt Engineering</span>
+    <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Prompt Engineering, Function Calling</span>
 
     <span class="skill-cat">Backend</span>
-    <span class="skill-vals">Node.js, Python, Express.js, REST APIs, GraphQL, Microservices, JWT Auth, WebSockets</span>
+    <span class="skill-vals">Node.js, Python, Express.js, REST APIs, GraphQL, Microservices, WebSockets, JWT Auth, BullMQ, Message Queues</span>
 
     <span class="skill-cat">Frontend</span>
     <span class="skill-vals">React.js, Next.js, TypeScript, React Native, Redux, Context API, Tailwind CSS, Framer Motion</span>
@@ -225,18 +228,22 @@
 
     <span class="skill-cat">DevOps</span>
     <span class="skill-vals">AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx</span>
+
+    <span class="skill-cat">Methods</span>
+    <span class="skill-vals">System Design, Distributed Systems, Agile / Scrum, Technical Roadmap, Code Reviews, Cross-functional Collaboration, Team Mentorship</span>
   </div>
 
   <!-- WORK EXPERIENCE -->
   <div class="section-title">Work Experience</div>
 
   <div class="exp-item">
-    <div class="exp-header">Full-Stack Developer &nbsp;|&nbsp; Jan 2023 &ndash; Present</div>
+    <div class="exp-header">Senior Full-Stack Developer &amp; Tech Lead &nbsp;|&nbsp; Jan 2023 &ndash; Present</div>
     <div class="exp-company">Evren</div>
     <ul class="exp-bullets">
-      <li><strong>78% of tier-1 support tickets resolved without a human</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway handling <strong>4,800 peak concurrent sessions at 99.7% uptime</strong>, scaling the platform without proportional support headcount growth</li>
-      <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server-based AI agents that autonomously execute workflows (DB queries, Slack notifications, report generation) on trigger, with a full audit trail on every action</li>
-      <li>Led <strong>Node.js backend architecture</strong>, RBAC security redesign, and React UI overhaul — delivered <strong>&minus;30% API latency</strong>, <strong>+40% portal adoption</strong>, and cut debugging time by 50% through structured Python log-analysis tooling</li>
+      <li>Owned end-to-end technical architecture and roadmap — led cross-functional engineering decisions across backend, AI, and frontend layers; mentored developers through structured code reviews and architecture design sessions</li>
+      <li><strong>78% of tier-1 support tickets resolved autonomously</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway handling <strong>4,800 peak concurrent sessions at 99.7% uptime</strong></li>
+      <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server-based AI agents autonomously executing workflows (DB queries, Slack notifications, report generation) with a full audit trail on every action</li>
+      <li>Led <strong>Python &rarr; Node.js migration</strong>, RBAC redesign, and React UI overhaul — delivered <strong>&minus;30% API latency</strong>, <strong>+40% portal adoption</strong>, and &minus;50% debug time via structured log-analysis tooling</li>
     </ul>
   </div>
 
@@ -244,9 +251,9 @@
     <div class="exp-header">Full-Stack Developer &amp; Team Lead &nbsp;|&nbsp; Jul 2021 &ndash; Dec 2022</div>
     <div class="exp-company">Bestpeers Infosystem</div>
     <ul class="exp-bullets">
-      <li>Led a <strong>3-engineer team</strong> shipping one product across web (React.js), iOS (React Native), and a custom smartwatch — single Node.js + MySQL backend, shared JWT auth — delivered with <strong>+25% performance</strong> over the previous system</li>
-      <li>Enforced structured code review gates and architecture standards driving a <strong>35% drop in post-ship bug reports</strong> — quality built in during development, not patched after launch</li>
-      <li>Eliminated memory leaks, N+1 queries, and security vulnerabilities at development time; applied Redux, Context API, and memoization for a performant, maintainable frontend</li>
+      <li>Led a <strong>3-engineer team</strong> shipping one product across web (React.js), iOS (React Native), and a custom smartwatch — shared Node.js + MySQL backend, single JWT auth contract; delivered <strong>+25% performance</strong> over the prior system</li>
+      <li>Established architecture standards and code review gates that drove a <strong>35% reduction in bug reports</strong>; mentored junior developers on performance patterns, system design, and scalable state management</li>
+      <li>Eliminated memory leaks, N+1 queries, and security vulnerabilities during development; applied Redux, Context API, and memoization for performant, maintainable frontend architecture</li>
     </ul>
   </div>
 
@@ -254,43 +261,46 @@
     <div class="exp-header">Software Developer &nbsp;|&nbsp; Aug 2019 &ndash; Jun 2021</div>
     <div class="exp-company">FIS Global (Worldpay)</div>
     <ul class="exp-bullets">
-      <li>Built the REST API test automation framework that let FIS&rsquo;s payment platform deploy continuously &mdash; <strong>90%+ test coverage</strong>, <strong>80% of manual QA eliminated</strong>, zero-regression CI/CD pipeline integrated from day one</li>
-      <li>Engineered a fault-tolerant <strong>ETL pipeline</strong> syncing SQL transaction databases with Salesforce CRM &mdash; <strong>95% data accuracy at financial scale</strong>, zero manual reconciliation, retry logic with dead-letter queuing and full audit trail</li>
+      <li>Built REST API test automation framework delivering <strong>90%+ test coverage</strong> and eliminating <strong>80% of manual QA effort</strong> — integrated with CI/CD pipeline for zero-regression continuous deployment at Fortune-500 payment scale</li>
+      <li>Engineered fault-tolerant <strong>ETL pipeline</strong> bidirectionally syncing SQL databases with Salesforce CRM — <strong>95% data accuracy</strong>, retry logic with dead-letter queuing, full audit trail, replacing all weekly manual reconciliation</li>
     </ul>
   </div>
 
-  <!-- ACADEMIC HISTORY -->
-  <div class="section-title">Academic History</div>
-  <div class="edu-school">RGPV University, LNCT College &nbsp;|&nbsp; 2015&ndash;2019</div>
-  <div class="edu-sub">Bachelor of Engineering (Computer Science)</div>
+  <!-- PROJECTS -->
+  <div class="section-title">Projects</div>
+  <div class="proj-grid">
+    <div class="proj-item">
+      <div class="proj-name"><a href="https://lexandledger.in">Lex &amp; Ledger</a></div>
+      <div class="proj-stack">React &middot; Node.js &middot; MongoDB &middot; Groq AI &middot; JWT &middot; AWS S3</div>
+      <div class="proj-desc">Legal &amp; financial services marketplace — user-to-expert matching (lawyers, CAs), booking system, WhatsApp notifications, multi-role auth, AI document processing</div>
+    </div>
+    <div class="proj-item">
+      <div class="proj-name"><a href="https://livoh.in">Livoh.in</a></div>
+      <div class="proj-stack">React &middot; TypeScript &middot; Express &middot; Prisma &middot; PostgreSQL &middot; AWS S3</div>
+      <div class="proj-desc">Full-stack home decor e-commerce — OTP auth, product catalog, cart &amp; checkout, shipping integration, automated GST invoice generation</div>
+    </div>
+    <div class="proj-item">
+      <div class="proj-name">Sunpress Organic</div>
+      <div class="proj-stack">React &middot; Node.js &middot; PostgreSQL</div>
+      <div class="proj-desc">Manufacturing P&amp;L costing tool for edible oil production — tracks seed input, oil/khari yield, overhead allocation, per-unit profitability across pack sizes</div>
+    </div>
+    <div class="proj-item">
+      <div class="proj-name">PlotSync</div>
+      <div class="proj-stack">React Native &middot; Node.js &middot; MongoDB</div>
+      <div class="proj-desc">Real estate plot management for tier-3 Indian cities — eliminates double-booking conflicts, real-time plot availability for developers and sales teams</div>
+    </div>
+  </div>
 
-  <!-- CERTIFICATION -->
-  <div class="section-title">Certification</div>
-  <div class="cert-grid">
-    <div>
-      <div class="cert-name">Machine Learning with R &mdash; Level 1</div>
-      <div class="cert-issuer">IBM, 2018</div>
-    </div>
-    <div>
-      <div class="cert-name">MongoDB Developer Certification</div>
-      <div class="cert-issuer">MongoDB, Inc., 2021</div>
-    </div>
-    <div>
-      <div class="cert-name">Big Data Foundations &mdash; Level 2</div>
-      <div class="cert-issuer">IBM, 2018</div>
-    </div>
-    <div>
-      <div class="cert-name">Spark &mdash; Level 1</div>
-      <div class="cert-issuer">IBM, 2018</div>
-    </div>
-    <div>
-      <div class="cert-name">Hadoop Foundations &mdash; Level 1</div>
-      <div class="cert-issuer">IBM, 2018</div>
-    </div>
-    <div>
-      <div class="cert-name">Build Your Own Chatbot &mdash; Level 1</div>
-      <div class="cert-issuer">IBM, 2018</div>
-    </div>
+  <!-- EDUCATION -->
+  <div class="section-title">Education</div>
+  <div class="edu-school">RGPV University, LNCT College &nbsp;|&nbsp; 2015&ndash;2019</div>
+  <div class="edu-sub">Bachelor of Engineering — Computer Science</div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section-title">Certifications</div>
+  <div>
+    <div class="cert-name">MongoDB Developer Certification</div>
+    <div class="cert-issuer">MongoDB, Inc. &middot; 2021</div>
   </div>
 
   <!-- FOOTER -->

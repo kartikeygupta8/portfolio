@@ -2,11 +2,11 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { CERTIFICATIONS, PINNED_REPOS, SITE } from '@/lib/constants'
+import { CERTIFICATIONS, PINNED_REPOS, SIDE_PROJECTS, SITE } from '@/lib/constants'
 
 const FACTS = [
-  { label: 'Role',       value: 'Full-Stack & AI Engineer' },
-  { label: 'Experience', value: '6+ Years' },
+  { label: 'Role',       value: 'Senior Full-Stack & GenAI Engineer' },
+  { label: 'Experience', value: '7 Years' },
   { label: 'Education',  value: 'B.E. Computer Science' },
   { label: 'University', value: 'LNCT — RGPV' },
   { label: 'Graduated',  value: '2019' },
@@ -60,7 +60,10 @@ export function About() {
                   At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Bestpeers</strong>, I led a 3-engineer team shipping simultaneously across React web, React Native iOS, and a custom smartwatch — all from a single Node.js backend. I learned that clean architecture isn't aesthetic, it's operational: it's what lets you ship three surfaces without tripling the maintenance burden.
                 </>,
                 <>
-                  At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Evren</strong>, I've been building AI-first infrastructure since before it became a trend. LLM gateways, MCP agents, support automation — systems where the AI is invisible infrastructure, not a UI feature. If you want someone who can take an AI product idea from prompt to production, that's the work I do every day.
+                  At <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>Evren</strong>, I own the technical architecture — LLM gateways, MCP agents, RAG pipelines, and support automation. I set technical direction, lead cross-functional engineering decisions, and mentor developers through code reviews and system design. The AI here is invisible infrastructure, not a UI feature bolted on.
+                </>,
+                <>
+                  Deployed across <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>FIS Global (Fortune 500)</strong>, Evren, and Bestpeers — I work at the intersection of distributed systems and AI, owning the full stack from database schema to production deployment.
                 </>,
               ].map((para, i) => (
                 <motion.p

@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Kartikey Gupta',
-  title: 'Full-Stack & AI Systems Engineer',
-  tagline: 'I build production AI systems — backend to UI — and ship them fast.',
+  title: 'Senior Full-Stack Developer & GenAI Engineer',
+  tagline: 'I build production AI systems — MCP agents, RAG pipelines, full-stack — and ship them fast.',
   email: 'kartikeygupta8@gmail.com',
   phone: '+91-9695173723',
   github: 'https://github.com/kartikeygupta8',
@@ -11,7 +11,7 @@ export const SITE = {
 }
 
 export const PROOF = [
-  { num: '6', sup: '+', label: 'Years Production' },
+  { num: '7', sup: '+', label: 'Years Production' },
   { num: '78', sup: '%', label: 'AI Auto-Resolution' },
   { num: '−30', sup: '%', label: 'API Latency' },
   { num: '95', sup: '%', label: 'ETL Accuracy' },
@@ -25,7 +25,7 @@ export const TICKER_ITEMS = [
   { dot: 'green', val: '−80%',  label: 'Manual QA Eliminated' },
   { dot: 'blue',  val: '4,800', label: 'Peak Concurrent Sessions' },
   { dot: 'green', val: '99.7%', label: 'System Uptime (90d)' },
-  { dot: 'blue',  val: '6+',    label: 'Years Production Engineering' },
+  { dot: 'blue',  val: '7+',    label: 'Years Production Engineering' },
 ]
 
 export const PROJECTS = [
@@ -119,7 +119,7 @@ export const EXPERIENCE = [
   {
     id: 'evren',
     company: 'Evren',
-    role: 'Full-Stack Developer',
+    role: 'Senior Full-Stack Developer & Tech Lead',
     period: 'Jan 2023 – Present',
     type: 'current' as const,
     hl: 'Built and scaled an AI-first admin and support platform from scratch',
@@ -188,6 +188,8 @@ export const STACK_LAYERS = [
       { label: 'OpenAI API', color: 'v' },
       { label: 'Ollama', color: 'v' },
       { label: 'MCP Protocol', color: 'c' },
+      { label: 'RAG Pipelines', color: 'v' },
+      { label: 'AI Agents', color: 'v' },
       { label: 'LangChain', color: '' },
       { label: 'Prompt Engineering', color: '' },
     ],
@@ -201,7 +203,9 @@ export const STACK_LAYERS = [
       { label: 'Python', color: 'b' },
       { label: 'Express.js', color: '' },
       { label: 'REST APIs', color: '' },
+      { label: 'System Design', color: 'b' },
       { label: 'Microservices', color: '' },
+      { label: 'Message Queues', color: '' },
       { label: 'GraphQL', color: '' },
     ],
   },
@@ -279,12 +283,38 @@ export const PHILOSOPHY = [
 ]
 
 export const CERTIFICATIONS = [
-  { title: 'Machine Learning with R — Level 1',  issuer: 'IBM',           year: '2018' },
-  { title: 'Big Data Foundations — Level 2',      issuer: 'IBM',           year: '2018' },
-  { title: 'Spark — Level 1',                     issuer: 'IBM',           year: '2018' },
-  { title: 'Hadoop Foundations — Level 1',        issuer: 'IBM',           year: '2018' },
-  { title: 'Build Your Own Chatbot — Level 1',    issuer: 'IBM',           year: '2018' },
-  { title: 'MongoDB Developer Certification',     issuer: 'MongoDB, Inc.', year: '2021' },
+  { title: 'MongoDB Developer Certification', issuer: 'MongoDB, Inc.', year: '2021' },
+]
+
+export const SIDE_PROJECTS = [
+  {
+    name: 'Lex & Ledger',
+    url: 'https://lexandledger.in',
+    desc: 'Legal & financial services marketplace connecting users with verified lawyers and CAs — booking system, WhatsApp notifications, multi-role auth (User / Expert / Admin), AI document processing.',
+    stack: ['React', 'Node.js', 'MongoDB', 'Groq AI', 'JWT', 'AWS S3'],
+    accent: 'violet' as const,
+  },
+  {
+    name: 'Livoh.in',
+    url: 'https://livoh.in',
+    desc: 'Full-stack home decor e-commerce platform — OTP auth, product catalog, cart & checkout, shipping integration, and automated GST invoice generation.',
+    stack: ['React', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'AWS S3'],
+    accent: 'cyan' as const,
+  },
+  {
+    name: 'Sunpress Organic',
+    url: null,
+    desc: 'Manufacturing P&L and costing tool for edible oil production — tracks raw seed input, oil/khari yield, overhead allocation, and per-unit profitability across pack sizes.',
+    stack: ['React', 'Node.js', 'PostgreSQL'],
+    accent: 'amber' as const,
+  },
+  {
+    name: 'PlotSync',
+    url: null,
+    desc: 'Real estate plot management app for tier-3 Indian cities — prevents double-booking conflicts and provides real-time plot availability visibility for developers and sales teams.',
+    stack: ['React Native', 'Node.js', 'MongoDB'],
+    accent: 'green' as const,
+  },
 ]
 
 export const PINNED_REPOS = [

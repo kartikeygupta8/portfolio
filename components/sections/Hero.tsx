@@ -268,7 +268,7 @@ export function Hero() {
               animation: 'blink 2.2s ease-in-out infinite',
             }}
           />
-          Full-Stack · AI Systems · Architecture
+          Senior Full-Stack · MCP Agents · RAG Pipelines · AI Systems
         </motion.div>
 
         {/* Name — Syne display font */}
@@ -313,9 +313,9 @@ export function Hero() {
           }}
         >
           <strong style={{ color: 'var(--t0)', fontWeight: 500 }}>
-            6 years building production infrastructure
+            7 years building production AI infrastructure
           </strong>{' '}
-          — from distributed backends and microservices to AI agents and LLM pipelines that ship at scale.
+          — MCP agents, RAG pipelines, distributed backends, and full-stack systems that ship at scale.
         </motion.p>
 
         {/* CTAs */}

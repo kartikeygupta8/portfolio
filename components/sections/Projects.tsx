@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ArrowUpRight } from 'lucide-react'
-import { PROJECTS } from '@/lib/constants'
+import { PROJECTS, SIDE_PROJECTS } from '@/lib/constants'
 
 const ACCENT_MAP = {
   blue:   { border: 'var(--blue)',   dim: 'var(--blue-d)',   bright: 'var(--blue-b)' },
@@ -563,11 +563,75 @@ export function Projects() {
         )
       })}
 
+      {/* ── Side / Freelance Projects ── */}
+      <div style={{ borderTop: '1px solid var(--rule)', padding: '80px 48px' }}>
+        <div style={{ maxWidth: 1300, margin: '0 auto' }}>
+          <div style={{ marginBottom: 40 }}>
+            <div className="s-tag" style={{ marginBottom: 12 }}>Freelance & Side Projects</div>
+            <p style={{ fontSize: 15, color: 'var(--t2)', lineHeight: 1.7, maxWidth: 560 }}>
+              Client work and independent builds shipped outside of full-time roles.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
+            {SIDE_PROJECTS.map((proj, idx) => {
+              const accent = ACCENT_MAP[proj.accent]
+              return (
+                <motion.div
+                  key={proj.name}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: idx * 0.07 }}
+                  style={{
+                    border: '1px solid var(--rule2)',
+                    borderRadius: 10,
+                    background: 'var(--bg1)',
+                    padding: '24px 26px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 12,
+                    transition: 'border-color 0.2s',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.borderColor = accent.bright)}
+                  onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--rule2)')}
+                >
+                  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
+                    <div style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 17, fontWeight: 400, color: 'var(--t0)', letterSpacing: '-0.3px' }}>
+                      {proj.name}
+                    </div>
+                    {proj.url && (
+                      <a
+                        href={proj.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={e => e.stopPropagation()}
+                        style={{ color: accent.border, flexShrink: 0, marginTop: 2 }}
+                      >
+                        <ArrowUpRight size={15} />
+                      </a>
+                    )}
+                  </div>
+                  <p style={{ fontSize: 13, color: 'var(--t2)', lineHeight: 1.7, flex: 1 }}>{proj.desc}</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+                    {proj.stack.map(s => (
+                      <span key={s} className="chip" style={{ fontSize: 10, padding: '3px 8px' }}>{s}</span>
+                    ))}
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+
       <style>{`
         @media (max-width: 960px) {
           #projects article > div { grid-template-columns: 1fr !important; gap: 40px !important; direction: ltr !important; }
           #projects article { padding: 60px 24px !important; }
           #projects > div:first-child { padding: 0 24px 60px !important; }
+        }
+        @media (max-width: 768px) {
+          #projects > div:last-child > div { padding: 60px 24px !important; }
         }
       `}</style>
     </section>
