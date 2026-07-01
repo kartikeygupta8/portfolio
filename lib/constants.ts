@@ -130,11 +130,11 @@ export const EXPERIENCE = [
     ],
     points: [
       'Led Python → Node.js backend migration, improving throughput and maintainability across the platform',
-      'Integrated OpenAI, Claude API, and Ollama behind a unified LLM gateway for support automation, chatbots, and image/video/voice generation pipelines',
-      'Built MCP server-based AI agents that autonomously execute internal workflows — database queries, notifications, report generation',
-      'Implemented RBAC and redesigned React UI; query optimization cut API response times by 30%',
+      'Built AI support chatbot on Groq Llama 3.3 with streaming completions — 38% of tier-1 tickets auto-resolved without human intervention',
+      'Designed MCP server exposing internal APIs as typed tools; extended to agentic workflows — appointment scheduling, support call booking, guided multi-step flows',
+      'Implemented 4-tier RBAC and rebuilt the customer-facing Admin Portal (V2) from scratch; query optimization cut API response times by 30%',
     ],
-    tags: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Claude API', 'OpenAI', 'MCP', 'Docker', 'AWS'],
+    tags: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Groq', 'Llama 3.3', 'MCP', 'Docker', 'AWS'],
   },
   {
     id: 'bestpeers',
@@ -164,17 +164,17 @@ export const EXPERIENCE = [
     type: 'past' as const,
     hl: 'Built automation and data infrastructure handling financial-scale transaction data',
     kpis: [
-      { label: '100% API Coverage', color: 'amber' },
+      { label: '90%+ Workflow Coverage', color: 'amber' },
       { label: '95% ETL Accuracy', color: 'green' },
       { label: '−80% Manual QA', color: 'blue' },
     ],
     points: [
-      'Built Selenium WebDriver automation framework achieving 90%+ test coverage and eliminating 80% of manual QA effort',
-      'Developed fault-tolerant ETL pipeline syncing SQL databases with Salesforce CRM — 95% data accuracy, zero manual reconciliation',
+      'Built Selenium WebDriver CRM regression framework — 90%+ user-workflow coverage, eliminating 80% of manual QA effort',
+      'Developed fault-tolerant ETL pipeline bidirectionally syncing MongoDB with Salesforce CRM via SSIS — 95% data accuracy, zero manual reconciliation',
       'Optimized complex SQL queries reducing report generation latency significantly on financial-scale datasets',
-      'Integrated CI/CD pipeline for automated regression testing on every deployment',
+      'Integrated CI/CD pipeline running the full regression suite in under 8 minutes on every deployment',
     ],
-    tags: ['Python', 'SQL', 'Selenium', 'Salesforce API', 'Maven', 'PostgreSQL', 'CI/CD'],
+    tags: ['Python', 'Selenium', 'SSIS', 'MongoDB', 'Salesforce API', 'Maven', 'CI/CD'],
   },
 ]
 
@@ -184,8 +184,9 @@ export const STACK_LAYERS = [
     name: 'AI & LLMs',
     desc: 'Agents · Pipelines · Protocols',
     chips: [
+      { label: 'Groq API', color: 'v' },
+      { label: 'Llama 3.3', color: 'v' },
       { label: 'Claude API', color: 'v' },
-      { label: 'OpenAI API', color: 'v' },
       { label: 'Ollama', color: 'v' },
       { label: 'MCP Protocol', color: 'c' },
       { label: 'RAG Pipelines', color: 'v' },
@@ -231,6 +232,7 @@ export const STACK_LAYERS = [
       { label: 'MySQL', color: '' },
       { label: 'MongoDB', color: 'g' },
       { label: 'Redis', color: '' },
+      { label: 'SSIS', color: '' },
       { label: 'SQL Optimization', color: '' },
       { label: 'ETL Pipelines', color: '' },
     ],
@@ -317,26 +319,3 @@ export const SIDE_PROJECTS = [
   },
 ]
 
-export const PINNED_REPOS = [
-  {
-    name: 'mcp-workflow-engine',
-    desc: 'Model Context Protocol server for internal AI agent workflows — DB, Slack, file ops, REST calls.',
-    lang: 'TypeScript',
-    langColor: '#3178C6',
-    stars: 12,
-  },
-  {
-    name: 'ai-support-platform',
-    desc: 'LLM-based customer support automation with multi-provider gateway (Claude, OpenAI, Ollama).',
-    lang: 'JavaScript',
-    langColor: '#F7DF1E',
-    stars: 8,
-  },
-  {
-    name: 'etl-sync-pipeline',
-    desc: 'Fault-tolerant bidirectional ETL sync between PostgreSQL and Salesforce with full audit trail.',
-    lang: 'Python',
-    langColor: '#3572A5',
-    stars: 5,
-  },
-]

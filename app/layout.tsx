@@ -36,12 +36,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.kartikeygupta.co'),
   title: 'Kartikey Gupta — Senior Full-Stack Developer & GenAI Engineer',
   description:
-    'Full-Stack Developer with 7 years of experience building scalable AI-first systems. Node.js, React, Claude API, MCP agents, RAG pipelines. 38% AI auto-resolution without human intervention at 4,800 concurrent sessions. Open to senior & lead roles.',
+    'Full-Stack Developer with 7 years of experience building scalable AI-first systems. Node.js, React, Groq Llama 3.3, MCP agents, agentic workflows. 38% AI auto-resolution without human intervention at 4,800 concurrent sessions. Open to senior & lead roles.',
   keywords: [
     'Senior Full-Stack Engineer', 'Backend Engineer', 'GenAI Engineer', 'AI Integration Engineer',
     'System Design', 'Distributed Systems', 'LLM integration', 'MCP servers', 'MCP agents',
     'RAG pipelines', 'AI Agents', 'Node.js', 'React', 'Python', 'TypeScript',
-    'OpenAI', 'Claude API', 'LangChain', 'Prompt Engineering',
+    'Groq', 'Llama 3.3', 'Claude API', 'LangChain', 'Prompt Engineering',
     'remote engineer India', 'AI product engineer', 'tech lead',
   ],
   authors: [{ name: 'Kartikey Gupta', url: 'https://www.kartikeygupta.co' }],

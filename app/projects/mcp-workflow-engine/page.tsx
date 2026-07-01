@@ -88,7 +88,7 @@ export default function McpWorkflowEngine() {
 
                   <path d="M120 140 L155 140" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arr)"/>
 
-                  {/* Claude API */}
+                  {/* LLM reasoning layer */}
                   <rect x="155" y="100" width="110" height="80" rx="6" fill="rgba(149,124,244,0.1)" stroke="rgba(149,124,244,0.35)" strokeWidth="1"/>
                   <text x="210" y="125" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">Groq Llama 3.3</text>
                   <text x="210" y="143" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Intent reasoning</text>

@@ -21,7 +21,7 @@ export const POSTS: Post[] = [
   {
     slug:     'llm-gateway-architecture',
     title:    'Why We Run Three LLMs in Production',
-    excerpt:  "Claude for judgment, GPT-4o for structured output, Ollama for cheap deterministic tasks. Routing correctly across them is the optimization — not picking the smartest model.",
+    excerpt:  "Groq Llama 3.3 for speed, Claude for judgment, Ollama for free deterministic tasks. Routing correctly across them is the optimization — not picking the smartest model.",
     date:     'Apr 2026',
     readTime: '6 min',
     tag:      'Architecture',

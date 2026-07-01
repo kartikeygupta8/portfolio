@@ -91,7 +91,7 @@ export default function CrossPlatformEcosystem() {
                   <text x="85" y="137" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">React Native iOS</text>
                   <text x="85" y="155" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.6">Shared RN codebase</text>
 
-                  {/* watchOS */}
+                  {/* Smartwatch */}
                   <rect x="30" y="200" width="110" height="50" rx="6" fill="rgba(240,164,41,0.08)" stroke="rgba(240,164,41,0.35)" strokeWidth="1"/>
                   <text x="85" y="222" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="10">Smartwatch App</text>
                   <text x="85" y="240" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.6">BLE + Custom SDK</text>
@@ -160,7 +160,7 @@ export default function CrossPlatformEcosystem() {
               {[
                 {
                   title: 'Shared API client with a single JWT auth contract',
-                  body: "Every surface — web, iOS, watchOS — uses the same API client library with the same JWT header shape. Auth is handled once, at the client level, and attached to every request identically. This eliminated the three separate auth implementations that were causing divergent session behavior and made security auditing a single code path rather than three.",
+                  body: "Every surface — web dashboard, mobile app, smartwatch sync layer — uses the same API client library with the same JWT header shape. Auth is handled once, at the client level, and attached to every request identically. This eliminated the three separate auth implementations that were causing divergent session behavior and made security auditing a single code path rather than three — which matters when the payload is personal health data.",
                   accent: 'var(--green)',
                 },
                 {
