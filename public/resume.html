@@ -222,7 +222,7 @@
   <div class="section-title">Technical Skills</div>
   <div class="skills-table">
     <span class="skill-cat">AI &amp; GenAI</span>
-    <span class="skill-vals">Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Prompt Engineering, Function Calling</span>
+    <span class="skill-vals">Groq API, Llama 3.3, Claude API, OpenAI API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Prompt Engineering, Function Calling</span>
 
     <span class="skill-cat">Backend</span>
     <span class="skill-vals">Node.js, Python, Express.js, REST APIs, GraphQL, Microservices, WebSockets, JWT Auth, BullMQ, Message Queues</span>
@@ -231,7 +231,7 @@
     <span class="skill-vals">React.js, Next.js, TypeScript, React Native, Redux, Context API, Tailwind CSS, Framer Motion</span>
 
     <span class="skill-cat">Data</span>
-    <span class="skill-vals">PostgreSQL, MySQL, MongoDB, Redis, ETL Pipelines, SQL Optimization, Salesforce API, Pandas</span>
+    <span class="skill-vals">PostgreSQL, MySQL, MongoDB, Redis, SSIS, ETL Pipelines, SQL Optimization, Salesforce API</span>
 
     <span class="skill-cat">DevOps</span>
     <span class="skill-vals">AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx</span>
@@ -248,8 +248,8 @@
     <div class="exp-company">Evren</div>
     <ul class="exp-bullets">
       <li>Owned end-to-end technical architecture and roadmap — led cross-functional engineering decisions across backend, AI, and frontend layers; mentored developers through structured code reviews and architecture design sessions</li>
-      <li><strong>38% of tier-1 support tickets auto-resolved without human intervention</strong> — built the LLM classification pipeline (Claude API, OpenAI, Ollama) behind a unified gateway handling <strong>4,800 peak concurrent sessions at 99.7% uptime</strong></li>
-      <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server-based AI agents autonomously executing workflows (DB queries, Slack notifications, report generation) with a full audit trail on every action</li>
+      <li><strong>38% of tier-1 support tickets auto-resolved without human intervention</strong> — built on Groq Llama 3.3 with streaming completions; extended to agentic workflows for <strong>appointment scheduling, support call booking, and guided multi-step flows</strong> at 4,800 peak concurrent sessions</li>
+      <li><strong>6h+/week of manual internal ops eliminated</strong> — designed MCP server exposing internal GET endpoints as typed tools; agentic layer executes scheduling and booking workflows with a full immutable audit trail on every action</li>
       <li>Led <strong>Python &rarr; Node.js migration</strong>, RBAC redesign, and React UI overhaul — delivered <strong>&minus;30% API latency</strong>, <strong>+40% portal adoption</strong>, and &minus;50% debug time via structured log-analysis tooling</li>
     </ul>
   </div>
@@ -258,7 +258,7 @@
     <div class="exp-header">Full-Stack Developer &amp; Team Lead &nbsp;|&nbsp; Jul 2021 &ndash; Dec 2022</div>
     <div class="exp-company">Bestpeers Infosystem</div>
     <ul class="exp-bullets">
-      <li>Led a <strong>3-engineer team</strong> shipping one product across web (React.js), iOS (React Native), and a custom smartwatch — shared Node.js + MySQL backend, single JWT auth contract; delivered <strong>+25% performance</strong> over the prior system</li>
+      <li>Led a <strong>3-engineer team</strong> shipping a healthcare monitoring platform across web (React.js), mobile (React Native), and a custom smartwatch (HR, SpO2, GPS) — shared Node.js + MySQL backend, single JWT auth contract; delivered <strong>+25% performance</strong> over the prior system</li>
       <li>Established architecture standards and code review gates that drove a <strong>35% reduction in bug reports</strong>; mentored junior developers on performance patterns, system design, and scalable state management</li>
       <li>Eliminated memory leaks, N+1 queries, and security vulnerabilities during development; applied Redux, Context API, and memoization for performant, maintainable frontend architecture</li>
     </ul>
@@ -268,8 +268,8 @@
     <div class="exp-header">Software Developer &nbsp;|&nbsp; Aug 2019 &ndash; Jun 2021</div>
     <div class="exp-company">FIS Global (Worldpay)</div>
     <ul class="exp-bullets">
-      <li>Built REST API test automation framework delivering <strong>90%+ test coverage</strong> and eliminating <strong>80% of manual QA effort</strong> — integrated with CI/CD pipeline for zero-regression continuous deployment at Fortune-500 payment scale</li>
-      <li>Engineered fault-tolerant <strong>ETL pipeline</strong> bidirectionally syncing SQL databases with Salesforce CRM — <strong>95% data accuracy</strong>, retry logic with dead-letter queuing, full audit trail, replacing all weekly manual reconciliation</li>
+      <li>Built Selenium-based <strong>CRM regression automation framework</strong> achieving <strong>90%+ workflow coverage</strong> and eliminating <strong>80% of manual QA effort</strong> — full suite runs in &lt;8 min on every CI push; zero manual regression cycles per release</li>
+      <li>Engineered fault-tolerant <strong>ETL pipeline</strong> bidirectionally syncing MongoDB with Salesforce CRM via SSIS — <strong>95% data accuracy</strong>, dead-letter queuing, immutable audit trail, replacing all weekly manual reconciliation</li>
     </ul>
   </div>
 
