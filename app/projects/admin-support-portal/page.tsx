@@ -29,7 +29,7 @@ export default function AdminSupportPortal() {
               <em style={{ color: 'var(--green)' }}>Support Portal</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              Scalable admin and support portal for OS management — migrated the backend from Python to Node.js, implemented multi-tiered RBAC, rebuilt the React UI, and shipped a Python log-analysis tool that cut debugging time by 50% and API response times by 30%.
+              Two portals at Evren — the Admin Portal (customer-facing interface for enterprise OS management, rebuilt from scratch as V2) and the internal Support Portal used by engineers to manage enterprise customer environments. Migrated backend from Python to Node.js, designed 4-tier RBAC, overhauled the React UI, and built a log-analysis tool that cut debugging time by 50%.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
@@ -56,7 +56,7 @@ export default function AdminSupportPortal() {
                 A Python backend that couldn't scale, no meaningful access controls, and debugging that required tailing raw logs manually.
               </h2>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82, marginBottom: 16 }}>
-                Evren's admin and support portal was built on a Python backend that became a bottleneck as the platform grew. Response times degraded under load, onboarding new team members to the codebase was slow, and the access control model was flat — every admin had the same permissions regardless of role.
+                Evren's Admin Portal is the primary customer-facing interface for enterprise OS management — clients use it to configure, monitor, and control their operating environments. The original V1 ran on a Python backend that couldn't scale: response times degraded under load, onboarding engineers to the codebase was slow, and access control was a flat admin flag — every admin had identical permissions regardless of role or scope.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
                 On top of that, debugging production issues meant manually grepping through server logs. There was no structured log analysis tooling, no visibility into error patterns, and no way to correlate API latency with specific operations — each incident was a blank-slate investigation.
@@ -193,7 +193,7 @@ export default function AdminSupportPortal() {
                 },
                 {
                   title: 'Multi-tiered RBAC instead of a flat admin flag',
-                  body: 'The old system had one admin boolean. The redesign introduced three tiers — Admin, Support, and Viewer — each with a distinct permission set enforced at the API layer via a policy engine, not just on the frontend. This meant a support agent could action tickets without ever having access to billing or infrastructure settings. Portal adoption jumped 40% after launch, largely because support staff could now do their job without escalating every second action.',
+                  body: 'The old system had one admin boolean. The redesign introduced four tiers — Super Admin, Team Admin, Support Agent, and Viewer — each with a distinct permission set enforced at the API layer via a policy engine, not just on the frontend. Super Admins manage the full enterprise scope; Team Admins control their org\'s systems; Support Agents action tickets without access to infrastructure settings; Viewers have read-only access. Portal adoption jumped 40% after launch, largely because staff could now do their jobs without escalating every second action.',
                   accent: 'var(--blue)',
                 },
                 {

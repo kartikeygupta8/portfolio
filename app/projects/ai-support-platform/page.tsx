@@ -23,14 +23,14 @@ export default function AISupportPlatform() {
             <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
               <span className="chip chip-g">Live · Production</span>
               <span className="chip">Evren</span>
-              <span className="chip">01 / 05</span>
+              <span className="chip">01 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               AI-Powered Customer<br />
               <em style={{ color: 'var(--blue)' }}>Support Platform</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              A full-stack support automation system combining LLM-based intent classification with autonomous agent workflows. Handles the majority of tier-1 support without human intervention — at scale.
+              A full-stack support automation system combining AI-based intent classification with agentic workflows — built on Groq's Llama 3.3 with streaming completions. Auto-resolves 38% of tier-1 tickets without human intervention, and extends to scheduling appointments, booking support calls, and guiding users through multi-step service flows.
             </p>
             {/* Impact metrics bar */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
@@ -61,7 +61,7 @@ export default function AISupportPlatform() {
                 Every customer ticket required a human agent to read, classify, and respond. At 4,800 concurrent sessions, this created bottlenecks, inconsistent response quality, and an agent team under constant pressure. Tier-1 queries — password resets, status checks, standard troubleshooting — consumed the same human time as genuinely complex escalations.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
-                The goal: automate tier-1 resolution entirely without degrading response quality, while keeping humans in the loop for escalations that required judgment.
+                The goal: reduce tier-1 manual load by auto-resolving high-confidence routine queries, extend to agentic workflows for scheduling and booking, and ensure the remaining 62% always gets a well-classified, context-rich handoff — not a blank-slate escalation.
               </p>
             </div>
           </div>
@@ -94,8 +94,8 @@ export default function AISupportPlatform() {
                   {/* LLM Gateway */}
                   <rect x="158" y="110" width="120" height="84" rx="6" fill="rgba(149,124,244,0.1)" stroke="rgba(149,124,244,0.35)" strokeWidth="1"/>
                   <text x="218" y="138" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">LLM Gateway</text>
-                  <text x="218" y="155" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Claude · OpenAI</text>
-                  <text x="218" y="170" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Ollama</text>
+                  <text x="218" y="155" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Groq · Llama 3.3</text>
+                  <text x="218" y="170" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Claude · Ollama</text>
                   <text x="218" y="185" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.55">Intent classify</text>
 
                   {/* Arrow to Router */}
@@ -150,7 +150,7 @@ export default function AISupportPlatform() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['Claude API', 'OpenAI', 'Ollama', 'Node.js', 'React', 'PostgreSQL', 'Redis', 'Docker'].map(t => (
+              {['Groq API', 'Llama 3.3', 'Ollama', 'Node.js', 'React', 'PostgreSQL', 'Redis', 'Docker'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -169,7 +169,7 @@ export default function AISupportPlatform() {
               {[
                 {
                   title: 'Multi-provider LLM gateway',
-                  body: "Rather than hard-coding one LLM provider, I built a unified gateway that routes to Claude, OpenAI, or Ollama based on query type, cost, and latency requirements. This removed single-provider lock-in and let us tune each route for accuracy vs. cost. Claude handles nuanced escalation decisions; Ollama serves deterministic FAQ lookups at near-zero cost.",
+                  body: "The system is built on Groq's Llama 3.3 with streaming completions for low-latency responses — sub-second for most tier-1 queries. A unified gateway routes across providers by query type: Llama 3.3 handles the main classification and response generation; Claude routes for nuanced escalation decisions; Ollama serves deterministic FAQ lookups at near-zero cost. This removed single-provider lock-in and enabled per-route cost optimization without a monolithic dependency.",
                   accent: 'var(--violet)',
                 },
                 {
@@ -201,7 +201,7 @@ export default function AISupportPlatform() {
                 {[
                   { val: '38%',     unit: '',    label: 'of tickets auto-resolved without human intervention', color: 'up' },
                   { val: '1.2',     unit: 's',   label: 'median response time vs. 4-6 minute baseline', color: 'up' },
-                  { val: '4,800',   unit: '',    label: 'peak concurrent sessions without degradation', color: 'neu' },
+                  { val: '3',       unit: '',    label: 'agentic workflow types automated — appointment scheduling, support booking, guided multi-step flows', color: 'neu' },
                   { val: '99.7',    unit: '%',   label: 'uptime over a 90-day production window', color: 'up' },
                 ].map(m => (
                   <div key={m.label} style={{ padding: '24px', border: '1px solid var(--rule)', borderRadius: 10, background: 'var(--bg)' }}>

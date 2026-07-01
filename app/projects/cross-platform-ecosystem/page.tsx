@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { NextProjectLink } from '@/components/ui/NextProjectLink'
 
 export const metadata = {
-  title: 'Cross-Platform Product Ecosystem — Kartikey Gupta',
+  title: 'Cross-Platform Healthcare Monitoring Platform — Kartikey Gupta',
 }
 
 export default function CrossPlatformEcosystem() {
@@ -27,17 +27,17 @@ export default function CrossPlatformEcosystem() {
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
               Cross-Platform<br />
-              <em style={{ color: 'var(--violet)' }}>Product Ecosystem</em>
+              <em style={{ color: 'var(--violet)' }}>Healthcare Monitoring Platform</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              A unified product across React.js web, React Native iOS, and watchOS — all consuming a single Node.js backend with one auth contract. Led a 3-engineer team. Shipped with 25% performance improvement and 35% fewer bugs.
+              A unified healthcare monitoring platform spanning a custom smartwatch, React Native mobile app, and React.js web dashboard — all consuming a single Node.js backend with one auth contract. The smartwatch continuously monitors heart rate, SpO2, and GPS; the mobile app displays health metrics and manages sync; the web portal gives administrators real-time visibility across users.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
                 { val: '+25%',  label: 'Performance Improvement' },
                 { val: '−35%',  label: 'Bug Report Reduction' },
                 { val: '3',     label: 'Surfaces, 1 Backend' },
-                { val: '3',     label: 'Engineers Led' },
+                { val: '24/7',  label: 'Background Health Monitoring' },
               ].map((m, i) => (
                 <div key={m.label} style={{ flex: 1, minWidth: 130, padding: '24px 28px', borderRight: i < 3 ? '1px solid var(--rule)' : 'none', background: 'var(--bg1)' }}>
                   <div className="metric-big"><span className="up">{m.val}</span></div>
@@ -57,7 +57,7 @@ export default function CrossPlatformEcosystem() {
                 Three product surfaces had evolved into three separate systems — tripling maintenance and fragmenting the user experience.
               </h2>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82, marginBottom: 16 }}>
-                The web app, iOS app, and watchOS companion each had their own data fetching logic, their own auth flows, and their own interpretation of the business domain. A schema change in the backend required three separate frontend updates. Bugs manifested differently per platform. The team was spending more time on consistency work than on features.
+                The healthcare monitoring product spanned three surfaces — a custom smartwatch collecting real-time health data (heart rate, SpO2, GPS), a React Native mobile app, and a web dashboard. Each had its own data fetching logic, auth flows, and interpretation of the health domain. A schema change to how health metrics were stored required three separate frontend updates. Bugs manifested differently per platform.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
                 The mandate: ship all three surfaces from a single backend and a unified auth contract — without a full rewrite timeline.
@@ -93,8 +93,8 @@ export default function CrossPlatformEcosystem() {
 
                   {/* watchOS */}
                   <rect x="30" y="200" width="110" height="50" rx="6" fill="rgba(240,164,41,0.08)" stroke="rgba(240,164,41,0.35)" strokeWidth="1"/>
-                  <text x="85" y="222" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="10">watchOS Bridge</text>
-                  <text x="85" y="240" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.6">Native Swift bridge</text>
+                  <text x="85" y="222" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="10">Smartwatch App</text>
+                  <text x="85" y="240" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.6">BLE + Custom SDK</text>
 
                   {/* Shared API client */}
                   <path d="M140 55 L220 120" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
@@ -142,7 +142,7 @@ export default function CrossPlatformEcosystem() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['React.js', 'React Native', 'Node.js', 'watchOS Bridge', 'MySQL', 'JWT Auth', 'Redux'].map(t => (
+              {['React.js', 'React Native', 'Node.js', 'Smartwatch SDK', 'MySQL', 'JWT Auth', 'Redux'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -165,7 +165,7 @@ export default function CrossPlatformEcosystem() {
                 },
                 {
                   title: 'React Native as the cross-platform mobile layer',
-                  body: "Rather than maintaining separate iOS and Android codebases, React Native gave us one JavaScript codebase that compiled to both. The watchOS companion used a native Swift bridge to consume the same data models exposed by the RN layer — no separate data-fetching logic on the watch. This reduced the mobile codebase surface by approximately 60%.",
+                  body: "Rather than maintaining separate iOS and Android codebases, React Native gave us one JavaScript codebase for the mobile layer. The custom smartwatch integrates via a BLE-based SDK bridge — the watch sends health data (heart rate, SpO2, GPS) to the mobile app, which aggregates and syncs to the backend. No separate backend integration on the watch; all data flows through the mobile layer, keeping the backend contract clean and consistent across all three surfaces.",
                   accent: 'var(--violet)',
                 },
                 {
@@ -192,7 +192,7 @@ export default function CrossPlatformEcosystem() {
                 { val: '+25', unit: '%', label: 'performance improvement from memoization and N+1 fixes', color: 'up' },
                 { val: '−35', unit: '%', label: 'bug reports over 18 months via structured review gates', color: 'up' },
                 { val: '3',   unit: '',  label: 'product surfaces shipped from a single Node.js backend', color: 'neu' },
-                { val: '3',   unit: '',  label: 'engineers led with defined architecture standards', color: 'neu' },
+                { val: '24/7',unit: '',  label: 'background health monitoring — HR, SpO2, GPS synced automatically across all surfaces', color: 'neu' },
               ].map(m => (
                 <div key={m.label} style={{ padding: '24px', border: '1px solid var(--rule)', borderRadius: 10, background: 'var(--bg)' }}>
                   <div className="metric-big"><span className={m.color}>{m.val}</span><span className="unit">{m.unit}</span></div>

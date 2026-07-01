@@ -30,7 +30,7 @@ export default function EtlSyncPipeline() {
               <em style={{ color: 'var(--green)' }}>ETL Sync Pipeline</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              Bidirectional sync pipeline between SQL databases and Salesforce CRM with schema validation, retry logic, dead-letter queuing, and a full audit trail. Eliminated weekly manual reconciliation at a financial-scale operation.
+              Bidirectional ETL sync pipeline between MongoDB and Salesforce CRM — built with SSIS. Schema validation, retry logic, dead-letter queuing, and a full immutable audit trail. Eliminated weekly manual reconciliation at a financial-scale operation.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
@@ -54,10 +54,10 @@ export default function EtlSyncPipeline() {
             <div className="s-tag" style={{ paddingTop: 4 }}>Problem</div>
             <div>
               <h2 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 28, fontWeight: 400, color: 'var(--t0)', lineHeight: 1.3, marginBottom: 20 }}>
-                Weekly manual reconciliation between SQL databases and Salesforce — error-prone and unscalable at financial data volumes.
+                Weekly manual reconciliation between MongoDB and Salesforce — error-prone and unscalable at financial data volumes.
               </h2>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82, marginBottom: 16 }}>
-                At FIS Global, transaction data lived in internal SQL databases while customer-facing records lived in Salesforce. Every week, a team member would run a set of comparison queries, identify discrepancies, and manually patch records in one or both systems. At financial scale, even a 1% error rate represented thousands of records.
+                At FIS Global, transaction data lived in MongoDB while customer-facing records lived in Salesforce. Every week, a team member would run a set of comparison queries, identify discrepancies, and manually patch records in one or both systems. At financial scale, even a 1% error rate represented thousands of records.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
                 The manual process also had no audit trail — if a reconciliation introduced an error, there was no way to trace when, what, or why a record changed. The goal: replace the entire process with a fault-tolerant automated pipeline that handled failures explicitly and logged everything.
@@ -83,7 +83,7 @@ export default function EtlSyncPipeline() {
                 <svg viewBox="0 0 760 260" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
                   {/* SQL Source */}
                   <rect x="10" y="100" width="100" height="44" rx="6" fill="rgba(75,139,245,0.1)" stroke="rgba(75,139,245,0.35)" strokeWidth="1"/>
-                  <text x="60" y="118" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="10">SQL DB</text>
+                  <text x="60" y="118" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="10">MongoDB</text>
                   <text x="60" y="135" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.6">Source of truth</text>
 
                   {/* Arrow */}
@@ -92,7 +92,7 @@ export default function EtlSyncPipeline() {
                   {/* Extract */}
                   <rect x="148" y="100" width="90" height="44" rx="6" fill="rgba(149,124,244,0.08)" stroke="rgba(149,124,244,0.3)" strokeWidth="1"/>
                   <text x="193" y="118" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">Extract</text>
-                  <text x="193" y="133" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.6">Pandas / Python</text>
+                  <text x="193" y="133" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.6">SSIS Package</text>
 
                   <path d="M238 122 L278 122" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arr)"/>
 
@@ -133,7 +133,7 @@ export default function EtlSyncPipeline() {
 
                   {/* Bidirectional note */}
                   <path d="M558 130 L110 130" stroke="rgba(255,255,255,0.05)" strokeWidth="1" strokeDasharray="4 3"/>
-                  <text x="340" y="72" textAnchor="middle" fill="rgba(255,255,255,0.15)" fontFamily="monospace" fontSize="8">← Bidirectional sync (SF changes → SQL)</text>
+                  <text x="340" y="72" textAnchor="middle" fill="rgba(255,255,255,0.3)" fontFamily="monospace" fontSize="8">← Bidirectional sync (SF changes → MongoDB)</text>
 
                   <defs>
                     <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
@@ -148,7 +148,7 @@ export default function EtlSyncPipeline() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['Python', 'SQL', 'Salesforce API', 'Docker', 'Pandas', 'PostgreSQL'].map(t => (
+              {['SSIS', 'MongoDB', 'Salesforce API', 'PostgreSQL'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -167,7 +167,7 @@ export default function EtlSyncPipeline() {
                 {
                   title: 'Dead-letter queue with exponential backoff',
                   body: "Records that fail schema validation or the Salesforce upsert don't crash the pipeline — they go to a dead-letter queue with a full record of why they failed. The retry scheduler uses exponential backoff with a max of 5 attempts before alerting a human. This means the pipeline handles transient network issues automatically, and only real data problems surface to the team.",
-                  accent: 'var(--red)',
+                  accent: 'var(--blue)',
                 },
                 {
                   title: 'Schema validation before any transformation',

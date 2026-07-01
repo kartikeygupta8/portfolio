@@ -1,15 +1,15 @@
-import { Navigation } from '@/components/layout/Navigation'
+import { ProjectNav } from '@/components/layout/ProjectNav'
 import { Footer }     from '@/components/layout/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Selenium WebDriver Automation Framework — Kartikey Gupta',
+  title: 'CRM Regression Automation Framework — Kartikey Gupta',
 }
 
 export default function AutomationFramework() {
   return (
     <>
-      <Navigation />
+      <ProjectNav />
       <main>
 
         {/* ── Hero ── */}
@@ -25,18 +25,18 @@ export default function AutomationFramework() {
               <span className="chip">06 / 06</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 24, color: 'var(--t0)' }}>
-              Selenium WebDriver<br />
+              Selenium CRM<br />
               <em style={{ color: 'var(--amber)' }}>Automation Framework</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              End-to-end REST API test automation framework built with Selenium WebDriver and Python, covering 90%+ of the application surface. Reduced manual QA effort by 80% and enabled continuous regression testing in CI/CD pipelines.
+              End-to-end regression automation framework for a large-scale CRM application. Mapped every critical user journey — multi-step forms, data entry workflows, business process flows — and automated them with Selenium WebDriver so the entire CRM surface could be validated on every CI push, with no manual test run required.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
-                { val: '90%+', label: 'Test Coverage' },
-                { val: '−80%', label: 'Manual QA Effort' },
-                { val: '100%', label: 'REST API Coverage' },
-                { val: '0',    label: 'Regression Escapes' },
+                { val: '90%+',  label: 'CRM Workflow Coverage' },
+                { val: '−80%',  label: 'Manual QA Effort' },
+                { val: '<8 min',label: 'Full CI Suite Runtime' },
+                { val: '0',     label: 'Manual Regression Cycles' },
               ].map((m, i) => (
                 <div key={m.label} style={{ flex: 1, minWidth: 130, padding: '24px 28px', borderRight: i < 3 ? '1px solid var(--rule)' : 'none', background: 'var(--bg1)' }}>
                   <div className="metric-big"><span className="up">{m.val}</span></div>
@@ -53,13 +53,13 @@ export default function AutomationFramework() {
             <div className="s-tag" style={{ paddingTop: 4 }}>Problem</div>
             <div>
               <h2 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 28, fontWeight: 400, color: 'var(--t0)', lineHeight: 1.3, marginBottom: 20 }}>
-                Manual QA before every release was a bottleneck — slow, inconsistent, and unable to scale with deployment frequency.
+                Manual CRM regression before every release took days — inconsistent, error-prone, and impossible to scale.
               </h2>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82, marginBottom: 16 }}>
-                At FIS Global, every deployment required manual regression testing across dozens of REST API endpoints. QA cycles consumed days before each release, slowing the delivery cadence and leaving room for human error — particularly on edge cases that weren't in the checklist.
+                At FIS Global, every deployment to the CRM required a full manual regression pass across dozens of user workflows — data entry forms, multi-step business processes, reporting flows, and authentication paths. QA engineers executed these by hand before each release. At financial-services scale, even one missed edge case could produce a data integrity issue or a failed customer interaction.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
-                The goal: build a framework that could test the entire REST API surface automatically on every CI run, produce a clear pass/fail report, and eliminate the need for manual regression entirely.
+                The manual process was also inconsistent — different engineers ran different subsets depending on what they remembered or had time for. Edge cases outside the standard checklist consistently escaped into production. The goal: build a framework that automated the complete CRM surface, ran on every CI push, and produced a clear pass/fail report without any human involvement.
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function AutomationFramework() {
           <div style={{ maxWidth: 900, margin: '0 auto' }}>
             <div className="s-tag" style={{ marginBottom: 32 }}>Architecture</div>
             <h2 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 28, fontWeight: 400, color: 'var(--t0)', lineHeight: 1.3, marginBottom: 40 }}>
-              Page Object Model — test logic decoupled from driver interaction at every layer.
+              Page Object Model — workflow logic decoupled from selectors at every layer.
             </h2>
 
             <div style={{ border: '1px solid var(--rule2)', borderRadius: 12, overflow: 'hidden', marginBottom: 40 }}>
@@ -93,7 +93,7 @@ export default function AutomationFramework() {
                   <text x="205" y="125" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="9" opacity="0.6">Pytest runner</text>
                   <text x="205" y="141" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="9" opacity="0.6">Page Objects</text>
                   <text x="205" y="157" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="9" opacity="0.55">Data fixtures</text>
-                  <text x="205" y="170" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.45">90%+ coverage</text>
+                  <text x="205" y="170" textAnchor="middle" fill="#4B8BF5" fontFamily="monospace" fontSize="8" opacity="0.45">90%+ CRM coverage</text>
 
                   <path d="M260 132 L300 132" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arr)"/>
 
@@ -101,28 +101,28 @@ export default function AutomationFramework() {
                   <rect x="300" y="100" width="120" height="64" rx="6" fill="rgba(240,164,41,0.08)" stroke="rgba(240,164,41,0.4)" strokeWidth="1.5"/>
                   <text x="360" y="122" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="10">Selenium</text>
                   <text x="360" y="138" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="9" opacity="0.7">WebDriver</text>
-                  <text x="360" y="154" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.55">Parallel execution</text>
+                  <text x="360" y="154" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.55">Parallel workers</text>
 
                   <path d="M420 132 L460 132" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arr)"/>
 
-                  {/* REST API */}
+                  {/* CRM Application */}
                   <rect x="460" y="100" width="110" height="64" rx="6" fill="rgba(45,214,138,0.08)" stroke="rgba(45,214,138,0.35)" strokeWidth="1"/>
-                  <text x="515" y="122" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="10">REST APIs</text>
-                  <text x="515" y="138" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="9" opacity="0.6">100% endpoint</text>
-                  <text x="515" y="154" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.55">coverage</text>
+                  <text x="515" y="118" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="10">CRM App</text>
+                  <text x="515" y="134" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="9" opacity="0.6">Browser workflows</text>
+                  <text x="515" y="150" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.55">Full journey coverage</text>
 
                   <path d="M570 132 L610 132" stroke="rgba(255,255,255,0.15)" strokeWidth="1" markerEnd="url(#arr)"/>
 
                   {/* Results collector */}
                   <rect x="610" y="100" width="110" height="64" rx="6" fill="rgba(31,208,208,0.08)" stroke="rgba(31,208,208,0.35)" strokeWidth="1"/>
-                  <text x="665" y="122" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="10">Collect</text>
-                  <text x="665" y="138" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="9" opacity="0.6">JUnit XML report</text>
-                  <text x="665" y="154" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.55">Pass/fail matrix</text>
+                  <text x="665" y="118" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="10">Report</text>
+                  <text x="665" y="134" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="9" opacity="0.6">JUnit XML</text>
+                  <text x="665" y="150" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.55">Pass/fail matrix</text>
 
-                  {/* Report output */}
+                  {/* CI output */}
                   <path d="M665 164 L665 210" stroke="rgba(255,255,255,0.1)" strokeWidth="1" markerEnd="url(#arr)"/>
                   <rect x="610" y="210" width="110" height="44" rx="5" fill="rgba(45,214,138,0.06)" stroke="rgba(45,214,138,0.25)" strokeWidth="1"/>
-                  <text x="665" y="229" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="9">CI Report</text>
+                  <text x="665" y="229" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="9">CI Gate</text>
                   <text x="665" y="244" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.6">GitHub Actions / Maven</text>
 
                   {/* Maven build note */}
@@ -130,8 +130,7 @@ export default function AutomationFramework() {
                   <text x="205" y="219" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="9">Maven Build</text>
                   <text x="205" y="234" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.6">Dependency mgmt</text>
 
-                  {/* Parallel note */}
-                  <text x="360" y="185" textAnchor="middle" fill="rgba(240,164,41,0.5)" fontFamily="monospace" fontSize="8">↕ Parallel test workers</text>
+                  <text x="360" y="184" textAnchor="middle" fill="rgba(240,164,41,0.5)" fontFamily="monospace" fontSize="8">↕ Parallel test workers</text>
 
                   <defs>
                     <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
@@ -143,7 +142,7 @@ export default function AutomationFramework() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['Selenium WebDriver', 'Python', 'Pytest', 'Maven', 'REST API Testing', 'CI/CD', 'GitHub Actions'].map(t => (
+              {['Selenium WebDriver', 'Python', 'Pytest', 'Maven', 'Page Object Model', 'CI/CD', 'GitHub Actions'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -160,18 +159,18 @@ export default function AutomationFramework() {
               </h2>
               {[
                 {
-                  title: 'Page Object Model for maintainability at scale',
-                  body: "Every page or API endpoint in the system has a corresponding Python class (Page Object) that encapsulates its selectors and interactions. Test logic never touches raw selectors — it calls methods on these objects. When a UI or API changes, only the Page Object needs to update; none of the test cases do. This is what kept the framework maintainable as the product evolved over 18 months.",
+                  title: 'Page Object Model for CRM workflow maintainability',
+                  body: "Every CRM screen and user workflow has a corresponding Python class (Page Object) that encapsulates its selectors and interaction logic. Test logic never touches raw selectors — it calls methods on these objects. When the CRM UI changed (and it changed frequently), only the relevant Page Object needed updating; none of the test cases did. This is what kept the framework maintainable and continuously expanded across 18 months of active CRM development without requiring a rewrite.",
                   accent: 'var(--amber)',
                 },
                 {
-                  title: 'Parallel execution to keep CI times viable',
-                  body: "90%+ coverage generates hundreds of test cases. Without parallelism, the suite would block CI for 30+ minutes per run, killing deployment velocity. I configured Pytest-xdist with worker counts tuned to the CI environment, bringing end-to-end test suite execution to under 8 minutes. The entire regression suite runs on every push to main.",
+                  title: 'Parallel execution to keep CI runtime under 8 minutes',
+                  body: "90%+ coverage generates hundreds of test cases across complex multi-step CRM workflows. Without parallelism, the suite would block CI for 30+ minutes per run, killing deployment velocity. I configured Pytest-xdist with worker counts tuned to the CI environment, bringing end-to-end execution to under 8 minutes. The full regression suite runs on every push to main — developers get a complete pass/fail result before the branch merges.",
                   accent: 'var(--blue)',
                 },
                 {
-                  title: 'Data fixtures decoupled from test logic',
-                  body: "Test data lives in external fixture files, not hardcoded in test functions. This meant QA engineers could add new test scenarios by writing fixture data — no Python required. It also made the suite portable: the same tests run against staging and production environments by swapping the config, not rewriting tests.",
+                  title: 'External data fixtures decoupled from test logic',
+                  body: "Test data lives in external fixture files, not hardcoded in test functions. This kept the framework portable: the same test suite runs against staging and production environments by swapping the config, not rewriting tests. It also let the QA team expand coverage by adding fixture entries without writing Python — lowering the barrier for non-developers to contribute new test scenarios as new CRM features shipped.",
                   accent: 'var(--green)',
                 },
               ].map((d, i) => (
@@ -190,10 +189,10 @@ export default function AutomationFramework() {
             <div className="s-tag" style={{ paddingTop: 4 }}>Impact</div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 20 }}>
               {[
-                { val: '90',  unit: '%+', label: 'test coverage across the full application surface area', color: 'up' },
-                { val: '−80', unit: '%',  label: 'manual QA effort — regression runs fully automated', color: 'up' },
-                { val: '100', unit: '%',  label: 'REST API endpoint coverage in the test suite', color: 'neu' },
-                { val: '<8',  unit: 'min',label: 'full regression suite run time in parallel CI mode', color: 'neu' },
+                { val: '90',  unit: '%+', label: 'CRM workflow coverage — every major user journey automated end-to-end', color: 'up' },
+                { val: '−80', unit: '%',  label: 'manual QA effort eliminated — regression runs automatically on every CI push', color: 'up' },
+                { val: '<8',  unit: 'min',label: 'full suite CI runtime via parallel test workers — no blocking releases', color: 'neu' },
+                { val: '0',   unit: '',   label: 'manual regression cycles required per release after deployment', color: 'neu' },
               ].map(m => (
                 <div key={m.label} style={{ padding: '24px', border: '1px solid var(--rule)', borderRadius: 10, background: 'var(--bg)' }}>
                   <div className="metric-big"><span className={m.color}>{m.val}</span><span className="unit">{m.unit}</span></div>

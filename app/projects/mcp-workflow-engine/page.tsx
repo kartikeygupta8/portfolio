@@ -30,11 +30,11 @@ export default function McpWorkflowEngine() {
               <em style={{ color: 'var(--cyan)' }}>Workflow Engine</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              A Model Context Protocol server architecture enabling AI agents to autonomously execute multi-step internal workflows — querying databases, triggering notifications, updating records — without human initiation on each step.
+              An MCP (Model Context Protocol) server that gives AI agents structured, audited access to internal systems — exposing curated read endpoints as typed tools. Extended into an agentic layer (powered by Groq's Llama 3.3) that executes actions: scheduling support calls, booking appointments, and guiding users through multi-step service flows without human initiation.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
-                { val: '100%', label: 'Internal Ops Automated' },
+                { val: '3',    label: 'Agentic Workflow Types' },
                 { val: '~6h',  label: 'Reclaimed Per Team / Week' },
                 { val: '100%', label: 'Audit Trail Coverage' },
                 { val: '0',    label: 'Human Triggers Required' },
@@ -90,7 +90,7 @@ export default function McpWorkflowEngine() {
 
                   {/* Claude API */}
                   <rect x="155" y="100" width="110" height="80" rx="6" fill="rgba(149,124,244,0.1)" stroke="rgba(149,124,244,0.35)" strokeWidth="1"/>
-                  <text x="210" y="125" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">Claude API</text>
+                  <text x="210" y="125" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="10">Groq Llama 3.3</text>
                   <text x="210" y="143" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Intent reasoning</text>
                   <text x="210" y="160" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.6">Tool selection</text>
                   <text x="210" y="174" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9" opacity="0.55">Plan execution</text>
@@ -146,7 +146,7 @@ export default function McpWorkflowEngine() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['MCP Protocol', 'Claude API', 'OpenAI API', 'Node.js', 'PostgreSQL', 'Docker', 'AWS Lambda'].map(t => (
+              {['MCP Protocol', 'Groq API', 'Llama 3.3', 'Node.js', 'PostgreSQL', 'Docker', 'AWS Lambda'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -164,7 +164,7 @@ export default function McpWorkflowEngine() {
               {[
                 {
                   title: 'MCP Protocol for structured tool invocation',
-                  body: "The Model Context Protocol gives the AI agent a typed interface to call internal tools — not raw code execution. Every tool call goes through a schema-validated contract: input shape, output shape, permissions required. The agent cannot call what isn't registered, and every call is logged before execution begins. This is what makes autonomous operation safe enough to deploy to production.",
+                  body: "The system started by exposing selected internal GET endpoints via MCP — structured read access to operational data for AI queries. The MCP server provides a typed tool registry: every exposed endpoint has a schema-validated contract for input shape, output shape, and permissions required. The agent cannot call what isn't registered, and every call is logged before execution. This foundation of audited access is what made extending to write operations (scheduling, booking) safe enough to deploy to production.",
                   accent: 'var(--cyan)',
                 },
                 {
@@ -193,7 +193,7 @@ export default function McpWorkflowEngine() {
             <div className="s-tag" style={{ paddingTop: 4 }}>Impact</div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 20 }}>
               {[
-                { val: '100', unit: '%', label: 'of target internal operations now agent-executed', color: 'up' },
+                { val: '3',   unit: '',  label: 'agentic workflow types automated — appointment scheduling, support call booking, guided user flows', color: 'up' },
                 { val: '~6',  unit: 'h', label: 'reclaimed per team per week, per workflow scope', color: 'up' },
                 { val: '100', unit: '%', label: 'audit coverage — every invocation logged immutably', color: 'neu' },
                 { val: '0',   unit: '',  label: 'human triggers required for scheduled operations', color: 'up' },
