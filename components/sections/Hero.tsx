@@ -128,8 +128,19 @@ export function Hero() {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const gl2 = canvas.getContext('webgl2')
-    const gl   = (gl2 ?? canvas.getContext('webgl')) as WebGLRenderingContext | null
+    let cancelled = false
+    let cleanupGL: (() => void) | undefined
+
+    const initGL = () => {
+    if (cancelled) return
+
+    // Nebula is soft cloud content — cheap contexts render it identically
+    const CTX_OPTS: WebGLContextAttributes = {
+      alpha: false, antialias: false, depth: false, stencil: false,
+      powerPreference: 'high-performance',
+    }
+    const gl2 = canvas.getContext('webgl2', CTX_OPTS)
+    const gl   = (gl2 ?? canvas.getContext('webgl', CTX_OPTS)) as WebGLRenderingContext | null
     if (!gl) return
 
     const isGL2  = !!gl2
@@ -161,7 +172,9 @@ export function Hero() {
     canvas.addEventListener('pointermove', onMove)
 
     const resize = () => {
-      const dpr = window.innerWidth <= 768 ? 1 : Math.min(devicePixelRatio, 1.5)
+      // Soft cloud shader — sub-native resolution upscales invisibly and
+      // cuts fragment work ~2× on hi-DPI screens
+      const dpr = window.innerWidth <= 768 ? 0.75 : Math.min(devicePixelRatio, 1)
       canvas.width  = Math.floor(window.innerWidth  * dpr)
       canvas.height = Math.floor(window.innerHeight * dpr)
       gl.viewport(0, 0, canvas.width, canvas.height)
@@ -175,10 +188,7 @@ export function Hero() {
     const onScroll = () => { heroPast = window.scrollY > window.innerHeight }
     window.addEventListener('scroll', onScroll, { passive: true })
 
-    const loop = (now: number) => {
-      rafRef.current = requestAnimationFrame(loop)
-      if (document.hidden || heroPast || now - lastFrame < TARGET_MS) return
-      lastFrame = now
+    const drawFrame = (now: number) => {
       gl.useProgram(prog)
       gl.uniform2f(uRes,   canvas.width, canvas.height)
       gl.uniform1f(uTime,  now * 1e-3)
@@ -187,13 +197,43 @@ export function Hero() {
       dmx *= 0.9; dmy *= 0.9
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
     }
-    rafRef.current = requestAnimationFrame(loop)
 
-    return () => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduced) {
+      drawFrame(1000)
+    } else {
+      const loop = (now: number) => {
+        rafRef.current = requestAnimationFrame(loop)
+        if (document.hidden || heroPast || now - lastFrame < TARGET_MS) return
+        lastFrame = now
+        drawFrame(now)
+      }
+      rafRef.current = requestAnimationFrame(loop)
+    }
+
+    cleanupGL = () => {
       cancelAnimationFrame(rafRef.current)
       canvas.removeEventListener('pointermove', onMove)
       window.removeEventListener('resize', resize)
       window.removeEventListener('scroll', onScroll)
+    }
+    }
+
+    // Defer shader compile past hydration + entrance animations so the
+    // page opens without competing for the main thread
+    let idleId = 0
+    let timerId = 0
+    if (typeof window.requestIdleCallback === 'function') {
+      idleId = window.requestIdleCallback(initGL, { timeout: 600 })
+    } else {
+      timerId = window.setTimeout(initGL, 250)
+    }
+
+    return () => {
+      cancelled = true
+      if (idleId && typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(idleId)
+      if (timerId) window.clearTimeout(timerId)
+      cleanupGL?.()
     }
   }, [])
 
@@ -257,8 +297,6 @@ export function Hero() {
             fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase',
             color: 'var(--t1)',
             marginBottom: 44,
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
           }}
         >
           <span
@@ -402,9 +440,7 @@ export function Hero() {
           display: 'flex', flexWrap: 'wrap',
           borderTop: '1px solid var(--rule)',
           zIndex: 3,
-          background: 'rgba(7,7,9,0.72)',
-          backdropFilter: 'blur(18px)',
-          WebkitBackdropFilter: 'blur(18px)',
+          background: 'rgba(7,7,9,0.9)',
         }}
       >
         {PROOF.map((p, i) => (
@@ -437,9 +473,9 @@ export function Hero() {
         <svg width="100%" height="220" preserveAspectRatio="none" style={{ display: 'block' }}>
           <defs>
             <filter id="hero-smoke" x="-5%" y="-5%" width="110%" height="110%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.018 0.006" numOctaves="4" seed="7" result="noise">
-                <animate attributeName="baseFrequency" values="0.018 0.006;0.024 0.009;0.018 0.006" dur="16s" repeatCount="indefinite"/>
-              </feTurbulence>
+              {/* Static turbulence — animating baseFrequency re-rasterizes the
+                  filter on the CPU every frame across the full viewport */}
+              <feTurbulence type="fractalNoise" baseFrequency="0.018 0.006" numOctaves="4" seed="7" result="noise"/>
               <feDisplacementMap in="SourceGraphic" in2="noise" scale="44" xChannelSelector="R" yChannelSelector="G"/>
             </filter>
             <linearGradient id="smoke-fill" x1="0" y1="0" x2="0" y2="1">
