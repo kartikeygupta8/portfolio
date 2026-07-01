@@ -108,12 +108,6 @@ function makeShader(gl: WebGLRenderingContext, type: number, src: string): WebGL
   return s
 }
 
-const rise = (delay: number) => ({
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.72, ease: [0.16, 1, 0.3, 1] as any, delay },
-})
-
 export function Hero() {
   const canvasRef  = useRef<HTMLCanvasElement>(null)
   const rafRef     = useRef<number>(0)
@@ -189,6 +183,7 @@ export function Hero() {
     window.addEventListener('scroll', onScroll, { passive: true })
 
     const drawFrame = (now: number) => {
+      if (canvas.style.opacity !== '1') canvas.style.opacity = '1'
       gl.useProgram(prog)
       gl.uniform2f(uRes,   canvas.width, canvas.height)
       gl.uniform1f(uTime,  now * 1e-3)
@@ -261,6 +256,8 @@ export function Hero() {
           width: '100%', height: '100%',
           touchAction: 'pan-y',
           background: 'var(--bg)',
+          opacity: 0,
+          transition: 'opacity 0.9s ease',
         }}
       />
 
@@ -286,8 +283,9 @@ export function Hero() {
         }}
       >
         {/* Badge */}
-        <motion.div {...rise(0.10)}
+        <div className="hero-rise"
           style={{
+            animationDelay: '0.10s',
             display: 'inline-flex', alignItems: 'center', gap: 10,
             padding: '7px 20px',
             background: 'rgba(75,139,245,0.07)',
@@ -307,12 +305,13 @@ export function Hero() {
             }}
           />
           Senior Full-Stack · MCP Agents · RAG Pipelines · AI Systems
-        </motion.div>
+        </div>
 
         {/* Name — Syne display font */}
-        <motion.h1
-          {...rise(0.28)}
+        <h1
+          className="hero-rise"
           style={{
+            animationDelay: '0.28s',
             fontFamily: 'var(--font-display), "Syne", system-ui, sans-serif',
             fontSize: 'clamp(48px, 7.5vw, 108px)',
             fontWeight: 800,
@@ -339,12 +338,13 @@ export function Hero() {
           >
             Gupta
           </span>
-        </motion.h1>
+        </h1>
 
         {/* Tagline */}
-        <motion.p
-          {...rise(0.44)}
+        <p
+          className="hero-rise"
           style={{
+            animationDelay: '0.44s',
             fontSize: 18, lineHeight: 1.78,
             color: 'rgba(242,241,249,0.62)',
             maxWidth: 560, marginBottom: 48, fontWeight: 300,
@@ -354,12 +354,12 @@ export function Hero() {
             7 years building production AI infrastructure
           </strong>{' '}
           — MCP agents, RAG pipelines, distributed backends, and full-stack systems that ship at scale.
-        </motion.p>
+        </p>
 
         {/* CTAs */}
-        <motion.div
-          {...rise(0.58)}
-          style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}
+        <div
+          className="hero-rise"
+          style={{ animationDelay: '0.58s', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}
         >
           <a
             href="#projects"
@@ -428,14 +428,14 @@ export function Hero() {
             </svg>
             Resume
           </a>
-        </motion.div>
+        </div>
       </div>
 
       {/* Proof bar */}
-      <motion.div
-        {...rise(0.74)}
-        className="proof-bar"
+      <div
+        className="proof-bar hero-rise"
         style={{
+          animationDelay: '0.74s',
           position: 'absolute', bottom: 0, left: 0, right: 0,
           display: 'flex', flexWrap: 'wrap',
           borderTop: '1px solid var(--rule)',
@@ -466,7 +466,7 @@ export function Hero() {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Smoky curtain edge — organic fog hiding content below */}
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 220, zIndex: 2, pointerEvents: 'none' }}>
@@ -509,6 +509,18 @@ export function Hero() {
       </motion.div>
 
       <style>{`
+        /* CSS-driven entrance — runs at first paint, before JS hydration,
+           so the hero is never a blank screen while the bundle loads */
+        .hero-rise {
+          animation: hero-rise 0.72s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes hero-rise {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-rise { animation-duration: 0.01s; animation-delay: 0s !important; }
+        }
         @keyframes nudge-up {
           0%, 100% { transform: translateY(0);    opacity: 1; }
           50%       { transform: translateY(-7px); opacity: 0.5; }
