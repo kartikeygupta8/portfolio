@@ -37,7 +37,7 @@ export default function AISupportPlatform() {
               {[
                 { val: '38%',   label: 'Auto-Resolution Rate' },
                 { val: '1.2s',  label: 'Median Response Time' },
-                { val: '4,800', label: 'Peak Concurrent Sessions' },
+                { val: '62%',   label: 'Context-Rich Handoffs' },
                 { val: '99.7%', label: 'System Uptime (90d)' },
               ].map((m, i) => (
                 <div key={m.label} style={{ flex: 1, minWidth: 140, padding: '24px 28px', borderRight: i < 3 ? '1px solid var(--rule)' : 'none', background: 'var(--bg1)' }}>
@@ -58,7 +58,7 @@ export default function AISupportPlatform() {
                 100% of tier-1 support was manual — slow, inconsistent, and unscalable.
               </h2>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82, marginBottom: 16 }}>
-                Every customer ticket required a human agent to read, classify, and respond. At 4,800 concurrent sessions, this created bottlenecks, inconsistent response quality, and an agent team under constant pressure. Tier-1 queries — password resets, status checks, standard troubleshooting — consumed the same human time as genuinely complex escalations.
+                Every customer ticket required a human agent to read, classify, and respond. As ticket volume grew, this created bottlenecks, inconsistent response quality, and an agent team under constant pressure. Tier-1 queries — password resets, status checks, standard troubleshooting — consumed the same human time as genuinely complex escalations.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
                 The goal: reduce tier-1 manual load by auto-resolving high-confidence routine queries, extend to agentic workflows for scheduling and booking, and ensure the remaining 62% always gets a well-classified, context-rich handoff — not a blank-slate escalation.
@@ -131,7 +131,7 @@ export default function AISupportPlatform() {
                   {/* Redis session note */}
                   <rect x="140" y="220" width="100" height="36" rx="5" fill="rgba(31,208,208,0.07)" stroke="rgba(31,208,208,0.25)" strokeWidth="1"/>
                   <text x="190" y="237" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="9">Redis Sessions</text>
-                  <text x="190" y="250" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.6">4,800 concurrent</text>
+                  <text x="190" y="250" textAnchor="middle" fill="#1FD0D0" fontFamily="monospace" fontSize="8" opacity="0.6">30-min TTL state</text>
 
                   {/* Arrowhead markers */}
                   <defs>
@@ -178,7 +178,7 @@ export default function AISupportPlatform() {
                   accent: 'var(--blue)',
                 },
                 {
-                  title: 'Redis session store for 4,800 concurrent conversations',
+                  title: 'Redis session store for stateless horizontal scaling',
                   body: 'Each conversation thread is a stateful session held in Redis with a 30-minute TTL. This lets any backend instance pick up any conversation without re-hydrating from the database, enabling horizontal scaling. The session schema is also the audit record — no separate write path, no consistency issues.',
                   accent: 'var(--cyan)',
                 },

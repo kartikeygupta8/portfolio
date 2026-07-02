@@ -64,7 +64,7 @@ export default function Post() {
 
               <p>The gateway works like this: every LLM call goes through a central dispatcher that takes a task type, input, and latency budget. The dispatcher has a routing table — a set of rules that maps task × confidence × budget to a provider. High-volume deterministic tasks go to Ollama. Classification and response generation go to Llama 3.3 on Groq. Anything requiring judgment, or where confidence stays below threshold after two attempts, escalates to Claude.</p>
 
-              <p>The practical effect at 4,800 concurrent sessions: the majority of calls resolve on Ollama or Groq, and only the hard tail reaches the frontier model. The infrastructure cost for the LLM layer is a fraction of what it would be if everything went through a frontier model by default.</p>
+              <p>The practical effect at production volume: the majority of calls resolve on Ollama or Groq, and only the hard tail reaches the frontier model. The infrastructure cost for the LLM layer is a fraction of what it would be if everything went through a frontier model by default.</p>
 
               <p>The single-model approach is simpler to build. The multi-provider approach is significantly cheaper to run and more resilient — when one provider has an outage or a degraded API, the others absorb the load. At scale, that resilience is worth the routing complexity.</p>
 

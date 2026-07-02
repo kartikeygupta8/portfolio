@@ -23,7 +23,7 @@ export const TICKER_ITEMS = [
   { dot: 'green', val: '−30%',  label: 'API Latency Reduction' },
   { dot: 'amber', val: '95%',   label: 'ETL Data Accuracy' },
   { dot: 'green', val: '−80%',  label: 'Manual QA Eliminated' },
-  { dot: 'blue',  val: '4,800', label: 'Peak Concurrent Sessions' },
+  { dot: 'blue',  val: '+40%',  label: 'Portal Adoption' },
   { dot: 'green', val: '99.7%', label: 'System Uptime (90d)' },
   { dot: 'blue',  val: '7+',    label: 'Years Production Engineering' },
 ]
@@ -37,7 +37,7 @@ export const PROJECTS = [
     company: 'Evren',
     title: 'AI-Powered Customer Support Platform',
     titleEm: 'Customer Support',
-    summary: 'AI support platform on Groq Llama 3.3 — auto-resolves 38% of tier-1 tickets without human intervention, and extends to agentic workflows: scheduling, support booking, guided multi-step flows. 4,800 peak concurrent sessions at 99.7% uptime.',
+    summary: 'AI support platform on Groq Llama 3.3 — auto-resolves 38% of tier-1 tickets without human intervention, and extends to agentic workflows: scheduling, support booking, guided multi-step flows. 99.7% uptime over a 90-day window.',
     stack: ['Groq API', 'Llama 3.3', 'Ollama', 'Node.js', 'React', 'PostgreSQL', 'Redis', 'Docker'],
     chipColors: ['b', 'b', 'b', '', '', '', '', ''],
     metrics: ['38% tier-1 auto-resolution without human intervention', '3 agentic workflow types', '99.7% uptime'],
