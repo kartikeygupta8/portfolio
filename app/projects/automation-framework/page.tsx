@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'CRM Regression Automation Framework — Kartikey Gupta',
+  description: 'Case study: Selenium WebDriver CRM regression automation framework with Page Object Model and parallel execution. 90%+ workflow coverage, −80% manual QA, full suite runs in under 8 minutes on every CI push.',
 }
 
 export default function AutomationFramework() {

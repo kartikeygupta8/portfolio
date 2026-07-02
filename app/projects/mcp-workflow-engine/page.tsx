@@ -5,6 +5,7 @@ import { NextProjectLink } from '@/components/ui/NextProjectLink'
 
 export const metadata = {
   title: 'MCP-Based AI Agent Workflow Engine — Kartikey Gupta',
+  description: 'Case study: MCP server exposing internal APIs as typed tools for Groq Llama 3.3 agents. Automated appointment scheduling, support booking, and guided flows — 6h+/week reclaimed, 100% audit coverage.',
 }
 
 export default function McpWorkflowEngine() {

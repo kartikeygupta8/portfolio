@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Admin & Support Portal — Kartikey Gupta',
+  description: 'Case study: Python → Node.js backend migration, 4-tier RBAC redesign, React UI overhaul for enterprise OS management portal. Delivered −30% API latency, +40% portal adoption, zero downtime.',
 }
 
 export default function AdminSupportPortal() {

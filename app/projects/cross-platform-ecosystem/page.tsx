@@ -5,6 +5,7 @@ import { NextProjectLink } from '@/components/ui/NextProjectLink'
 
 export const metadata = {
   title: 'Cross-Platform Healthcare Monitoring Platform — Kartikey Gupta',
+  description: 'Case study: unified healthcare monitoring platform across a custom smartwatch (HR, SpO2, GPS), React Native mobile, and React web — single Node.js + MySQL backend. Led 3-engineer team, +25% performance, −35% bug reports.',
 }
 
 export default function CrossPlatformEcosystem() {

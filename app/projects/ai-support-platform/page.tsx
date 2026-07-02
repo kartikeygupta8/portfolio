@@ -5,6 +5,7 @@ import { NextProjectLink } from '@/components/ui/NextProjectLink'
 
 export const metadata = {
   title: 'AI-Powered Customer Support Platform — Kartikey Gupta',
+  description: 'Case study: AI support platform on Groq Llama 3.3 auto-resolving 72% of tier-1 tickets without human intervention. Agentic workflows for scheduling and booking. 99.7% uptime over 90 days.',
 }
 
 export default function AISupportPlatform() {

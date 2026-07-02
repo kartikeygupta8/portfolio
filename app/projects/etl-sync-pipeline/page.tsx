@@ -5,6 +5,7 @@ import { NextProjectLink } from '@/components/ui/NextProjectLink'
 
 export const metadata = {
   title: 'Fault-Tolerant ETL Sync Pipeline — Kartikey Gupta',
+  description: 'Case study: bidirectional ETL sync between MongoDB and Salesforce CRM via SSIS. Schema validation, dead-letter queuing, exponential backoff retry, immutable audit trail. 95% data accuracy, zero manual reconciliation.',
 }
 
 export default function EtlSyncPipeline() {
