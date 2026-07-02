@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 import { CERTIFICATIONS, SIDE_PROJECTS, SITE } from '@/lib/constants'
 
 const FACTS = [
@@ -103,13 +104,12 @@ export function About() {
           >
             {/* Avatar */}
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img
+              <Image
                 src="/avatar.jpg"
                 alt="Kartikey Gupta"
                 width={160}
                 height={160}
                 style={{
-                  width: 160, height: 160,
                   borderRadius: '50%',
                   objectFit: 'cover',
                   objectPosition: 'center top',

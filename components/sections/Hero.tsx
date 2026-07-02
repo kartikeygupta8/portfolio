@@ -361,29 +361,30 @@ export function Hero() {
           className="hero-rise"
           style={{ animationDelay: '0.58s', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}
         >
-          <a
-            href="#projects"
+          <button
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             style={{
               fontFamily: 'var(--font-mono), monospace',
               fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
               color: 'var(--bg)', background: 'var(--t0)',
-              textDecoration: 'none', padding: '13px 26px',
+              border: 'none', cursor: 'pointer', padding: '13px 26px',
               borderRadius: 'var(--r)', transition: 'opacity 0.2s',
             }}
             onMouseEnter={e => (e.currentTarget.style.opacity = '0.82')}
             onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
           >
             View Work
-          </a>
-          <a
-            href="#contact"
+          </button>
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             style={{
               fontFamily: 'var(--font-mono), monospace',
               fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: 'var(--t1)', textDecoration: 'none',
+              color: 'var(--t1)', background: 'none',
               padding: '13px 26px',
               border: '1px solid var(--rule2)',
               borderRadius: 'var(--r)', transition: 'all 0.2s',
+              cursor: 'pointer',
               display: 'flex', alignItems: 'center', gap: 8,
             }}
             onMouseEnter={e => {
@@ -399,7 +400,7 @@ export function Hero() {
             <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </a>
+          </button>
           <a
             href="/resume.pdf"
             download="Kartikey_Gupta_Resume.pdf"
