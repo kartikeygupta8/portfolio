@@ -101,25 +101,6 @@ export function About() {
             transition={{ duration: 0.62, delay: 0.3 }}
             style={{ display: 'flex', flexDirection: 'column', gap: 14 }}
           >
-            {/* Avatar */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img
-                src="/avatar.jpg"
-                alt="Kartikey Gupta"
-                width={160}
-                height={160}
-                style={{
-                  width: 160, height: 160,
-                  borderRadius: '50%',
-                  objectFit: 'cover',
-                  objectPosition: 'center top',
-                  border: '2px solid var(--rule2)',
-                  boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
-                  display: 'block',
-                }}
-              />
-            </div>
-
             {/* Quick facts */}
             <div style={{ border: '1px solid var(--rule2)', borderRadius: 10, background: 'var(--bg1)', overflow: 'hidden' }}>
               <div style={{ borderBottom: '1px solid var(--rule)', padding: '14px 20px', fontFamily: 'var(--font-mono), monospace', fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--t2)' }}>

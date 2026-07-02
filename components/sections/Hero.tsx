@@ -282,25 +282,6 @@ export function Hero() {
           width: '100%', maxWidth: 1060,
         }}
       >
-        {/* Avatar */}
-        <div className="hero-rise" style={{ animationDelay: '0s', marginBottom: 28 }}>
-          <img
-            src="/avatar.jpg"
-            alt="Kartikey Gupta"
-            width={96}
-            height={96}
-            style={{
-              width: 96, height: 96,
-              borderRadius: '50%',
-              objectFit: 'cover',
-              objectPosition: 'center top',
-              border: '2px solid rgba(75,139,245,0.35)',
-              boxShadow: '0 0 0 5px rgba(75,139,245,0.08), 0 8px 32px rgba(0,0,0,0.4)',
-              display: 'block',
-            }}
-          />
-        </div>
-
         {/* Badge */}
         <div className="hero-rise"
           style={{

@@ -50,14 +50,34 @@ export function Navigation() {
         <Link
           href="/"
           style={{
-            fontFamily: 'var(--font-mono), monospace',
-            fontSize: 13,
-            letterSpacing: '0.04em',
-            color: 'var(--t0)',
+            display: 'flex', alignItems: 'center', gap: 10,
             textDecoration: 'none',
           }}
         >
-          kartikey<span style={{ color: 'var(--blue)' }}>.co</span>
+          <img
+            src="/avatar.jpg"
+            alt="Kartikey Gupta"
+            width={30}
+            height={30}
+            style={{
+              width: 30, height: 30,
+              borderRadius: '50%',
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              border: '1.5px solid rgba(75,139,245,0.4)',
+              flexShrink: 0,
+            }}
+          />
+          <span
+            style={{
+              fontFamily: 'var(--font-mono), monospace',
+              fontSize: 13,
+              letterSpacing: '0.04em',
+              color: 'var(--t0)',
+            }}
+          >
+            kartikey<span style={{ color: 'var(--blue)' }}>.co</span>
+          </span>
         </Link>
 
         {/* Desktop links */}
