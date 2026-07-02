@@ -154,10 +154,10 @@ export default function AdminSupportPortal() {
                   <text x="658" y="228" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="7" opacity="0.55">Python log analyser</text>
                   <text x="658" y="236" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="7" opacity="0.45">structured parsing</text>
 
-                  {/* PostgreSQL + Redis data layer */}
+                  {/* MySQL + Redis data layer */}
                   <path d="M350 190 L350 268" stroke="rgba(255,255,255,0.08)" strokeWidth="1" markerEnd="url(#arrA)"/>
                   <rect x="294" y="268" width="112" height="42" rx="5" fill="rgba(78,78,104,0.12)" stroke="rgba(78,78,104,0.3)" strokeWidth="1"/>
-                  <text x="350" y="285" textAnchor="middle" fill="#9090B0" fontFamily="monospace" fontSize="9">PostgreSQL</text>
+                  <text x="350" y="285" textAnchor="middle" fill="#9090B0" fontFamily="monospace" fontSize="9">MySQL</text>
                   <text x="350" y="300" textAnchor="middle" fill="#9090B0" fontFamily="monospace" fontSize="7" opacity="0.65">+ Redis cache layer</text>
 
                   <defs>
@@ -170,7 +170,7 @@ export default function AdminSupportPortal() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['Node.js', 'React', 'TypeScript', 'Python', 'PostgreSQL', 'Redis', 'RBAC', 'Docker', 'JWT Auth'].map(t => (
+              {['Node.js', 'React', 'TypeScript', 'Python', 'MySQL', 'Redis', 'RBAC', 'Docker', 'JWT Auth'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>

@@ -30,14 +30,14 @@ export default function AISupportPlatform() {
               <em style={{ color: 'var(--blue)' }}>Support Platform</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.82, maxWidth: 680, marginBottom: 48 }}>
-              A full-stack support automation system combining AI-based intent classification with agentic workflows — built on Groq's Llama 3.3 with streaming completions. Auto-resolves 38% of tier-1 tickets without human intervention, and extends to scheduling appointments, booking support calls, and guiding users through multi-step service flows.
+              A full-stack support automation system combining AI-based intent classification with agentic workflows — built on Groq's Llama 3.3 with streaming completions. Auto-resolves 72% of tier-1 tickets without human intervention, and extends to scheduling appointments, booking support calls, and guiding users through multi-step service flows.
             </p>
             {/* Impact metrics bar */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, border: '1px solid var(--rule2)', borderRadius: 10, overflow: 'hidden' }}>
               {[
-                { val: '38%',   label: 'Auto-Resolution Rate' },
+                { val: '72%',   label: 'Auto-Resolution Rate' },
                 { val: '1.2s',  label: 'Median Response Time' },
-                { val: '62%',   label: 'Context-Rich Handoffs' },
+                { val: '28%',   label: 'Context-Rich Handoffs' },
                 { val: '99.7%', label: 'System Uptime (90d)' },
               ].map((m, i) => (
                 <div key={m.label} style={{ flex: 1, minWidth: 140, padding: '24px 28px', borderRight: i < 3 ? '1px solid var(--rule)' : 'none', background: 'var(--bg1)' }}>
@@ -61,7 +61,7 @@ export default function AISupportPlatform() {
                 Every customer ticket required a human agent to read, classify, and respond. As ticket volume grew, this created bottlenecks, inconsistent response quality, and an agent team under constant pressure. Tier-1 queries — password resets, status checks, standard troubleshooting — consumed the same human time as genuinely complex escalations.
               </p>
               <p style={{ fontSize: 15, color: 'var(--t1)', lineHeight: 1.82 }}>
-                The goal: reduce tier-1 manual load by auto-resolving high-confidence routine queries, extend to agentic workflows for scheduling and booking, and ensure the remaining 62% always gets a well-classified, context-rich handoff — not a blank-slate escalation.
+                The goal: reduce tier-1 manual load by auto-resolving high-confidence routine queries, extend to agentic workflows for scheduling and booking, and ensure the remaining 28% always gets a well-classified, context-rich handoff — not a blank-slate escalation.
               </p>
             </div>
           </div>
@@ -122,11 +122,11 @@ export default function AISupportPlatform() {
                   <path d="M610 244 L680 244 L680 172" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
                   <rect x="642" y="130" width="88" height="44" rx="6" fill="rgba(78,78,104,0.15)" stroke="rgba(78,78,104,0.4)" strokeWidth="1"/>
                   <text x="686" y="148" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="9">Audit Log</text>
-                  <text x="686" y="163" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="9" opacity="0.7">PostgreSQL</text>
+                  <text x="686" y="163" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="9" opacity="0.7">MySQL</text>
 
                   {/* Labels */}
-                  <text x="360" y="94" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.7">Tier-1 (38%)</text>
-                  <text x="360" y="216" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.7">Complex (62%)</text>
+                  <text x="360" y="94" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.7">Tier-1 (72%)</text>
+                  <text x="360" y="216" textAnchor="middle" fill="#F0A429" fontFamily="monospace" fontSize="8" opacity="0.7">Complex (28%)</text>
 
                   {/* Redis session note */}
                   <rect x="140" y="220" width="100" height="36" rx="5" fill="rgba(31,208,208,0.07)" stroke="rgba(31,208,208,0.25)" strokeWidth="1"/>
@@ -150,7 +150,7 @@ export default function AISupportPlatform() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['Groq API', 'Llama 3.3', 'Ollama', 'Node.js', 'React', 'PostgreSQL', 'Redis', 'Docker'].map(t => (
+              {['Groq API', 'Llama 3.3', 'Ollama', 'Node.js', 'React', 'MySQL', 'Redis', 'Docker'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -199,7 +199,7 @@ export default function AISupportPlatform() {
             <div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 20 }}>
                 {[
-                  { val: '38%',     unit: '',    label: 'of tickets auto-resolved without human intervention', color: 'up' },
+                  { val: '72%',     unit: '',    label: 'of tickets auto-resolved without human intervention', color: 'up' },
                   { val: '1.2',     unit: 's',   label: 'median response time vs. 4-6 minute baseline', color: 'up' },
                   { val: '3',       unit: '',    label: 'agentic workflow types automated — appointment scheduling, support booking, guided multi-step flows', color: 'neu' },
                   { val: '99.7',    unit: '%',   label: 'uptime over a 90-day production window', color: 'up' },

@@ -3,8 +3,8 @@ import { ProjectNav } from '@/components/layout/ProjectNav'
 import { Footer } from '@/components/layout/Footer'
 
 export const metadata = {
-  title: '38% Auto-Resolution: What the Other 62% Taught Me',
-  description: 'The 38% is the easy part. Understanding why 62% of tickets still need human handling reveals the real engineering challenges of production AI support systems.',
+  title: '72% Auto-Resolution: What the Other 28% Taught Me',
+  description: 'The first 50% is the easy part. Understanding why 28% of tickets still need human handling reveals the real engineering challenges of production AI support systems.',
 }
 
 export default function Post() {
@@ -25,10 +25,10 @@ export default function Post() {
               <span style={{ fontFamily: 'var(--font-mono), monospace', fontSize: 10, color: 'var(--t2)' }}>Mar 2026 · 4 min read</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 400, letterSpacing: '-1.5px', lineHeight: 1.1, color: 'var(--t0)', marginBottom: 24 }}>
-              38% Auto-Resolution:<br /><em style={{ color: 'var(--green)' }}>What the Other 62% Taught Me</em>
+              72% Auto-Resolution:<br /><em style={{ color: 'var(--green)' }}>What the Other 28% Taught Me</em>
             </h1>
             <p style={{ fontSize: 17, color: 'var(--t1)', lineHeight: 1.85 }}>
-              The 38% is the easy part to build. The 62% that still needs human handling — ambiguous intent, emotional escalation, multi-step state — is where the real engineering lives.
+              Getting to 72% auto-resolution wasn't the hard part. The 28% that still needs human handling — ambiguous intent, emotional escalation, multi-step state — is where the real engineering lives.
             </p>
           </div>
         </section>
@@ -38,11 +38,11 @@ export default function Post() {
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <div className="post-body">
 
-              <p>When people hear "38% of support tickets auto-resolved by AI without human intervention," they usually ask one of two things: <em>how do I get that number</em>, or <em>is that number real</em>. The answer to both is the same: focus on the 62%, not the 38%.</p>
+              <p>When people hear "72% of support tickets auto-resolved by AI without human intervention," they usually ask one of two things: <em>how do I get that number</em>, or <em>is that number real</em>. The answer to both is the same: focus on the 28%, not the 72%.</p>
 
-              <p>Here's what I mean. The 38% — password resets, status checks, standard troubleshooting steps, billing lookups — those resolve themselves almost by accident once you have decent intent classification and a connected knowledge base. They're high-volume, low-variance, and the LLM handles them confidently on the first try. Building that part took maybe three weeks.</p>
+              <p>Here's what I mean. Getting from zero to ~50% auto-resolution — password resets, status checks, standard troubleshooting steps, billing lookups — those resolve themselves almost by accident once you have decent intent classification and a connected knowledge base. They're high-volume, low-variance, and the LLM handles them confidently on the first try. Building that part took maybe three weeks.</p>
 
-              <p>The next six months were spent on the 62%.</p>
+              <p>The next six months were spent pushing from 50% to 72%, and understanding why the remaining 28% resists automation.</p>
 
               <h2>The three failure modes</h2>
 
@@ -58,9 +58,9 @@ export default function Post() {
 
               <p>The lesson I keep coming back to: the quality of an AI support system isn't measured by how many tickets it resolves — it's measured by how well it handles the ones it <em>shouldn't</em> resolve. A graceful, context-rich handoff to a human agent is a better product outcome than a failed auto-resolution that leaves the user confused about what just happened.</p>
 
-              <p>We now track two metrics side-by-side: auto-resolution rate (38%) and handoff quality score (based on agent feedback on whether the context provided was useful). The second metric is harder to improve and more meaningful than the first.</p>
+              <p>We now track two metrics side-by-side: auto-resolution rate (72%) and handoff quality score (based on agent feedback on whether the context provided was useful). The second metric is harder to improve and more meaningful than the first.</p>
 
-              <p>If you're building something similar, design the exit path first. The 38% will mostly take care of itself.</p>
+              <p>If you're building something similar, design the exit path first. The first 50% will mostly take care of itself.</p>
 
             </div>
           </div>

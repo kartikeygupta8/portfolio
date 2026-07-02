@@ -110,7 +110,7 @@ export default function McpWorkflowEngine() {
                   <path d="M430 110 L500 60" stroke="rgba(255,255,255,0.12)" strokeWidth="1" markerEnd="url(#arr)"/>
                   <rect x="500" y="38" width="110" height="36" rx="5" fill="rgba(45,214,138,0.08)" stroke="rgba(45,214,138,0.3)" strokeWidth="1"/>
                   <text x="555" y="53" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="9">DB Query</text>
-                  <text x="555" y="67" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.6">PostgreSQL / AWS</text>
+                  <text x="555" y="67" textAnchor="middle" fill="#2DD68A" fontFamily="monospace" fontSize="8" opacity="0.6">MySQL / AWS</text>
 
                   {/* Slack */}
                   <path d="M430 128 L500 120" stroke="rgba(255,255,255,0.12)" strokeWidth="1" markerEnd="url(#arr)"/>
@@ -130,11 +130,11 @@ export default function McpWorkflowEngine() {
                   <text x="555" y="238" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="9">File / Report</text>
                   <text x="555" y="252" textAnchor="middle" fill="#957CF4" fontFamily="monospace" fontSize="8" opacity="0.6">S3 / Lambda</text>
 
-                  {/* Audit → PostgreSQL */}
+                  {/* Audit → MySQL */}
                   <path d="M365 192 L365 255" stroke="rgba(255,255,255,0.1)" strokeWidth="1" markerEnd="url(#arr)"/>
                   <rect x="300" y="255" width="130" height="36" rx="5" fill="rgba(78,78,104,0.15)" stroke="rgba(78,78,104,0.35)" strokeWidth="1"/>
                   <text x="365" y="270" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="9">Audit Log</text>
-                  <text x="365" y="284" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="8" opacity="0.7">PostgreSQL — immutable</text>
+                  <text x="365" y="284" textAnchor="middle" fill="#4E4E68" fontFamily="monospace" fontSize="8" opacity="0.7">MySQL — immutable</text>
 
                   <defs>
                     <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
@@ -146,7 +146,7 @@ export default function McpWorkflowEngine() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {['MCP Protocol', 'Groq API', 'Llama 3.3', 'Node.js', 'PostgreSQL', 'Docker', 'AWS Lambda'].map(t => (
+              {['MCP Protocol', 'Groq API', 'Llama 3.3', 'Node.js', 'MySQL', 'Docker', 'AWS Lambda'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>
@@ -173,7 +173,7 @@ export default function McpWorkflowEngine() {
                   accent: 'var(--amber)',
                 },
                 {
-                  title: 'Immutable audit trail — append-only PostgreSQL',
+                  title: 'Immutable audit trail — append-only MySQL',
                   body: "Every tool invocation writes an immutable record before execution: who triggered it (the AI session ID), what was called, what parameters, what timestamp. Post-execution appends the result or error. The audit table has no UPDATE or DELETE access for the application layer. If regulators or ops ever ask 'what did the agent do last Tuesday?', the answer is a SQL query.",
                   accent: 'var(--violet)',
                 },

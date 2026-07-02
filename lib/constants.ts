@@ -12,13 +12,13 @@ export const SITE = {
 
 export const PROOF = [
   { num: '7', sup: '+', label: 'Years Production' },
-  { num: '38', sup: '%', label: 'AI Auto-Resolution' },
+  { num: '72', sup: '%', label: 'AI Auto-Resolution' },
   { num: '−30', sup: '%', label: 'API Latency' },
   { num: '95', sup: '%', label: 'ETL Accuracy' },
 ]
 
 export const TICKER_ITEMS = [
-  { dot: 'green', val: '38%',   label: 'AI Ticket Auto-Resolution' },
+  { dot: 'green', val: '72%',   label: 'AI Ticket Auto-Resolution' },
   { dot: 'blue',  val: '1.2s',  label: 'Median Support Response Time' },
   { dot: 'green', val: '−30%',  label: 'API Latency Reduction' },
   { dot: 'amber', val: '95%',   label: 'ETL Data Accuracy' },
@@ -37,10 +37,10 @@ export const PROJECTS = [
     company: 'Evren',
     title: 'AI-Powered Customer Support Platform',
     titleEm: 'Customer Support',
-    summary: 'AI support platform on Groq Llama 3.3 — auto-resolves 38% of tier-1 tickets without human intervention, and extends to agentic workflows: scheduling, support booking, guided multi-step flows. 99.7% uptime over a 90-day window.',
-    stack: ['Groq API', 'Llama 3.3', 'Ollama', 'Node.js', 'React', 'PostgreSQL', 'Redis', 'Docker'],
+    summary: 'AI support platform on Groq Llama 3.3 — auto-resolves 72% of tier-1 tickets without human intervention, and extends to agentic workflows: scheduling, support booking, guided multi-step flows. 99.7% uptime over a 90-day window.',
+    stack: ['Groq API', 'Llama 3.3', 'Ollama', 'Node.js', 'React', 'MySQL', 'Redis', 'Docker'],
     chipColors: ['b', 'b', 'b', '', '', '', '', ''],
-    metrics: ['38% tier-1 auto-resolution without human intervention', '3 agentic workflow types', '99.7% uptime'],
+    metrics: ['72% tier-1 auto-resolution without human intervention', '3 agentic workflow types', '99.7% uptime'],
     accent: 'blue' as const,
   },
   {
@@ -52,7 +52,7 @@ export const PROJECTS = [
     title: 'MCP-Based AI Agent Workflow Engine',
     titleEm: 'AI Agent',
     summary: 'MCP server exposing internal read endpoints as typed tools for AI agents. Extended via Groq Llama 3.3 agentic layer to execute actions: appointment scheduling, support call booking, and guided multi-step flows — all with immutable audit trails.',
-    stack: ['MCP Protocol', 'Groq API', 'Llama 3.3', 'Node.js', 'PostgreSQL', 'Docker', 'AWS Lambda'],
+    stack: ['MCP Protocol', 'Groq API', 'Llama 3.3', 'Node.js', 'MySQL', 'Docker', 'AWS Lambda'],
     chipColors: ['c', 'v', 'v', '', '', '', ''],
     metrics: ['3 agentic workflow types automated', '~6h/week reclaimed', '100% audit coverage'],
     accent: 'cyan' as const,
@@ -66,7 +66,7 @@ export const PROJECTS = [
     title: 'Admin & Support Portal',
     titleEm: 'Support Portal',
     summary: 'Customer-facing Admin Portal for enterprise OS management (V2 rebuild from scratch) + internal Support Portal. Migrated Python → Node.js, designed 4-tier RBAC, rebuilt React UI — delivered −30% API latency, +40% adoption, −50% debug time, zero downtime.',
-    stack: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Redis', 'RBAC', 'Docker'],
+    stack: ['Node.js', 'React', 'Python', 'MySQL', 'Redis', 'RBAC', 'Docker'],
     chipColors: ['g', 'b', 'g', '', '', '', ''],
     metrics: ['−30% API latency', '+40% portal adoption', '−50% debug time'],
     accent: 'green' as const,
@@ -126,15 +126,15 @@ export const EXPERIENCE = [
     kpis: [
       { label: '+40% Portal Adoption', color: 'green' },
       { label: '−30% API Latency', color: 'blue' },
-      { label: '38% AI Auto-Resolution', color: 'green' },
+      { label: '72% AI Auto-Resolution', color: 'green' },
     ],
     points: [
       'Led Python → Node.js backend migration, improving throughput and maintainability across the platform',
-      'Built AI support chatbot on Groq Llama 3.3 with streaming completions — 38% of tier-1 tickets auto-resolved without human intervention',
+      'Built AI support chatbot on Groq Llama 3.3 with streaming completions — 72% of tier-1 tickets auto-resolved without human intervention',
       'Designed MCP server exposing internal APIs as typed tools; extended to agentic workflows — appointment scheduling, support call booking, guided multi-step flows',
       'Implemented 4-tier RBAC and rebuilt the customer-facing Admin Portal (V2) from scratch; query optimization cut API response times by 30%',
     ],
-    tags: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Groq', 'Llama 3.3', 'MCP', 'Docker', 'AWS'],
+    tags: ['Node.js', 'React', 'Python', 'MySQL', 'Groq', 'Llama 3.3', 'MCP', 'Docker', 'AWS'],
   },
   {
     id: 'bestpeers',

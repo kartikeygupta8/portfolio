@@ -11,8 +11,8 @@ export type Post = {
 export const POSTS: Post[] = [
   {
     slug:     'ai-auto-resolution-production',
-    title:    '38% Auto-Resolution: What the Other 62% Taught Me',
-    excerpt:  'The 38% is the easy part to build. The 62% that still needs human handling — ambiguous intent, emotional escalation, multi-step state — is where the real engineering lives.',
+    title:    '72% Auto-Resolution: What the Other 28% Taught Me',
+    excerpt:  'Getting to 72% was the easy part. The 28% that still needs human handling — ambiguous intent, emotional escalation, multi-step state — is where the real engineering lives.',
     date:     'Mar 2026',
     readTime: '4 min',
     tag:      'AI Systems',
