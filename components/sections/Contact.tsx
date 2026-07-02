@@ -265,13 +265,19 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormState('submitting')
+    const form = e.currentTarget
+    const data = {
+      name:    (form.elements.namedItem('name')    as HTMLInputElement).value.trim(),
+      email:   (form.elements.namedItem('email')   as HTMLInputElement).value.trim(),
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim(),
+    }
     try {
-      const data = new FormData(e.currentTarget)
-      await fetch('/', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       })
+      if (!res.ok) throw new Error('Failed')
       setFormState('success')
     } catch {
       setFormState('error')
@@ -363,9 +369,6 @@ export function Contact() {
             ) : (
               <motion.form
                 key="form"
-                name="contact"
-                method="POST"
-                data-netlify="true"
                 onSubmit={handleSubmit}
                 style={{
                   display: 'flex',
@@ -379,8 +382,6 @@ export function Contact() {
                   textAlign: 'left',
                 }}
               >
-                <input type="hidden" name="form-name" value="contact" />
-
                 <div style={{ display: 'flex', gap: 10 }} className="form-row">
                   <input
                     name="name"
