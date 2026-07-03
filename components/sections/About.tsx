@@ -105,7 +105,7 @@ export function About() {
             {/* Avatar */}
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <Image
-                src="/avatar.jpg"
+                src="/avatar.png"
                 alt="Kartikey Gupta"
                 width={160}
                 height={160}

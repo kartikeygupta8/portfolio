@@ -60,7 +60,7 @@ export function Navigation() {
           }}
         >
           <Image
-            src="/avatar.jpg"
+            src="/avatar.png"
             alt="Kartikey Gupta"
             width={30}
             height={30}
