@@ -133,8 +133,12 @@ export function Experience() {
         @media (max-width: 768px) {
           #experience { padding: 80px 24px !important; }
           #experience .exp-entry { grid-template-columns: 1fr !important; }
-          #experience .exp-left  { padding: 0 0 24px !important; }
-          #experience .exp-right { padding: 24px 0 0 !important; border-left: none !important; border-top: 1px solid var(--rule) !important; }
+          #experience .exp-left  { padding: 0 0 20px !important; }
+          #experience .exp-right { padding: 20px 0 0 !important; border-left: none !important; border-top: 1px solid var(--rule) !important; }
+        }
+        @media (max-width: 640px) {
+          #experience { padding: 60px 20px !important; }
+          #experience .exp-entry { padding: 32px 0 !important; }
         }
       `}</style>
     </section>

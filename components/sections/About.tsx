@@ -166,6 +166,9 @@ export function About() {
           #about { padding: 80px 24px !important; }
           .about-grid { grid-template-columns: 1fr !important; }
         }
+        @media (max-width: 640px) {
+          #about { padding: 60px 20px !important; }
+        }
       `}</style>
     </section>
   )

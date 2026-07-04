@@ -164,6 +164,9 @@ export function Testimonials() {
           #testimonials { padding: 80px 24px !important; }
           .testimonials-grid { grid-template-columns: 1fr !important; }
         }
+        @media (max-width: 640px) {
+          #testimonials { padding: 60px 20px !important; }
+        }
       `}</style>
     </section>
   )

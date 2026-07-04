@@ -603,9 +603,12 @@ export function Contact() {
           gap: 10px;
         }
         @media (max-width: 640px) {
-          #contact { padding: 72px 24px 120px !important; }
-          .contact-cards { grid-template-columns: repeat(2, 1fr); }
-          #contact .contact-footer { padding: 16px 24px !important; flex-direction: column; text-align: center; }
+          #contact { padding: 60px 20px 100px !important; }
+          .contact-cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+          #contact .contact-footer { padding: 16px 20px !important; flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 380px) {
+          .contact-cards { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>

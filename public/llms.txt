@@ -1,0 +1,62 @@
+# Kartikey Gupta — Senior Full-Stack Developer & GenAI Engineer
+
+## Who I Am
+
+Kartikey Gupta is a Senior Full-Stack Developer and GenAI Engineer based in India, with 7 years of experience shipping production AI-first systems across Fortune-500 fintech (FIS Global / Worldpay), SaaS startups, and product companies. Available for remote senior and lead engineering roles worldwide.
+
+## Services & What I Build
+
+- **Full-Stack Web Development** — Node.js, React, Next.js, TypeScript, Python. End-to-end: database schema to production deployment.
+- **AI & GenAI Integration** — LLM pipelines (Groq Llama 3.3, Claude, Ollama), RAG pipelines, MCP agents, agentic workflows, streaming completions, function calling.
+- **Backend Engineering** — REST APIs, GraphQL, microservices, MySQL, PostgreSQL, MongoDB, Redis, message queues, system design.
+- **React Native Mobile Development** — Cross-platform iOS & Android from a shared codebase.
+- **ETL & Data Pipelines** — SSIS, bidirectional sync, Salesforce API, fault-tolerant pipelines with dead-letter queuing and audit trails.
+- **Technical Leadership** — Architecture design, code reviews, engineering roadmaps, team mentorship (led 3–4 engineer teams).
+- **DevOps** — AWS (EC2, S3, Lambda), Docker, CI/CD, Nginx.
+
+## Key Achievements (with real numbers)
+
+- Built AI support platform on Groq Llama 3.3 — **72% of tier-1 tickets auto-resolved** without human intervention at 99.7% uptime
+- Designed MCP server with agentic workflows — **6h+/week of manual ops eliminated**, full immutable audit trail
+- Led Python → Node.js backend migration — **−30% API latency**, **+40% portal adoption**, zero downtime
+- Built Selenium CRM regression framework — **90%+ workflow coverage**, −80% manual QA, <8 min full CI runtime
+- Delivered fault-tolerant MongoDB↔Salesforce ETL via SSIS — **95% data accuracy**, zero manual reconciliation
+- Led 3-engineer team shipping healthcare monitoring platform (web + mobile + custom smartwatch) — **+25% performance**, −35% bugs
+
+## Tech Stack
+
+**AI/LLMs:** Groq API, Llama 3.3, Claude API, Ollama, MCP Protocol, RAG Pipelines, AI Agents, LangChain, Prompt Engineering, Function Calling, Agentic Workflows
+
+**Backend:** Node.js, Python, Express.js, REST APIs, GraphQL, Microservices, WebSockets, JWT Auth, BullMQ
+
+**Frontend:** React.js, Next.js, TypeScript, React Native, Redux, Tailwind CSS, Framer Motion
+
+**Data:** PostgreSQL, MySQL, MongoDB, Redis, SSIS, ETL Pipelines, Salesforce API
+
+**DevOps:** AWS (EC2, S3, Lambda), Docker, CI/CD, Git, Nginx
+
+## Contact & Availability
+
+- **Website:** https://www.kartikeygupta.co
+- **Email:** kartikeygupta8@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/kartikeyguptadev/
+- **GitHub:** https://github.com/kartikeygupta8
+- **Phone:** +91-9695173723
+- **Availability:** Open to remote senior & lead roles — UTC+5:30
+
+## Key Pages
+
+- Portfolio & contact: https://www.kartikeygupta.co
+- All projects: https://www.kartikeygupta.co/projects
+- AI Support Platform case study: https://www.kartikeygupta.co/projects/ai-support-platform
+- MCP Workflow Engine case study: https://www.kartikeygupta.co/projects/mcp-workflow-engine
+- Admin & Support Portal case study: https://www.kartikeygupta.co/projects/admin-support-portal
+- Healthcare Platform case study: https://www.kartikeygupta.co/projects/cross-platform-ecosystem
+- ETL Pipeline case study: https://www.kartikeygupta.co/projects/etl-sync-pipeline
+- Automation Framework case study: https://www.kartikeygupta.co/projects/automation-framework
+- Blog: https://www.kartikeygupta.co/blog
+- Resume (PDF): https://www.kartikeygupta.co/resume.pdf
+
+## Hiring Keywords
+
+Senior Full-Stack Developer, GenAI Engineer, AI Integration Engineer, Backend Engineer, Node.js Developer, React Developer, Next.js Developer, React Native Developer, Python Developer, LLM Engineer, MCP Agent Developer, RAG Pipeline Engineer, Technical Lead, Freelance Full-Stack Developer, Remote Engineer India, AI Product Engineer, Full-Stack Developer for Hire

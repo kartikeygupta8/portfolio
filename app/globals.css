@@ -267,3 +267,11 @@ body {
 .metric-big .dn   { color: var(--red); }
 .metric-big .neu  { color: var(--blue); }
 .metric-big .unit { font-size: 20px; color: var(--t2); letter-spacing: 0; }
+
+/* ─── Mobile scale ─── */
+@media (max-width: 640px) {
+  .s-h2        { letter-spacing: -0.5px; line-height: 1.1; }
+  .s-sub       { font-size: 15px; }
+  .metric-big  { font-size: 30px; letter-spacing: -1px; }
+  .metric-big .unit { font-size: 16px; }
+}

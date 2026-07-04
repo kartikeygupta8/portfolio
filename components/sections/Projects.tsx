@@ -633,6 +633,11 @@ export function Projects() {
         @media (max-width: 768px) {
           #projects > div:last-child > div { padding: 60px 24px !important; }
         }
+        @media (max-width: 640px) {
+          #projects article { padding: 48px 20px !important; }
+          #projects > div:first-child { padding: 0 20px 48px !important; }
+          #projects > div:last-child > div { padding: 48px 20px !important; }
+        }
       `}</style>
     </section>
   )

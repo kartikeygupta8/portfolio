@@ -283,7 +283,7 @@ export function Hero() {
         }}
       >
         {/* Badge */}
-        <div className="hero-rise"
+        <div className="hero-rise hero-badge"
           style={{
             animationDelay: '0.10s',
             display: 'inline-flex', alignItems: 'center', gap: 10,
@@ -342,7 +342,7 @@ export function Hero() {
 
         {/* Tagline */}
         <p
-          className="hero-rise"
+          className="hero-rise hero-tagline"
           style={{
             animationDelay: '0.44s',
             fontSize: 18, lineHeight: 1.78,
@@ -358,7 +358,7 @@ export function Hero() {
 
         {/* CTAs */}
         <div
-          className="hero-rise"
+          className="hero-rise hero-ctas"
           style={{ animationDelay: '0.58s', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}
         >
           <button
@@ -510,8 +510,7 @@ export function Hero() {
       </motion.div>
 
       <style>{`
-        /* CSS-driven entrance — runs at first paint, before JS hydration,
-           so the hero is never a blank screen while the bundle loads */
+        /* CSS-driven entrance — runs at first paint, before JS hydration */
         .hero-rise {
           animation: hero-rise 0.72s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
@@ -530,11 +529,16 @@ export function Hero() {
           #hero h1 { letter-spacing: -1px !important; }
         }
         @media (max-width: 640px) {
-          #hero .hero-content { padding: 80px 20px 200px !important; }
+          #hero .hero-content  { padding: 80px 20px 160px !important; }
+          #hero h1             { line-height: 1.05 !important; letter-spacing: -0.5px !important; font-size: clamp(38px, 10vw, 72px) !important; margin-bottom: 24px !important; }
+          #hero .hero-badge    { margin-bottom: 28px !important; padding: 6px 14px !important; font-size: 10px !important; }
+          #hero .hero-tagline  { font-size: 15px !important; margin-bottom: 32px !important; }
+          #hero .hero-ctas     { flex-direction: column !important; width: 100% !important; gap: 10px !important; }
+          #hero .hero-ctas > * { width: 100% !important; justify-content: center !important; }
           #hero .proof-bar > div { flex: 0 0 50% !important; border-bottom: 1px solid var(--rule); }
         }
         @media (max-width: 420px) {
-          #hero .hero-content { padding: 60px 16px 200px !important; }
+          #hero .hero-content { padding: 64px 16px 140px !important; }
         }
       `}</style>
     </motion.section>

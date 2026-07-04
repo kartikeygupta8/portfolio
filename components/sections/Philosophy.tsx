@@ -89,6 +89,7 @@ export function Philosophy() {
 
       <style>{`
         @media (max-width: 768px) { #philosophy { padding: 80px 24px !important; } }
+        @media (max-width: 640px) { #philosophy { padding: 60px 20px !important; } }
         @media (max-width: 620px) { #philosophy .phil-grid { grid-template-columns: 1fr !important; } }
       `}</style>
     </section>

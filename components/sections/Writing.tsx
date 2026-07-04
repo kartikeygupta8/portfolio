@@ -173,6 +173,9 @@ export function Writing() {
         @media (min-width: 640px) and (max-width: 900px) {
           .writing-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
+        @media (max-width: 640px) {
+          #writing { padding: 60px 20px !important; }
+        }
       `}</style>
     </section>
   )

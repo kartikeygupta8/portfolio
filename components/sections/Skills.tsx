@@ -115,6 +115,7 @@ export function Skills() {
 
       <style>{`
         @media (max-width: 768px) { #skills { padding: 80px 24px !important; } }
+        @media (max-width: 640px) { #skills { padding: 60px 20px !important; } }
         @media (max-width: 520px) { #skills .layer-grid { grid-template-columns: 1fr !important; } }
       `}</style>
     </section>
