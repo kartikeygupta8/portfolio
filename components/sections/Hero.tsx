@@ -128,13 +128,21 @@ export function Hero() {
     const initGL = () => {
     if (cancelled) return
 
-    // Nebula is soft cloud content — cheap contexts render it identically
-    const CTX_OPTS: WebGLContextAttributes = {
+    // Nebula is soft cloud content — cheap contexts render it identically.
+    // Mobile browsers often reject 'high-performance' (battery concern), so
+    // fall back to a bare context request if the hinted one fails.
+    const PERF_OPTS: WebGLContextAttributes = {
       alpha: false, antialias: false, depth: false, stencil: false,
       powerPreference: 'high-performance',
     }
-    const gl2 = canvas.getContext('webgl2', CTX_OPTS)
-    const gl   = (gl2 ?? canvas.getContext('webgl', CTX_OPTS)) as WebGLRenderingContext | null
+    const BARE_OPTS: WebGLContextAttributes = {
+      alpha: false, antialias: false, depth: false, stencil: false,
+    }
+    const gl2 = canvas.getContext('webgl2', PERF_OPTS) ?? canvas.getContext('webgl2', BARE_OPTS)
+    const gl   = (gl2
+      ?? canvas.getContext('webgl', PERF_OPTS)
+      ?? canvas.getContext('webgl', BARE_OPTS)
+    ) as WebGLRenderingContext | null
     if (!gl) return
 
     const isGL2  = !!gl2
