@@ -188,12 +188,13 @@ export function Navigation() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
             style={{
-              position: 'fixed', top: 60, left: 0, right: 0, zIndex: 199,
+              position: 'fixed', top: 60, left: 0, right: 0, bottom: 0, zIndex: 199,
               background: 'rgba(7,7,9,0.97)',
               backdropFilter: 'blur(24px)',
               borderBottom: '1px solid var(--rule)',
               padding: '24px 32px 32px',
               display: 'flex', flexDirection: 'column', gap: 20,
+              overflowY: 'auto',
             }}
           >
             {NAV_LINKS.map(l => (
