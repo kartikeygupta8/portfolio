@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { PROOF } from '@/lib/constants'
+import { ResumeMenu } from '@/components/ui/ResumeMenu'
 
 /* ── WebGL2 shaders (blue cosmic nebula, enhanced blue palette) ── */
 const VERT2 = `#version 300 es
@@ -409,34 +410,38 @@ export function Hero() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </button>
-          <a
-            href="/resume.pdf"
-            download="Kartikey_Gupta_Resume.pdf"
-            style={{
-              fontFamily: 'var(--font-mono), monospace',
-              fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: 'var(--blue)', textDecoration: 'none',
-              padding: '13px 26px',
-              border: '1px solid rgba(75,139,245,0.32)',
-              borderRadius: 'var(--r)', transition: 'all 0.2s',
-              background: 'rgba(75,139,245,0.07)',
-              display: 'flex', alignItems: 'center', gap: 8,
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = 'rgba(75,139,245,0.14)'
-              e.currentTarget.style.borderColor = 'rgba(75,139,245,0.55)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = 'rgba(75,139,245,0.07)'
-              e.currentTarget.style.borderColor = 'rgba(75,139,245,0.32)'
-            }}
-          >
-            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/>
-              <path d="M20 18H4v2h16v-2z"/>
-            </svg>
-            Resume
-          </a>
+          <ResumeMenu align="right">
+            {({ toggle }) => (
+              <button
+                onClick={toggle}
+                style={{
+                  fontFamily: 'var(--font-mono), monospace',
+                  fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase',
+                  color: 'var(--blue)',
+                  padding: '13px 26px',
+                  border: '1px solid rgba(75,139,245,0.32)',
+                  borderRadius: 'var(--r)', transition: 'all 0.2s',
+                  background: 'rgba(75,139,245,0.07)',
+                  cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 8,
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = 'rgba(75,139,245,0.14)'
+                  e.currentTarget.style.borderColor = 'rgba(75,139,245,0.55)'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = 'rgba(75,139,245,0.07)'
+                  e.currentTarget.style.borderColor = 'rgba(75,139,245,0.32)'
+                }}
+              >
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/>
+                  <path d="M20 18H4v2h16v-2z"/>
+                </svg>
+                Resume
+              </button>
+            )}
+          </ResumeMenu>
         </div>
       </div>
 

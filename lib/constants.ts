@@ -305,9 +305,9 @@ export const SIDE_PROJECTS = [
   },
   {
     name: 'Sunpress Organic',
-    url: null,
-    desc: 'Manufacturing P&L and costing tool for edible oil production — tracks raw seed input, oil/khari yield, overhead allocation, and per-unit profitability across pack sizes.',
-    stack: ['React', 'Node.js', 'PostgreSQL'],
+    url: 'https://sunpressorganic.com',
+    desc: 'End-to-end ERP (PWA) for an edible oil manufacturing unit — sourcing, production, orders, payments, employee & salary management, and stock control in one offline-capable app. Also built and maintain sunpressorganic.com, the company\'s public-facing website, as a separate project.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'PWA'],
     accent: 'amber' as const,
   },
   {

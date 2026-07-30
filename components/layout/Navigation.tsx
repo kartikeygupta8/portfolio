@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { ResumeMenu } from '@/components/ui/ResumeMenu'
 
 const NAV_LINKS = [
   { id: 'projects',   label: 'Projects' },
@@ -112,33 +113,37 @@ export function Navigation() {
 
         {/* CTA + hamburger */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <a
-            href="/resume.pdf"
-            download="Kartikey-Gupta-Resume.pdf"
-            className="hidden-mobile"
-            style={{
-              fontFamily: 'var(--font-mono), monospace',
-              fontSize: 11,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--t1)',
-              textDecoration: 'none',
-              padding: '9px 18px',
-              borderRadius: 'var(--r)',
-              border: '1px solid var(--rule2)',
-              transition: 'color 0.2s, border-color 0.2s',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-            }}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t0)'; el.style.borderColor = 'var(--t2)' }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t1)'; el.style.borderColor = 'var(--rule2)' }}
-          >
-            Resume
-            <svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-              <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-          </a>
+          <ResumeMenu align="right">
+            {({ toggle }) => (
+              <button
+                onClick={toggle}
+                className="hidden-mobile"
+                style={{
+                  fontFamily: 'var(--font-mono), monospace',
+                  fontSize: 11,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: 'var(--t1)',
+                  background: 'none',
+                  padding: '9px 18px',
+                  borderRadius: 'var(--r)',
+                  border: '1px solid var(--rule2)',
+                  cursor: 'pointer',
+                  transition: 'color 0.2s, border-color 0.2s',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t0)'; el.style.borderColor = 'var(--t2)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--t1)'; el.style.borderColor = 'var(--rule2)' }}
+              >
+                Resume
+                <svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                  <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+              </button>
+            )}
+          </ResumeMenu>
           <button
             onClick={() => scrollTo('contact')}
             className="hidden-mobile"

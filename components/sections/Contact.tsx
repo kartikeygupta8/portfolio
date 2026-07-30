@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { SITE } from '@/lib/constants'
+import { ResumeMenu } from '@/components/ui/ResumeMenu'
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -475,16 +476,19 @@ export function Contact() {
             LinkedIn ↗
           </a>
           <span style={{ color: 'var(--t3)', fontSize: 12 }}>·</span>
-          <a
-            href="/resume.pdf"
-            download="Kartikey-Gupta-Resume.pdf"
-            style={{ ...secondaryLinkStyle, display: 'inline-flex', alignItems: 'center', gap: 5 }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'var(--t0)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'var(--t1)')}
-          >
-            Resume
-            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-          </a>
+          <ResumeMenu align="right">
+            {({ toggle }) => (
+              <button
+                onClick={toggle}
+                style={{ ...secondaryLinkStyle, background: 'none', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 5 }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--t0)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--t1)')}
+              >
+                Resume
+                <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+              </button>
+            )}
+          </ResumeMenu>
         </motion.div>
 
         {/* Channel cards — 4 across */}

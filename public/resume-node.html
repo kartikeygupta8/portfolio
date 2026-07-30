@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartikey Gupta — Resume (Node.js)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4;
+      margin: 0.28in 0.44in;
+    }
+
+    html { font-size: 10px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.5;
+      color: #111;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media screen {
+      body { background: #d1d5db; display: flex; justify-content: center; padding: 40px 16px; }
+      .page {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        padding: 0.28in 0.44in;
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff;
+      }
+    }
+
+    /* ── Header ── */
+    .name {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #000;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .subtitle {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 3px;
+    }
+    .contact-line {
+      font-size: 9px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .contact-line a { color: #555; text-decoration: none; }
+
+    /* ── Section ── */
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #000;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    /* ── Summary ── */
+    .summary {
+      font-size: 9.5px;
+      color: #111;
+      line-height: 1.55;
+    }
+
+    /* ── Skills ── */
+    .skills-table {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      row-gap: 2px;
+      column-gap: 10px;
+      font-size: 9.5px;
+    }
+    .skill-cat  { font-weight: 600; color: #000; }
+    .skill-vals { color: #222; }
+
+    /* ── Experience ── */
+    .exp-item { margin-bottom: 9px; }
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .exp-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #000;
+    }
+    .exp-company {
+      font-size: 10px;
+      font-weight: 600;
+      color: #333;
+    }
+    .exp-period {
+      font-size: 9px;
+      color: #666;
+      white-space: nowrap;
+    }
+    .exp-bullets {
+      list-style: none;
+      padding-left: 11px;
+      margin-top: 3px;
+    }
+    .exp-bullets li {
+      font-size: 9.5px;
+      color: #111;
+      line-height: 1.48;
+      position: relative;
+      margin-bottom: 2px;
+    }
+    .exp-bullets li:last-child { margin-bottom: 0; }
+    .exp-bullets li::before {
+      content: '◦';
+      position: absolute;
+      left: -10px;
+      color: #000;
+    }
+
+    /* ── Projects ── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+    .proj-name {
+      font-size: 10px;
+      font-weight: 700;
+      color: #000;
+    }
+    .proj-name a { color: #000; text-decoration: none; }
+    .proj-stack {
+      font-size: 8.5px;
+      color: #666;
+      font-weight: 500;
+    }
+    .proj-desc {
+      font-size: 9px;
+      color: #333;
+      line-height: 1.43;
+    }
+
+    /* ── Education + Certs ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .edu-main {
+      font-size: 10px;
+      font-weight: 700;
+      color: #000;
+    }
+    .edu-sub {
+      font-size: 9.5px;
+      color: #444;
+    }
+    .cert-inline {
+      font-size: 9.5px;
+      color: #333;
+      text-align: right;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 8px;
+      font-size: 7.5px;
+      color: #aaa;
+    }
+    .footer a { color: #aaa; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="name">KARTIKEY GUPTA</div>
+  <div class="subtitle">Senior Full-Stack Developer &nbsp;&middot;&nbsp; Node.js &nbsp;&middot;&nbsp; Backend Engineer</div>
+  <div class="contact-line">
+    +91-9695173723 &nbsp;&middot;&nbsp;
+    <a href="mailto:kartikeygupta8@gmail.com">kartikeygupta8@gmail.com</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/kartikeygupta8">github.com/kartikeygupta8</a> &nbsp;&middot;&nbsp;
+    <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.kartikeygupta.co">kartikeygupta.co</a>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section-title">Summary</div>
+  <p class="summary">
+    Senior Full-Stack &amp; Backend Engineer with <strong>7 years</strong> building production Node.js systems across Fortune-500 fintech, healthcare SaaS, and enterprise software. Led a <strong>Python &rarr; Node.js migration</strong> cutting API latency <strong>30%</strong>; shipped a GenAI support layer (Groq Llama 3.3, MCP agents) on top of it auto-resolving <strong>72% of tier-1 tickets</strong> at 99.7% uptime; led a 3-engineer cross-platform team delivering web, mobile, and wearable from a single Node.js backend. Builds backend systems first, then layers AI in as reliable infrastructure.
+  </p>
+
+  <!-- SKILLS -->
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-table">
+    <span class="skill-cat">Backend</span>
+    <span class="skill-vals">Node.js, Express.js, REST APIs, GraphQL, WebSockets, JWT Auth, BullMQ, Microservices, System Design, Python</span>
+
+    <span class="skill-cat">AI &amp; GenAI</span>
+    <span class="skill-vals">Groq API, Llama 3.3, Claude API, Ollama, MCP Protocol, LangChain, RAG Pipelines, AI Agents, Agentic Workflows, Prompt Engineering, Function Calling</span>
+
+    <span class="skill-cat">Frontend</span>
+    <span class="skill-vals">React.js, Next.js, TypeScript, React Native, Redux, Tailwind CSS, Framer Motion</span>
+
+    <span class="skill-cat">Data &amp; DevOps</span>
+    <span class="skill-vals">PostgreSQL, MySQL, MongoDB, Redis, SSIS, ETL Pipelines, AWS (EC2 · S3 · Lambda), Docker, CI/CD, Nginx</span>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section-title">Work Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-role">Senior Full-Stack Developer &nbsp;—&nbsp; <span class="exp-company">Evren</span></span>
+      <span class="exp-period">Jan 2023 – Present</span>
+    </div>
+    <ul class="exp-bullets">
+      <li>Owned end-to-end technical architecture — led cross-functional engineering decisions across backend, AI, and frontend; mentored developers through structured code reviews and system design sessions</li>
+      <li>Led <strong>Python &rarr; Node.js migration</strong> on MySQL with 4-tier RBAC redesign — delivered <strong>&minus;30% API latency</strong>, <strong>+40% portal adoption</strong>, and &minus;50% debug time via structured log-analysis tooling</li>
+      <li><strong>72% of tier-1 support tickets auto-resolved</strong> via Groq Llama 3.3 streaming chatbot; extended to agentic MCP workflows for scheduling, booking, and guided multi-step flows — <strong>6h+/week of manual ops eliminated</strong></li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-role">Full-Stack Developer &amp; Team Lead &nbsp;—&nbsp; <span class="exp-company">Bestpeers Infosystem</span></span>
+      <span class="exp-period">Jul 2021 – Dec 2022</span>
+    </div>
+    <ul class="exp-bullets">
+      <li>Led a <strong>3-engineer team</strong> shipping a healthcare monitoring platform across React.js web, React Native mobile, and a custom smartwatch (HR, SpO2, GPS) — shared Node.js + MySQL backend, single JWT auth contract; delivered <strong>+25% performance</strong> over the prior system</li>
+      <li>Established architecture standards and code-review gates driving <strong>35% fewer bug reports</strong>; mentored junior devs on system design, performance patterns, and scalable state management</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-role">Software Developer &nbsp;—&nbsp; <span class="exp-company">FIS Global (Worldpay)</span></span>
+      <span class="exp-period">Aug 2019 – Jun 2021</span>
+    </div>
+    <ul class="exp-bullets">
+      <li>Built Selenium CRM regression framework achieving <strong>90%+ workflow coverage</strong>, eliminating <strong>80% of manual QA effort</strong> — full suite runs in &lt;8 min on every CI push</li>
+      <li>Engineered fault-tolerant ETL pipeline (MongoDB &harr; Salesforce via SSIS) — <strong>95% data accuracy</strong>, dead-letter queuing, immutable audit trail, replacing all manual weekly reconciliation</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section-title">Projects</div>
+  <div class="proj-grid">
+    <div>
+      <div class="proj-name"><a href="https://lexandledger.in">Lex &amp; Ledger</a></div>
+      <div class="proj-stack">Node.js · React · MongoDB · Groq AI · JWT · AWS S3</div>
+      <div class="proj-desc">Legal &amp; financial marketplace — user-to-expert matching (lawyers, CAs), booking, WhatsApp notifications, multi-role auth, AI document processing; client-to-expert matching under 2 min</div>
+    </div>
+    <div>
+      <div class="proj-name"><a href="https://livoh.in">Livoh.in</a></div>
+      <div class="proj-stack">Express · Prisma · PostgreSQL · React · TypeScript · AWS S3</div>
+      <div class="proj-desc">Full-stack home decor e-commerce — OTP auth, 50+ SKU catalog, cart &amp; checkout, shipping integration, automated GST invoice generation on every order</div>
+    </div>
+    <div>
+      <div class="proj-name">Sunpress Organic</div>
+      <div class="proj-stack">Node.js · React · PostgreSQL · PWA</div>
+      <div class="proj-desc">End-to-end ERP (offline-capable PWA) for an edible oil manufacturing unit — sourcing, production, orders, payments, employee &amp; salary management, and stock control in one app</div>
+    </div>
+    <div>
+      <div class="proj-name">PlotSync</div>
+      <div class="proj-stack">Node.js · React Native · MongoDB</div>
+      <div class="proj-desc">Real estate plot management for tier-3 Indian cities — eliminates double-booking across 200+ plots, real-time availability for field sales teams</div>
+    </div>
+  </div>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <div class="section-title">Education &amp; Certifications</div>
+  <div class="edu-row">
+    <div>
+      <div class="edu-main">RGPV University, LNCT College &nbsp;|&nbsp; 2015–2019</div>
+      <div class="edu-sub">Bachelor of Engineering — Computer Science</div>
+    </div>
+    <div class="cert-inline">
+      MongoDB Developer Certification<br>
+      <span style="color:#888;font-size:9px;">MongoDB, Inc. &middot; 2021</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>LinkedIn recommendations from direct manager &amp; teammate at Evren — <a href="https://linkedin.com/in/kartikeyguptadev">linkedin.com/in/kartikeyguptadev</a></div>
+    <div>Updated July 2026</div>
+  </div>
+
+</div>
+</body>
+</html>
