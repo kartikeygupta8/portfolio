@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 const RESUME_OPTIONS = [
   { id: 'node',   label: 'Node.js',  sub: 'Backend / full-stack focus', href: '/resume-node.pdf',   filename: 'Kartikey-Gupta-Resume-Node.pdf' },
   { id: 'python', label: 'Python',   sub: 'Backend / AI-ML focus',      href: '/resume-python.pdf', filename: 'Kartikey-Gupta-Resume-Python.pdf' },
+  { id: 'ai',     label: 'AI',      sub: 'GenAI / LLM systems focus',   href: '/resume-ai.pdf',     filename: 'Kartikey-Gupta-Resume-AI.pdf' },
 ] as const
 
 export function ResumeMenu({
@@ -51,7 +52,7 @@ export function ResumeMenu({
             overflow: 'hidden',
           }}
         >
-          {RESUME_OPTIONS.map(opt => (
+          {RESUME_OPTIONS.map((opt, i) => (
             <a
               key={opt.id}
               href={opt.href}
@@ -65,7 +66,7 @@ export function ResumeMenu({
                 padding: '10px 14px',
                 textDecoration: 'none',
                 color: 'var(--t0)',
-                borderBottom: '1px solid var(--rule)',
+                borderBottom: i < RESUME_OPTIONS.length - 1 ? '1px solid var(--rule)' : 'none',
               }}
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--rule)' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
