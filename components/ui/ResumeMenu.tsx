@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from 'react'
 
 const RESUME_OPTIONS = [
-  { id: 'node',   label: 'Node.js',  sub: 'Backend / full-stack focus', href: '/resume-node.pdf',   filename: 'Kartikey-Gupta-Resume-Node.pdf' },
-  { id: 'python', label: 'Python',   sub: 'Backend / AI-ML focus',      href: '/resume-python.pdf', filename: 'Kartikey-Gupta-Resume-Python.pdf' },
-  { id: 'ai',     label: 'AI',      sub: 'GenAI / LLM systems focus',   href: '/resume-ai.pdf',     filename: 'Kartikey-Gupta-Resume-AI.pdf' },
+  { id: 'node',       label: 'Node.js',      sub: 'Backend / full-stack focus',   href: '/resume-node.pdf',       filename: 'Kartikey-Gupta-Resume-Node.pdf' },
+  { id: 'node-react', label: 'Node + React', sub: 'Full-stack focus',             href: '/resume-node-react.pdf', filename: 'Kartikey-Gupta-Resume-Node-React.pdf' },
+  { id: 'python',     label: 'Python',       sub: 'Backend / AI-ML focus',        href: '/resume-python.pdf',     filename: 'Kartikey-Gupta-Resume-Python.pdf' },
+  { id: 'ai',         label: 'AI',           sub: 'GenAI / LLM systems focus',    href: '/resume-ai.pdf',         filename: 'Kartikey-Gupta-Resume-AI.pdf' },
 ] as const
 
 export function ResumeMenu({
